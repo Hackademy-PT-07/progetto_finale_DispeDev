@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
+
+Route::middleware("auth")->group(function(){
+    Route::resource('announcement', AnnouncementController::class);
+});
+

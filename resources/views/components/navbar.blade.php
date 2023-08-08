@@ -9,31 +9,31 @@
             <ul class="navbar-nav fc-bianco">
                 @if (auth()->user())
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-white" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link text-white" href="#">Features</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Nome User
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" >
+                            {{auth()->user()->name}}
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu text-white">
                             <li><a class="dropdown-item" href="#"></a></li>
                             <li><a class="dropdown-item" href="#"></a></li>
                             <li><a class="dropdown-item" href="#"></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Esci</a>
+                        <a class="nav-link text-white" href="#">Esci</a>
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link fc-bianco fs-3" aria-current="page" href="/login">Accedi</a>
+                        <a class="nav-link fc-bianco" aria-current="page" href="/login">Accedi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fc-bianco fs-3" aria-current="page" href="/register">Registrati</a>
+                        <a class="nav-link fc-bianco" aria-current="page" href="/register">Registrati</a>
                     </li>
                 @endif
             </ul>
