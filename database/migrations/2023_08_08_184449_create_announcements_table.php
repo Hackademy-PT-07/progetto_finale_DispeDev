@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->unsignedInteger('price');
+            $table->unsignedBigInteger('category_id');
+            $table->string('url_image');
+            $table->string('description');
             $table->timestamps();
         });
     }
