@@ -5,7 +5,7 @@
 
         <div class="container">
             <h1>Inserisci il tuo annuncio</h1>
-            <form action="/register" method="POST">
+            <form action="/register" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
