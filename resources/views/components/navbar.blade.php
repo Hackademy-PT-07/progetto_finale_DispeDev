@@ -30,10 +30,10 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link fc-bianco" aria-current="page" href="#">Accedi</a>
+                        <a class="nav-link fc-bianco" aria-current="page" href="/login">Accedi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fc-bianco" aria-current="page" href="#">Registrati</a>
+                        <a class="nav-link fc-bianco" aria-current="page" href="/register">Registrati</a>
                     </li>
                 @endif
             </ul>

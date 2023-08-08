@@ -17,9 +17,14 @@
     background-color: var(--panna);
 }
 
+.btn-azzuro {
+    background-color: var(--azzuro);
+}
+
 .fc-bianco  {
     color: var(--bianco);
 }
+
 
 
 /* Hover Session */
