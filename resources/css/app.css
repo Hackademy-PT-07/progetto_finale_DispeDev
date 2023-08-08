@@ -1,2 +1,28 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+
+:root {
+    --arancio: #E36414;
+    --blu: #0F4C5C;
+    --panna: #FCF6EB;
+    --azzuro: #048BA8;
+    --bianco: #FFFCF7;
+}
+
+.bg-body-arancio    {
+    background-color: var(--arancio);
+}
+
+.bg-body-panna  {
+    background-color: var(--panna);
+}
+
+.fc-bianco  {
+    color: var(--bianco);
+}
+
+
+/* Hover Session */
+.fc-bianco:hover    {
+    color: var(--bianco);
+}
