@@ -9,7 +9,6 @@
 }
 
 html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
@@ -42,4 +41,13 @@ html {
 /* Hover Session */
 .fc-bianco:hover    {
     color: var(--bianco);
+}
+
+/* button */
+button{
+    color: white;
+    background-color: var(--azzuro);
+    border-radius: 7px;
+    padding: 0.5% 3% 0.5% 3%;
+    border: none;
 }

@@ -43,7 +43,7 @@
                         {{ $message }}
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-azzuro">Registrati</button>
+                <button type="submit" >Registrati</button>
             </div>
             </div>
             </div>
