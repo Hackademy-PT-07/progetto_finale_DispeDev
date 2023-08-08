@@ -26,7 +26,11 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Esci</a>
+                        <form action="/logout" method="POST">
+                            @csrf
+                        <button class="btn text-white" type="submit">Esci</button> 
+                        </form>
+                        
                     </li>
                 @else
                     <li class="nav-item">
