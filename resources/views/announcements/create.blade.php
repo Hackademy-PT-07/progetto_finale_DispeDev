@@ -5,10 +5,10 @@
 
         <div class="container">
             <h1>Inserisci il tuo annuncio</h1>
-            
+
             <x-success />
 
-            <form action="{{route('announcements.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('announcement.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Titolo</label>
@@ -22,8 +22,8 @@
                 </div>
                 <div class="mb-3">
                     <div>
-                    <label for="image">Scegli categoria</label>
-                        <select class="form-select" aria-label="Default select example">
+                    <label for="categories">Scegli categoria</label>
+                        <select class="form-select" name="categories" aria-label="Default select example">
                             <option selected>Seleziona</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>

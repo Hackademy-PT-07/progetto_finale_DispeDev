@@ -28,7 +28,10 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $announcement = Announcement::create($request->all());
+        $announcement->save();
+        
+        return redirect()->back()->with(['success' => 'Annuncio creato correttamente.']);
     }
 
     /**
