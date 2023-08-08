@@ -19,4 +19,19 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
     }
+
+    private function categories()
+    {
+        \App\Models\Category::create(['name' => 'Auto']);
+        \App\Models\Category::create(['name' => 'Moto e scooter']);
+        \App\Models\Category::create(['name' => 'Nautica']);
+        \App\Models\Category::create(['name' => 'Elettronica']);
+        \App\Models\Category::create(['name' => 'Audio/Video']);
+        \App\Models\Category::create(['name' => 'Arredamento e Casalinghi']);
+        \App\Models\Category::create(['name' => 'Giardino e Fai da te']);
+        \App\Models\Category::create(['name' => 'Animali']);
+        \App\Models\Category::create(['name' => 'Immobili']);
+        \App\Models\Category::create(['name' => 'Lavoro']);
+
+    }
 }
