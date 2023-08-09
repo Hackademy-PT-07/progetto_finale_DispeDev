@@ -6,7 +6,7 @@
     <div class="container">
         <!-- @auth
         <button>
-            <a href="{{route('announcement.create')}}">Inserisci annuncio</a>
+            <a href="{{route('annuncio.create')}}">Inserisci annuncio</a>
         </button>
         @endauth  -->
 

@@ -18,6 +18,6 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
 Route::middleware("auth")->group(function(){
-    Route::resource('announcement', AnnouncementController::class);
+    Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
 });
 

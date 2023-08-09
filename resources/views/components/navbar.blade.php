@@ -12,7 +12,7 @@
                 </li> -->
                 <div class="row mx-4">
                     <button>
-                        <a href="{{route('announcement.create')}}">Inserisci annuncio</a>
+                        <a href="{{route('annuncio.create')}}">Inserisci annuncio</a>
                     </button>
                 </div>
                 <li class="nav-item dropdown">
