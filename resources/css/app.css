@@ -36,6 +36,10 @@ html {
     color: var(--bianco);
 }
 
+.clr-text-blu{
+    color: var(--blu);
+}
+
 
 
 /* Hover Session */

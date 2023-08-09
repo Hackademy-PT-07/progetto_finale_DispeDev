@@ -8,9 +8,9 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
-                            <h1 class="h2 text-white">Welcome back</h1>
-                            <p class="lead text-white">
-                                Login to your account to continue
+                            <h1 class="h2 clr-text-blu">Bentornato!</h1>
+                            <p class="lead clr-text-blu">
+                                Accedi con il tuo account per continuare
                             </p>
                         </div>
                         <div class="card-login">
@@ -25,7 +25,7 @@
                                         <div class="container">
                                             <div class="form-group mb-4">
                                                 <input class="form-control form-control-lg" type="email"
-                                                    name="email" id="email" placeholder="Enter your email">
+                                                    name="email" id="email" placeholder="Inserisci la tua email">
                                                 @error('email')
                                                     <span class="small text-danger">{{ $message }}</span>
                                                 @enderror
@@ -33,27 +33,26 @@
                                             <div class="form-group">
 
                                                 <input class="form-control form-control-lg" type="password"
-                                                    name="password" id="password" placeholder="Enter your password">
+                                                    name="password" id="password" placeholder="Inserisci la password">
                                                 @error('password')
                                                     <span class="small text-danger">{{ $message }}</span>
                                                 @enderror
                                                 <small>
-                                                    <a href="">Forgot password?</a>
+                                                    <a href="">Password dimenticata?</a>
                                                 </small>
                                             </div>
                                             <div>
                                                 <div class="custom-control custom-checkbox align-items-center">
                                                     <input type="checkbox" class="custom-control-input"
                                                         value="remember-me" name="remember-me" checked="">
-                                                    <label class="custom-control-label text-small text-white">Remember
-                                                        me next time</label>
+                                                    <label class="custom-control-label text-small clr-text-blu">Ricordami la prossima volta</label>
                                                 </div>
                                                 <div>
-                                                    <a href="/register">Don't have an account yet? Sign in!</a>
+                                                    <a href="/register">Non hai un account? Registrati!</a>
                                                 </div>
                                             </div>
                                             <div class="text-center mt-3 mb-3">
-                                                <button type="submit" class="btn action_btn btn-azzuro">Login</button>
+                                                <button type="submit" class="action_btn fc-bianco">Accedi</button>
                                             </div>
                                         </div>
                                     </form>
