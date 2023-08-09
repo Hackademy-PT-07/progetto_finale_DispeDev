@@ -17,6 +17,7 @@
     </div>
 
     <!-- categories box -->
+    
     <div class="container-fluid categories-home">
             <div class="d-flex categories-box">
                 <button class="categories-items item-1 mx-3">
@@ -36,20 +37,8 @@
 
 
     <!-- card annunci in primo piano -->
-    <div class="container my-5">
-        <div class="d-flex">
-        <div class="card-box">
-            <div class="card-img-box">
-                <img class="card-img" src="https://picsum.photos/200/220" alt="">
-            </div>
-            <div class="card-text-box">
-                <h3>Titolo</h3>
-                <span>€ 0,00</span>
-            </div>
-            <p>Breve descrizione del prodotto...</p>
-        </div>
-        </div>
-    </div>
+    <x-card-announcement />
+    
 
     
 

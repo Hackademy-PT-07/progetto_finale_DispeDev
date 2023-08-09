@@ -154,6 +154,7 @@ button a {
 
 .card-text-box{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -166,7 +167,7 @@ button a {
     font-size: 1.8rem;
 }
 
-.card-text-box span{
+.price{
     color: red;
     font-weight: 700;
     font-size: 1.2rem;
