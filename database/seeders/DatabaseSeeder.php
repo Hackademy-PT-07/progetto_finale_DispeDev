@@ -24,12 +24,12 @@ class DatabaseSeeder extends Seeder
     private function categories()
     {
         \App\Models\Category::create(['name' => 'Auto']);
-        \App\Models\Category::create(['name' => 'Moto e scooter']);
+        \App\Models\Category::create(['name' => 'Moto']);
         \App\Models\Category::create(['name' => 'Nautica']);
         \App\Models\Category::create(['name' => 'Elettronica']);
-        \App\Models\Category::create(['name' => 'Audio/Video']);
-        \App\Models\Category::create(['name' => 'Arredamento e Casalinghi']);
-        \App\Models\Category::create(['name' => 'Giardino e Fai da te']);
+        \App\Models\Category::create(['name' => 'Casalinghi']);
+        \App\Models\Category::create(['name' => 'Arredamento']);
+        \App\Models\Category::create(['name' => 'Giardinaggio']);
         \App\Models\Category::create(['name' => 'Animali']);
         \App\Models\Category::create(['name' => 'Immobili']);
         \App\Models\Category::create(['name' => 'Lavoro']);
