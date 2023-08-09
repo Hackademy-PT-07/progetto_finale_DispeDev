@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
@@ -28,8 +29,6 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        $announcement = Announcement::create($request->all());
-        $announcement->save();
         
         return redirect()->back()->with(['success' => 'Annuncio creato correttamente.']);
     }
