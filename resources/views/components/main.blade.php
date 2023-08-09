@@ -12,6 +12,9 @@
 
     {{-- LINK VITE --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- Livewire --}}
+    @livewireStyles
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-body-panna">
@@ -26,6 +29,8 @@
     <footer class="mt-auto">
         <x-footer />
     </footer>
+    
+    @livewireScripts
 </body>
 
 </html>
