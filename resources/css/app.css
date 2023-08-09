@@ -40,6 +40,9 @@ html {
     color: var(--blu);
 }
 
+a{
+    text-decoration: none;
+}
 
 
 /* Hover Session */
@@ -58,5 +61,118 @@ button{
 
 button a {
     color: white;
-    text-decoration: none;
+}
+
+/* navbar */
+.dropdown-menu{
+    --bs-dropdown-min-width: 5rem;
+}
+
+
+/* homepage */
+
+/* search bar */
+.search-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.search-box input{
+    width: 50%;
+    margin: 0px 15px;
+    border-color: var(--blu);
+    border-radius: 20px;
+}
+
+.search-box i{
+    color: var(--blu);
+    font-size: 24px;
+}
+
+/* categories */
+.categories-home{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.categories-box{
+    width: 60%;
+}
+
+.categories-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    height: 80px;
+    border-radius: 15px;
+}
+
+.item-1{
+    background-color: rgb(145, 158, 223);
+}
+.item-2{
+    background-color: rgb(230, 205, 146);
+}
+.item-3{
+    background-color: rgb(170, 145, 223);
+}
+.item-4{
+    background-color: rgb(145, 223, 214);
+}
+
+.categories-items a{
+    color: var(--panna);
+    font-size: 18px;
+}
+
+.categories-items a i{
+    margin-right: 5px;
+}
+
+
+
+/* card annunci in primo piano */
+
+.card-box{
+    box-shadow:0px 10px 13px -7px #000000;
+    background-color: var(--bianco);
+    width: 15rem;
+    height: 25rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card-img{
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.card-text-box{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+
+}
+
+.card-text-box h3{
+    font-weight: 700;
+    color: #0F4C5C;
+    font-size: 1.8rem;
+}
+
+.card-text-box span{
+    color: red;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card-box p{
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
 }
