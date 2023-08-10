@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Seeders;
+
 use \App\Models\Category;
 use \App\Models\Announcement;
 
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        //$this->categories();
+        /* $this->categories(); */
         $this->announcements();
     }
 
@@ -36,7 +37,6 @@ class DatabaseSeeder extends Seeder
         Category::create(['name' => 'Animali']);
         Category::create(['name' => 'Immobili']);
         Category::create(['name' => 'Lavoro']);
-
     }
 
     private function announcements()

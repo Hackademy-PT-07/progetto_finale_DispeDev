@@ -29,7 +29,7 @@
     <footer class="mt-auto">
         <x-footer />
     </footer>
-    
+
     @livewireScripts
 </body>
 
