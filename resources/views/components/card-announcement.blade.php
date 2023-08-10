@@ -2,7 +2,7 @@
         <div class="d-flex">
             <div class="card-box">
                 <div class="card-img-box">
-                    <img class="card-img" src="https://picsum.photos/200/220" alt="">
+                    <img class="card-img" src="{{$url_image}}" alt="{{$title}}">
                 </div>
                 <div class="card-text-box">
                     <h3>{{$title}}</h3>

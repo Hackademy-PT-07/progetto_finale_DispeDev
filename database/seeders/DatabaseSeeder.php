@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
             'category_id' => '10',
             'user_id' => '2',
             'url_image' => 'https://www.ilcorrieredellacitta.com/wp-content/uploads/2018/07/capire-un-annuncio-di-lavoro.jpg',
-            'price' => '100000'
+            'price' => '1'
         ]);
     }
 }
