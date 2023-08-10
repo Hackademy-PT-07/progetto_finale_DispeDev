@@ -100,7 +100,7 @@ button a {
 
 .categories-box{
     width: 60%;
-    
+
 }
 
 .categories-items{
@@ -114,7 +114,50 @@ button a {
 
 }
 
+/* Section Cards */
 
+
+.card-radius   {
+    border-radius: 5px 55px 5px 5px;
+}
+
+.card-posted    {
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+
+/* End Section Cards */
+
+
+/* Section Login */
+
+.section-split input[type=text],
+.section-split input[type=email],
+.section-split input[type=password] {
+   display: block;
+   width: 100%;
+   height: 40px;
+   border: 0;
+   background: transparent;
+   border-bottom: 1px solid #ccc;
+   outline: 0;
+   margin-top: 10px;
+}
+
+.section-split input[type=password] {
+    margin-bottom: 15px;
+}
+
+.large  {
+    padding: 15px 50px;
+}
+
+.fz-large   {
+    font-size: 70px;
+}
+
+/* End Section Login */
 
 .item-1{
     background-color: rgb(145, 158, 223);
@@ -164,7 +207,7 @@ a{
     .categories-box{
         width: 90%;
         padding-top:10px;
-        
+
     }
     .categories-items{
         display:flex;
@@ -175,8 +218,8 @@ a{
         height: 50px;
         border-radius: 50px;
         margin-right: 20px;
-        
-    
+
+
     }
     .categories-items a{
         color: var(--blu);
@@ -196,6 +239,30 @@ a{
     .categories-box:last-child{
         margin-right: 2px;
 
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile .fz-large   {
+        font-size: 50px;
+    }
+
+    .section-split input[type=text],
+    .section-split input[type=email],
+    .section-split input[type=password] {
+        width: 100%;
+    }
+
+    input::placeholder  {
+        font-size: 10px;
+    }
+
+    .small  {
+        width: 75%;
     }
 }
 @media(max-width:768px){

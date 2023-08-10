@@ -2,9 +2,9 @@
     <x-slot:mainTitle>
         Homepage
         </x-slot>
-        <div class="container h-100">
+        <div class="container h-100 mt-5">
             <div class="row h-100">
-                <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
+                <div class="col-sm-10 col-md-8 col-lg-6 m-auto d-table h-100">
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
@@ -17,20 +17,19 @@
                             <div class="index-card pb-1 rounded">
                                 <div class="m-sm-4">
                                     <div class="text-center py-3">
-                                        <img src="https://icon-library.com/images/hackers-icon/hackers-icon-11.jpg"
-                                            alt="logo-login" class="img-fluid rounded" width="100" height="132">
+                                        <h2 class="clr-text-blu fs-1 fw-bold">presto.it</h2>
                                     </div>
                                     <form action="/login" method="POST">
                                         @csrf
                                         <div class="container">
-                                            <div class="form-group mb-4">
+                                            <div class="form-group mb-4 section-split">
                                                 <input class="form-control form-control-lg" type="email"
                                                     name="email" id="email" placeholder="Inserisci la tua email">
                                                 @error('email')
                                                     <span class="small text-danger">{{ $message }}</span>
                                                 @enderror
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group section-split">
 
                                                 <input class="form-control form-control-lg" type="password"
                                                     name="password" id="password" placeholder="Inserisci la password">
@@ -45,14 +44,17 @@
                                                 <div class="custom-control custom-checkbox align-items-center">
                                                     <input type="checkbox" class="custom-control-input"
                                                         value="remember-me" name="remember-me" checked="">
-                                                    <label class="custom-control-label text-small clr-text-blu">Ricordami la prossima volta</label>
-                                                </div>
-                                                <div>
-                                                    <a href="/register">Non hai un account? Registrati!</a>
+                                                    <label
+                                                        class="custom-control-label text-small clr-text-blu">Ricordami
+                                                        la prossima volta</label>
                                                 </div>
                                             </div>
-                                            <div class="text-center mt-3 mb-3">
-                                                <button type="submit" class="action_btn fc-bianco">Accedi</button>
+                                            <div class="text-center mt-4 mb-3">
+                                                <button type="submit"
+                                                    class="action_btn fc-bianco large">Accedi</button>
+                                            </div>
+                                            <div class="mt-5 text-center">
+                                                <p>Non hai un account?<a href="/register"> Registrati!</a></p>
                                             </div>
                                         </div>
                                     </form>
