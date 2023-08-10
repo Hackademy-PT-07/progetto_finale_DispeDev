@@ -32,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
             $announcements=Announcement::all();
             View::share(['announcements'=>$announcements]);
         }
+        
     }
 }
