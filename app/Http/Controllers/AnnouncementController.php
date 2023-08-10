@@ -13,7 +13,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        $announcements = Announcement::all();
+        return view('announcements.index', compact('announcements'));
     }
 
     /**
