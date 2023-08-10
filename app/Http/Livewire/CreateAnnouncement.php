@@ -39,7 +39,7 @@ class CreateAnnouncement extends Component
         
         $this->validate();
     
-        $category = Category::find($this->category_id); 
+        $category = Category::find($this->category_id); /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
         $category->announcements()->create([
             'title'=> $this->title,
             'description'=>$this->description,
