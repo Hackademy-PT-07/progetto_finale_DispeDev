@@ -22,4 +22,7 @@ Route::middleware("auth")->group(function(){
 });
 
 Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
+Route::post('annunci/categorie', [AnnouncementController::class, 'filter'])->name('annunci.categoria');
+Route::get('annunci/{announcement}/show', [AnnouncementController::class, 'show'])->name('annunci.show');
+
 

@@ -13,8 +13,21 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
+        
         $announcements = Announcement::all();
-        return view('announcements.index', compact('announcements'));
+        $totalAnnouncements = $announcements->count();
+        
+        return view('announcements.index', compact('announcements', 'totalAnnouncements'));
+    }
+
+    public function filter(Request $request)
+    {
+        
+        $category = Category::find($request->category_id);
+        
+        $announcements = $category->announcements()->get();
+
+        return view('announcements.index', compact('category','announcements'));
     }
 
     /**
@@ -39,7 +52,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        //
+        return view('announcements.show', compact('announcement'));
     }
 
     /**
