@@ -21,8 +21,8 @@
     
 
 
-    <!-- card annunci in primo piano -->
-    <x-card-announcement />
+    <!-- card annunci in primo piano  -->
+    <!-- Eliminata perchè ora generava errori in quanto non riusciva ad avvalorarsi -->
     
 
     
