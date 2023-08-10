@@ -32,10 +32,17 @@
                     <i class="bi bi-search"></i>
                     </button>
                 </div>
-
-                
             </form>
             <h1>Annunci</h1>
+            <div class="container">
+                @foreach($announcements as $announcement)
+             <x-card-announcement>
+                <x-slot:title>{{$announcement->title}}</x-slot>
+                <x-slot:price>{{$announcement->price}}</x-slot>
+                <x-slot:description>{{$announcement->description}}</x-slot>
+             </x-card-announcement>
+             @endforeach
+            </div>
 
 
         </div>
