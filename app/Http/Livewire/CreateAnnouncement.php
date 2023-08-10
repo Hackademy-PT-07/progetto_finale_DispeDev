@@ -14,7 +14,7 @@ class CreateAnnouncement extends Component
     public $category_id;
     public $title;
     public $description;
-    public $image;
+    public $url_image;
     public $price;
 
 
@@ -24,6 +24,7 @@ class CreateAnnouncement extends Component
         return [
             'title' => 'required',
             'description' => 'required',
+            'category_id' => 'required',
             'price' => 'required'
         ];
     }
@@ -31,6 +32,7 @@ class CreateAnnouncement extends Component
     protected $messages = [
         'title.required' => 'Il campo non può essere vuoto.',
         'description.required' => 'Il campo non può essere vuoto.',
+        'category_id.required' => 'Il campo non può essere vuoto',
         'price.required' => 'Il campo non può essere vuoto.',
 
     ];
@@ -44,6 +46,7 @@ class CreateAnnouncement extends Component
             'title'=> $this->title,
             'description'=>$this->description,
             'price'=>$this->price,
+            'url_image'=>$this->url_image,
             'user_id'=> auth()->user()->id,
         ]);
 
@@ -60,6 +63,8 @@ class CreateAnnouncement extends Component
         $this->title = '';
         $this->description = '';
         $this->price = '';
+        $this->category_id = '';
+        $this->url_image = '';
 
     }
 

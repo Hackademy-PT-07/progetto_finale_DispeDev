@@ -2,13 +2,13 @@
         <div class="d-flex">
             <div class="card-box">
                 <div class="card-img-box">
-                    <img class="card-img" src="https://picsum.photos/200/220" alt="">
+                    <img class="card-img" src="{{$url_image}}" alt="{{$title}}">
                 </div>
                 <div class="card-text-box">
-                    <h3>Titolo</h3>
-                    <span class="price">€ 0,00</span>
+                    <h3>{{$title}}</h3>
+                    <span class="price">€{{$price}}</span>
                 </div>
-                <p>Breve descrizione del prodotto...</p>
+                <p>{{$description}}</p>
             </div>
         </div>
     </div>

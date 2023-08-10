@@ -21,3 +21,5 @@ Route::middleware("auth")->group(function(){
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
 });
 
+Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
+
