@@ -6,7 +6,7 @@
                 </div>
                 <div class="card-text-box">
                     <h3>{{$title}}</h3>
-                    <span class="price">{{$price}}</span>
+                    <span class="price">€{{$price}}</span>
                 </div>
                 <p>{{$description}}</p>
             </div>
