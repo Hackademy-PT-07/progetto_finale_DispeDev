@@ -16,32 +16,29 @@
     </div>
 
     <div class="container categories-home">
-    <div class="row">
-        <div class="col-12 text-center">
-            <button class="categories-items item-1 categories-items mx-3">
-                    <i class="bi bi-car-front-fill"></i>
-                    <a href="">Auto</a>
-            </button>
-            <button class="categories-items item-2 categories-items mx-3">
-                    <i class="bi bi-bicycle"></i>
-                    <a href="">Moto</a>
-            </button>
-            <button class="categories-items item-3 categories-items mx-3">
-                    <i class="bi bi-water"></i>
-                    <a href="">Nautica</a>
-            </button>
-            <button class="categories-items item-4 categories-items mx-3">
-                    <i class="bi bi-cpu-fill"></i>
-                    <a href="">Elettronica</a>
-            </button>
-            <button class="categories-items item-5 categories-items mx-3">
-                    <i class="bi bi-house-heart-fill"></i>
-                    <a href="">Casalinghi</a>
-            </button>
-        </div>
-    </div>
-
-    <div class="row mt-4">
+        <div class="row">
+                <div class="col-12 text-center">
+                <button class="categories-items item-1 categories-items mx-3">
+                        <i class="bi bi-car-front-fill"></i>
+                        <a href="">Auto</a>
+                </button>
+                <button class="categories-items item-2 categories-items mx-3">
+                        <i class="bi bi-bicycle"></i>
+                        <a href="">Moto</a>
+                </button>
+                <button class="categories-items item-3 categories-items mx-3">
+                        <i class="bi bi-water"></i>
+                        <a href="">Nautica</a>
+                </button>
+                <button class="categories-items item-4 categories-items mx-3">
+                        <i class="bi bi-cpu-fill"></i>
+                        <a href="">Elettronica</a>
+                </button>
+                <button class="categories-items item-5 categories-items mx-3">
+                        <i class="bi bi-house-heart-fill"></i>
+                        <a href="">Casalinghi</a>
+                </button>
+                <div class="row mt-4">
         <div class="col-12 text-center">
             <button class="categories-items item-6 categories-items mx-3">
                     <i class="bi bi-lamp-fill"></i>
@@ -65,5 +62,10 @@
             </button>
         </div>
     </div>
-</div>
-</div>
+        
+        </div>
+
+
+
+
+    </div>

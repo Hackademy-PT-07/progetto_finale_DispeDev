@@ -6,9 +6,11 @@ use App\Models\Announcement;
 
 use App\Models\Category;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateAnnouncement extends Component
 {
+    use WithFileUploads;
     
     public $user_id;
     public $category_id;
@@ -37,16 +39,22 @@ class CreateAnnouncement extends Component
 
     ];
 
+    
+
     public function store(){
         
-        $this->validate();
+        $this->validate([
+
+            'url_image' => 'image|max:1024', // 1MB Max
+
+        ]);
     
         $category = Category::find($this->category_id); /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
         $category->announcements()->create([
             'title'=> $this->title,
             'description'=>$this->description,
             'price'=>$this->price,
-            'url_image'=>$this->url_image,
+            'url_image'=>$this->url_image->store('photos'),
             'user_id'=> auth()->user()->id,
         ]);
 
