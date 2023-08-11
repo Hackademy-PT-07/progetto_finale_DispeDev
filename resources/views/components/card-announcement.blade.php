@@ -14,7 +14,7 @@
 </div> --}} -->
 
 
-<div class="mt-5 mx-auto card card-radius mb-3" style="max-width: 600px;">
+<!-- <div class="mt-5 mx-auto card card-radius mb-3" style="max-width: 600px;">
     <div class="row g-0">
         <div class="col-md-6">
             <img src="{{ $url_image }}" class="img-fluid full-size" alt="{{ $title }}">
@@ -29,4 +29,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<p class="card-container">
+    ciao
+</p>

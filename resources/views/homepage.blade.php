@@ -8,7 +8,7 @@
         <button>
             <a href="{{route('annuncio.create')}}">Inserisci annuncio</a>
         </button>
-        @endauth  -->
+        @endauth -->
 
         <div class="search-box">
             <input type="text" placeholder="Cerca" class="px-2">
