@@ -75,7 +75,7 @@ button a {
 .search-box{
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 4%;
 }
 
 .search-box input{
@@ -89,6 +89,7 @@ button a {
 .search-box i{
     color: var(--blu);
     font-size: 24px;
+    
 }
 
 /* categories */
@@ -96,14 +97,12 @@ button a {
     display: none;
 }
 
-<<<<<<< HEAD
 .categories-box{
     width: 60%;
+}
 
-=======
 .categories-home{
     margin-top: 5%;
->>>>>>> 3c10104fff51d9307bfa6433e620c6a891062686
 }
 
 
@@ -221,7 +220,6 @@ a{
     border-radius: 20px;
 }
 
-<<<<<<< HEAD
 /* categorie */
     .categories-box{
         width: 90%;
@@ -283,8 +281,6 @@ a{
     .small  {
         width: 75%;
     }
-=======
->>>>>>> 3c10104fff51d9307bfa6433e620c6a891062686
 }
 
 @media(max-width:768px){

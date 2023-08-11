@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-{{-- <div class="container my-5">
+<!-- {{-- <div class="container my-5">
         <div class="d-flex">
             <div class="card-box">
                 <div class="card-img-box">
@@ -12,7 +11,7 @@
                 <p>{{$description}}</p>
             </div>
         </div>
-</div> --}}
+</div> --}} -->
 
 
 <div class="mt-5 mx-auto card card-radius mb-3" style="max-width: 600px;">
@@ -23,7 +22,7 @@
         <div class="col-md-6">
             <div class="card-body">
                 <h5 class="card-title fw-bold">{{ $title }}</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Category</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">{{$category}}</h6>
                 <p class="card-text">{{ $description }}</p>
                 <span class="price">€{{ $price }}</span>
                 <p class="card-text card-posted"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
@@ -31,5 +30,3 @@
         </div>
     </div>
 </div>
-=======
->>>>>>> 3c10104fff51d9307bfa6433e620c6a891062686
