@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Http\Request;

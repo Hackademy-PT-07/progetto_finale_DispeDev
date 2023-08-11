@@ -15,7 +15,9 @@
             <a href=""><i class="bi bi-search"></i></a>
         </div>
     </div>
-
+    @foreach($announcements as $announcement)
+    <img src="{{ Storage::url($announcement->url_image)}}" alt="">
+    @endforeach
     <!-- categories box -->
     <x-categories />
     

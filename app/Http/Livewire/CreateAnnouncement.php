@@ -7,6 +7,7 @@ use App\Models\Announcement;
 use App\Models\Category;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Storage;
 
 class CreateAnnouncement extends Component
 {
