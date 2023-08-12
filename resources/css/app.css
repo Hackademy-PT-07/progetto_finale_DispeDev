@@ -93,7 +93,7 @@ button a {
 }
 
 /* categories */
-.select-categories{
+/* .select-categories{
     display: none;
 }
 
@@ -105,13 +105,57 @@ button a {
     margin-top: 5%;
 }
 
-
+*/
 .categories-items{
     width: 180px;
     height: 90px;
     border-radius: 15px;
     padding: 0;
 }
+
+.item-1{
+    background-color: rgb(228, 118, 120);
+    border: 2px dashed rgb(228, 118, 120);
+    }
+.item-1:hover{
+        transition: .4s;
+        border: 2px dashed rgb(228, 118, 120);
+        background-color: #fff;
+        color: rgb(228, 118, 120);
+    }
+.item-2{
+    background-color: rgb(214, 187, 124);
+    border: 2px dashed rgb(214, 187, 124);
+    }
+.item-2:hover{
+        transition: .4s;
+        border: 2px dashed rgb(214, 187, 124);
+        background-color: #fff;
+        color: rgb(214, 187, 124);
+    }
+.item-3{
+    background-color: rgb(170, 145, 223);
+    border: 2px dashed rgb(170, 145, 223);
+    }
+.item-3:hover{
+        transition: .4s;
+        border: 2px dashed rgb(170, 145, 223);
+        background-color: #fff;
+        color: rgb(170, 145, 223);
+    }
+.item-4{
+    background-color: rgb(131, 205, 196);
+    border: 2px dashed rgb(131, 205, 196);
+    }
+.item-4:hover{
+        transition: .4s;
+        border: 2px dashed rgb(131, 205, 196);
+        background-color: #fff;
+        color: rgb(131, 205, 196);
+    }
+    
+   
+   
 
 /* Section Cards */
 
@@ -158,52 +202,10 @@ button a {
 
 /* End Section Login */
 
-.item-1{
-    background-color: rgb(145, 158, 223);
-}
-.item-2{
-    background-color: rgb(230, 205, 146);
-}
-.item-3{
-    background-color: rgb(170, 145, 223);
-}
-.item-4{
-    background-color: rgb(145, 223, 214);
-}
-.item-5{
-    background-color: rgb(238, 168, 107);
-}
-.item-6{
-    background-color: rgb(123, 184, 114);
-}
-.item-7{
-    background-color: rgb(80, 97, 222);
-}
-.item-8{
-    background-color: rgb(178, 223, 145);
-}
-.item-9{
-    background-color: rgb(223, 145, 191);
-}
-.item-10{
-    background-color: rgb(145, 196, 223);
-}
-
-.categories-items a{
-    color: var(--panna);
-    font-size: 16px;
-}
-
-.categories-items i{
-    font-size: 16px;
-    margin-right: 5px;
-    margin-left: 5px;
-}
 
 
-a{
-    text-decoration: none;
-}
+
+
 
 
 
