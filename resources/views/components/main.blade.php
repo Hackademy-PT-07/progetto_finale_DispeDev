@@ -18,7 +18,7 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-body-panna">
-    <header>
+    <header class="mb-auto">
         <x-navbar />
     </header>
 

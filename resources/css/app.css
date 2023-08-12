@@ -24,6 +24,10 @@ html {
     background-color: var(--arancio);
 }
 
+.bg-shadow  {
+    box-shadow: -1px 0px 31px 6px rgba(227,100,20,0.6);
+}
+
 .bg-body-panna  {
     background-color: var(--panna);
 }
@@ -35,6 +39,7 @@ html {
 .fc-bianco  {
     color: var(--bianco);
 }
+
 
 .clr-text-blu{
     color: var(--blu);
@@ -68,6 +73,16 @@ button a {
     --bs-dropdown-min-width: 5rem;
 }
 
+.img-logo   {
+    width: 150px;
+    height: auto;
+}
+
+.img-logo-register  {
+    width: 220px;
+    height: auto;
+}
+
 
 /* homepage */
 
@@ -89,7 +104,7 @@ button a {
 .search-box i{
     color: var(--blu);
     font-size: 24px;
-    
+
 }
 
 /* categories */
@@ -133,8 +148,13 @@ button a {
 
 .section-split input[type=text],
 .section-split input[type=email],
+.section-split input[type=number],
+.section-split input[type=file],
+.section-split select,
+.section-split textarea,
 .section-split input[type=password] {
    display: block;
+   text-align: center;
    width: 100%;
    height: 40px;
    border: 0;
@@ -144,16 +164,34 @@ button a {
    margin-top: 10px;
 }
 
-.section-split input[type=password] {
-    margin-bottom: 15px;
-}
-
 .large  {
     padding: 15px 50px;
 }
 
 .fz-large   {
     font-size: 70px;
+}
+
+.card-registration,
+.card-create,
+.card-announcements  {
+    width: auto;
+    height: auto;
+    padding: 0 40px;
+    border-radius: 25px 75px 25px 75px;
+    background-color: var(--panna);
+    box-shadow: 11px 11px 31px -7px rgba(71,71,71,1);
+    border-left: 2px solid var(--arancio);
+}
+
+.card-create  {
+    border-radius: 25px 0 0 25px;
+}
+
+.card-announcements {
+    border-radius: 0 75px 75px 0;
+    border-left: none;
+    border-right: 2px solid var(--arancio);
 }
 
 /* End Section Login */
@@ -262,68 +300,7 @@ a{
     margin-left: 1.2rem;
 } */
 
-@media (max-width:576px) {
-/* barra di ricerca */
-.search-box{
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-}
-
-.search-box input{
-    width: 80%;
-    margin: 0px 15px;
-    border-color: rgba(103, 103, 103, 0.4);
-    border-radius: 20px;
-}
-
-/* categorie */
-    .categories-box{
-        width: 90%;
-        padding-top:10px;
-
-    }
-    .categories-items{
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        margin-right: 20px;
-
-
-    }
-    .categories-items a{
-        color: var(--blu);
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 10px;
-
-    }
-    .categories-items i{
-        color: var(--blu);
-        font-size: 24px;
-        margin-right: 5px;
-        margin-left: 5px;
-        margin-top: 30px;
-    }
-
-    .categories-box:last-child{
-        margin-right: 2px;
-
-    }
-
-    .mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mobile .fz-large   {
-        font-size: 50px;
-    }
+@media(max-width:768px){
 
     .section-split input[type=text],
     .section-split input[type=email],
@@ -331,27 +308,6 @@ a{
         width: 100%;
     }
 
-    input::placeholder  {
-        font-size: 10px;
-    }
-
-    .small  {
-        width: 75%;
-    }
-
-
-    /* card */
-    
-    .card-container{
-        width: 100%;
-        background-color: red;
-        border: 1px #353535;
-    }
-    
-}
-
-
-@media(max-width:768px){
     .categories-home{
         display: none;
     }
@@ -372,5 +328,99 @@ a{
         padding: 5px;
     }
 
-    
+    .img-register   {
+        display: none;
+    }
+
 }
+
+@media (max-width:576px) {
+    /* barra di ricerca */
+    .search-box{
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .search-box input{
+        width: 80%;
+        margin: 0px 15px;
+        border-color: rgba(103, 103, 103, 0.4);
+        border-radius: 20px;
+    }
+
+    /* categorie */
+        .categories-box{
+            width: 90%;
+            padding-top:10px;
+
+        }
+        .categories-items{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            margin-right: 20px;
+
+
+        }
+        .categories-items a{
+            color: var(--blu);
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 10px;
+
+        }
+        .categories-items i{
+            color: var(--blu);
+            font-size: 24px;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-top: 30px;
+        }
+
+        .categories-box:last-child{
+            margin-right: 2px;
+
+        }
+
+        .mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mobile .fz-large   {
+            font-size: 50px;
+        }
+
+        .section-split input[type=text],
+        .section-split input[type=email],
+        .section-split input[type=password] {
+            width: 100%;
+        }
+
+        input::placeholder  {
+            font-size: 10px;
+        }
+
+        /* card */
+
+        .card-container{
+            width: 100%;
+            background-color: red;
+            border: 1px #353535;
+        }
+
+        .img-register   {
+            display: none;
+        }
+
+        .card-registration  {
+            margin-left: -25px;
+        }
+
+    }

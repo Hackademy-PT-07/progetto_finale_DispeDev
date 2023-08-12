@@ -4,11 +4,11 @@
         </x-slot>
 
         <div class="container">
-            <h1>Inserisci il tuo annuncio</h1>
+            {{-- <h1>Inserisci il tuo annuncio</h1> --}}
 
             <x-success />
 
-            <livewire:create-announcement/>
+            <livewire:create-announcement />
 
         </div>
 
