@@ -1,7 +1,7 @@
     <div class="container">
         <div class="row">
             <x-success />
-            <div class="card-create col-6">
+            <div class="card-create col-4">
                 <div class="mt-4">
                     <h2 class="fw-medium clr-text-blu">Inserisci il tuo annuncio</h2>
                 </div>
@@ -57,9 +57,25 @@
                 </form>
             </div>
 
-            <div class="col-6 ms-4 card-announcements">
-
+            <div class="col-8 ms-4 card-announcements">
+                <div class="card bg-body-panna my-4" style="width: 45rem;">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="text-body-tertiary mb-0">categoria</h6>
+                        <span class="text-body-tertiary">data publicazione</span>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <div class="text-container">
+                            <h5 class="card-title">TITOLO ANNUNCIO</h5>
+                            <p class="card-text small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                                excepturi, fuga maiores autem id recusandae quos repellendus natus, ullam, ea eaque
+                                delectus. Dolores aut id consectetur quis, accusantium aperiam? Ea!</p>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn btn-warning mb-2">Modifica</button>
+                            <button class="btn btn-danger">Cancella</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </div>

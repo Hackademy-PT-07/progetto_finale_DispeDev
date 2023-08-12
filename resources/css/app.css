@@ -168,9 +168,9 @@ button a {
         background-color: #fff;
         color: rgb(131, 205, 196);
     }
-    
-   
-   
+
+
+
 
 /* Section Cards */
 
@@ -223,7 +223,7 @@ button a {
     height: auto;
     padding: 0 40px;
     border-radius: 25px 75px 25px 75px;
-    background-color: var(--panna);
+    background-color: var(--bianco);
     box-shadow: 11px 11px 31px -7px rgba(71,71,71,1);
     border-left: 2px solid var(--arancio);
 }
@@ -233,9 +233,19 @@ button a {
 }
 
 .card-announcements {
-    border-radius: 0 75px 75px 0;
+    border-radius: 0 25px 25px 0;
     border-left: none;
     border-right: 2px solid var(--arancio);
+}
+
+.text-body-tertiary {
+    font-size: 14px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
 }
 
 /* End Section Login */
