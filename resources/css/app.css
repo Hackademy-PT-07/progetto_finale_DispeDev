@@ -17,7 +17,7 @@ html {
     --blu: #0F4C5C;
     --panna: #FCF6EB;
     --azzuro: #048BA8;
-    --bianco: #FFFCF7;
+    --bianco: #ffffff;
 }
 
 .bg-body-arancio    {
@@ -25,7 +25,7 @@ html {
 }
 
 .bg-shadow  {
-    box-shadow: -1px 0px 31px 6px rgba(227,100,20,0.6);
+    box-shadow: 0px 0px 30px 0px rgb(172, 172, 172);
 }
 
 .bg-body-panna  {
@@ -88,23 +88,42 @@ button a {
 
 /* search bar */
 .search-box{
+    display:flex;
+    justify-content:space-around;
+    width: 750px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 140px;
+    background-color: var(--bianco);
+    border-radius: 15px ;
+    box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
+    
+    
+    
+}
+
+.search-box form{
     display: flex;
-    justify-content: center;
-    margin-top: 4%;
+    align-items:center;
+    justify-content:space-around;
+
 }
 
-.search-box input{
-    width: 50%;
-    margin: 0px 15px;
-    border-color: #676767;
-    border-radius: 20px;
+.search-input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
+.search-input input, select{
+    border: 1px solid #353535;
+    border-radius: 5px ;
+}
 
-.search-box i{
-    color: var(--blu);
-    font-size: 24px;
-
+.search-button{
+    padding: 10px 20px ;
 }
 
 /* categories */

@@ -4,18 +4,8 @@
 
     <!-- searchbar -->
     <div class="container">
-        <!-- @auth
-        <button>
-            <a href="{{route('annuncio.create')}}">Inserisci annuncio</a>
-        </button>
-        @endauth -->
-
-        <div class="search-box">
-            <input type="text" placeholder="Cerca" class="px-2">
-            <a href=""><i class="bi bi-search"></i></a>
-        </div>
-    </div>
-    @foreach($announcements as $announcement)
+        <x-search_bar />
+        @foreach($announcements as $announcement)
     <img src="{{ Storage::url($announcement->url_image)}}" alt="">
     @endforeach
     <!-- categories box -->
@@ -34,6 +24,8 @@
     </x-card-announcement>
     @endforeach
 
+    </div>
+    
 
 
     

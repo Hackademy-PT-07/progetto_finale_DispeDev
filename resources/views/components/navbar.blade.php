@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-arancio bg-shadow">
+<nav class="navbar navbar-expand-lg bg-body-arancio bg-shadow fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand fc-bianco fs-2 fw-bold" href="/">
             <img class="img-logo" src="{{ asset('img/logo-presto-bianco.png') }}" alt="">
