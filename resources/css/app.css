@@ -98,9 +98,9 @@ button a {
     background-color: var(--bianco);
     border-radius: 15px ;
     box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-    
-    
-    
+
+
+
 }
 
 .search-box form{
@@ -255,6 +255,8 @@ button a {
     border-radius: 0 25px 25px 0;
     border-left: none;
     border-right: 2px solid var(--arancio);
+    width: 49.5rem;
+    margin-left: 2rem;
 }
 
 .text-body-tertiary {
@@ -267,6 +269,13 @@ button a {
     margin-bottom: 0px;
 }
 
+.btn-container  {
+    margin-left: 25px;
+}
+
+.bottom  {
+    margin-bottom: 10px;
+}
 /* End Section Login */
 
 
@@ -331,6 +340,32 @@ button a {
     margin-left: 1.2rem;
 } */
 
+@media(min-width: 768px) and (max-width: 1400px)   {
+    .card-create    {
+        width: 100vw;
+        margin-top: 10rem;
+        border-radius: 25px;
+    }
+
+    .card-announcements {
+        width: 100vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        border-radius: 25px;
+    }
+
+    .btn-container  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom  {
+        margin-bottom: 10px;
+    }
+}
+
 @media(max-width:768px){
 
     .section-split input[type=text],
@@ -361,6 +396,38 @@ button a {
 
     .img-register   {
         display: none;
+    }
+
+    .card-body   {
+        display: flex;
+        justify-content: center;
+        align-items: space-evenly;
+    }
+
+    .card-create    {
+        width: 100vw;
+        margin-top: 10rem;
+        border-radius: 25px;
+    }
+
+    .card-announcements {
+        width: 100vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        border-radius: 25px;
+    }
+
+    .btn-container  {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom  {
+        margin-bottom: 10px;
     }
 
 }
@@ -452,6 +519,45 @@ button a {
 
         .card-registration  {
             margin-left: -25px;
+        }
+
+        .card-create    {
+            width: 100vw;
+            margin-top: 10rem;
+            border-radius: 25px;
+        }
+
+        .card-announcements {
+            width: 100vw;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 0;
+            border-radius: 25px;
+        }
+
+        .card-body   {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: space-evenly;
+        }
+
+        .card-header h5,
+        .card-header p    {
+            font-size: 10px;
+        }
+
+        .btn-container  {
+            margin-top: 20px;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom  {
+            margin-bottom: 10px;
         }
 
     }

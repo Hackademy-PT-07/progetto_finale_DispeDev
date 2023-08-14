@@ -1,5 +1,5 @@
     <div class="container">
-        <div class="row">
+        <div class="row d-flex">
             <x-success />
             <div class="card-create col-4">
                 <div class="mt-4">
@@ -57,11 +57,11 @@
                 </form>
             </div>
 
-            <div class="col-8 ms-4 card-announcements">
-                <div class="card bg-body-panna my-4" style="width: 45rem;">
+            <div class="card-announcements col-8">
+                <div class="card bg-body-panna my-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h6 class="text-body-tertiary mb-0">categoria</h6>
-                        <span class="text-body-tertiary">data publicazione</span>
+                        <span class="text-body-tertiary">12/05/20</span>
                     </div>
                     <div class="card-body d-flex justify-content-between">
                         <div class="text-container">
@@ -71,7 +71,7 @@
                                 delectus. Dolores aut id consectetur quis, accusantium aperiam? Ea!</p>
                         </div>
                         <div class="btn-container">
-                            <button class="btn btn-warning mb-2">Modifica</button>
+                            <button class="btn btn-warning bottom">Modifica</button>
                             <button class="btn btn-danger">Cancella</button>
                         </div>
                     </div>
