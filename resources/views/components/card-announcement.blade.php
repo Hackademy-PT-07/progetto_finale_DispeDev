@@ -30,8 +30,3 @@
         </div>
     </div>
 </div>
-
-
-{{-- <p class="card-container">
-    ciao
-</p> --}}
