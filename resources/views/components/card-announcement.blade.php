@@ -34,13 +34,16 @@
 
 <div class="card-announcement">
         <div class="card-img-box">
-            <img class="card-announcement-img" src="https://picsum.photos/200/220" alt="">
+            <img class="card-announcement-img" src="{{ $url_image }}" alt="{{ $title }}">
         </div>
         <div class="card-announcement-text-box">
-            <h3>Titolo</h3>
-            <span>€ 0,00</span>
-            <p>Breve descrizione del prodotto... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem laboriosam itaque beatae sit, labore odit sunt optio fuga corrupti officia, sint laudantium iste at eius, provident cumque ratione molestiae animi.</p>
-            <a href="" class="category-a">Categoria</a>
+            <h3>{{ $title }}</h3>
+            <span>€{{ $price }}</span>
+            <p>{{ $description }}</p>
+            <div class="d-flex justify-content-end mt-4">
+                <a href="" class="category-a">{{ $category }}</a>
+                <p class="last-update">Last updated 3 mins ago</p>
+            </div>
         </div>
         
 

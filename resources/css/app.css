@@ -214,6 +214,7 @@ button a {
 .card-announcement-text-box{
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
     margin-top: 10px;
@@ -237,12 +238,15 @@ button a {
     font-size: 14px;
     margin-bottom: 5%;
 }
-
-.card-announcement p{
+.card-announcement-text-box .last-update{
+    font-size: 12px;
+}
+.card-announcement-text-box p{
     font-size: 16PX;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 
 
 /* End Section Cards */
