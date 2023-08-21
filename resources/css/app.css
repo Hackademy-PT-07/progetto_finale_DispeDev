@@ -313,6 +313,7 @@ button a {
 
     /* categorie */
     .categories-box{
+<<<<<<< HEAD
             width: 90%;
             padding-top:10px;
 
@@ -329,6 +330,23 @@ button a {
 
     }
     .categories-items a{
+=======
+         width: 90%;
+        padding-top:10px;
+
+    }
+    .categories-items{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
+        .categories-items a{
+>>>>>>> 400d9e9d71e46ab7e38cf2c1202c383015d77cc3
             color: var(--blu);
             font-size: 14px;
             font-weight: 700;
@@ -394,6 +412,7 @@ button a {
     .card-announcement-img{
             width: 330px;
             height: auto;
+<<<<<<< HEAD
     }
 
     .card-container{
@@ -448,5 +467,8 @@ button a {
     .bottom  {
         margin-bottom: 10px;
     }
+=======
+        }
+>>>>>>> 400d9e9d71e46ab7e38cf2c1202c383015d77cc3
 
 }
