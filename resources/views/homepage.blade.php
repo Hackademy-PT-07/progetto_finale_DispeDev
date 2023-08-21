@@ -11,7 +11,39 @@
     <!-- categories box -->
     <x-categories />
     
-    
+
+    <div class="buy-sell">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-4 box-buy-sell me-4">
+            <div>
+              <h2>Scegli presto.it</h2>
+            </div>
+            <div>
+              <span>Compra e vendi in piena libertà.</span>
+            </div>
+          </div>
+  
+          <div class="col-4 box-buy-sell mx-2 text-center">
+            <div>
+              <img class="img-fluid" src="{{ asset('img/vendi_gratis.png') }}" alt="Vendi gratis">
+            </div>
+            <div>
+              <button>Vendi gratis</button>
+            </div>
+          </div>
+  
+          <div class="col-4 box-buy-sell ms-4 text-center">
+            <div>
+              <img class="img-fluid" src="{{ asset('img/compra_online.png') }}" alt="Compra onlin">
+            </div>
+            <div>
+              <button>Compra online</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
 
     <!-- card annunci in primo piano -->
     @foreach($announcements as $announcement)
