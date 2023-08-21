@@ -36,14 +36,14 @@
 .social-container ul li a,
 .app-container ul li a {
     text-decoration: none;
-    color: #ccc;
+    color: var(--grigio);
     font-size: 15px;
 }
 
 .help-container ul li i,
 .social-container ul li i,
 .app-container ul li i  {
-    color: #ccc;
+    color: var(--grigio);
     padding-right: 6px;
 }
 

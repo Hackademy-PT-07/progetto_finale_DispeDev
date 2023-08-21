@@ -25,6 +25,17 @@ html {
     --panna: #FCF6EB;
     --azzuro: #048BA8;
     --bianco: #ffffff;
+    --salmone: #e47678;
+    --bronzo: #d6bb7c;
+    --viola: #aa91df;
+    --acquamarina: #83cdc4;
+    --grigio: #ccc;
+
+    --shadow: #acacac;
+    --dark-shadow: #474747;
+
+    --black-border: #353535;
+    --gray-border: #676767;
 }
 
 .bg-body-arancio    {
@@ -32,7 +43,7 @@ html {
 }
 
 .bg-shadow  {
-    box-shadow: 0px 0px 30px 0px rgb(172, 172, 172);
+    box-shadow: 0px 0px 30px 0px var(--shadow);
 }
 
 .bg-body-panna  {
@@ -73,7 +84,7 @@ a{
 
 /* button */
 button{
-    color: white;
+    color: var(--bianco);
     background-color: var(--azzuro);
     border-radius: 7px;
     padding: 0.5% 3% 0.5% 3%;
@@ -81,7 +92,7 @@ button{
 }
 
 button a {
-    color: white;
+    color: var(--bianco);
 }
 
 @media(min-width: 768px) and (max-width: 1400px)   {
@@ -127,7 +138,7 @@ button a {
         margin-top: 90px;
         background-color: var(--bianco);
         border-radius: 15px ;
-        box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
+        box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
     .search-box form{
@@ -153,7 +164,7 @@ button a {
     }
 
     .search-input input{
-        border: 1px solid #353535;
+        border: 1px solid var(--black-border);
         border-radius: 30px;
         height:36px;
     }
@@ -211,7 +222,7 @@ button a {
         width: 292px;
         height: 36px;
         margin-left: 37px;
-        border-color: #676767;
+        border-color: var(--gray-border);
         border-radius: 20px;
         padding: 5px;
     }
@@ -257,6 +268,12 @@ button a {
         margin-bottom: 0.25rem;
     }
 
+    .footer-content-container   {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
 }
 
 @media (max-width:576px) {
@@ -270,7 +287,7 @@ button a {
         margin-top: 90px;
         background-color: var(--bianco);
         border-radius: 15px ;
-        box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
+        box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
     .search-box form{
@@ -293,7 +310,7 @@ button a {
     }
 
     .search-input input{
-        border: 1px solid #353535;
+        border: 1px solid var(--black-border);
         border-radius: 30px;
         height:36px;
         margin:5px 0px 5px 0px;
@@ -313,24 +330,6 @@ button a {
 
     /* categorie */
     .categories-box{
-<<<<<<< HEAD
-            width: 90%;
-            padding-top:10px;
-
-    }
-    .categories-items{
-            display:flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-            margin-right: 20px;
-
-    }
-    .categories-items a{
-=======
          width: 90%;
         padding-top:10px;
 
@@ -346,7 +345,6 @@ button a {
         margin-right: 20px;
     }
         .categories-items a{
->>>>>>> 400d9e9d71e46ab7e38cf2c1202c383015d77cc3
             color: var(--blu);
             font-size: 14px;
             font-weight: 700;
@@ -412,63 +410,5 @@ button a {
     .card-announcement-img{
             width: 330px;
             height: auto;
-<<<<<<< HEAD
-    }
-
-    .card-container{
-        width: 100%;
-        background-color: red;
-        border: 1px #353535;
-    }
-
-    .img-register   {
-        display: none;
-    }
-
-    .card-registration  {
-        margin-left: -25px;
-    }
-
-    .card-create    {
-        width: 100vw;
-        margin-top: 10rem;
-        border-radius: 25px;
-    }
-
-    .card-announcements {
-        width: 100vw;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 0;
-        border-radius: 25px;
-    }
-
-    .card-body   {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: space-evenly;
-    }
-
-    .card-header h5,
-    .card-header p    {
-        font-size: 10px;
-    }
-
-    .btn-container  {
-        margin-top: 20px;
-        margin-left: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .bottom  {
-        margin-bottom: 10px;
-    }
-=======
         }
->>>>>>> 400d9e9d71e46ab7e38cf2c1202c383015d77cc3
-
 }
