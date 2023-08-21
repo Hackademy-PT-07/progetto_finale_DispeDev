@@ -13,9 +13,10 @@
                     <!-- <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="{{ route('homepage') }}">Home</a>
                 </li> -->
-                    <div class="row mx-4">
-                        <button>
-                            <a href="{{ route('annuncio.create') }}">Inserisci annuncio</a>
+                    <div class="row mx-3">
+                        <button class="btn-add">
+                            <a href="{{ route('annuncio.create') }}"><i class="bi bi-plus-square pe-2"></i>Inserisci
+                                annuncio</a>
                         </button>
                     </div>
                     <li class="nav-item dropdown">

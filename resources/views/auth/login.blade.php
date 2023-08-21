@@ -2,9 +2,9 @@
     <x-slot:mainTitle>
         Homepage
         </x-slot>
-        <div class="container h-100 mt-5">
-            <div class="row h-100 ">
-                <div class="col-xl-6 col-lg-8 col-md-12mx-auto">
+        <div class="container m-top">
+            <div class="row">
+                <div class="col-xl-6 col-lg-8 col-md-12 mx-auto">
                     <img class="img-fluid img-register" src="{{ asset('img/login.png') }}" alt="">
                 </div>
                 <div class="ccol-xl-6 col-lg-4 col-md-6 col-sm-12 my-5 mx-auto text-center card-registration">

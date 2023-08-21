@@ -2,7 +2,7 @@
     <x-slot:mainTitle>
         Registrati
         </x-slot>
-        <div class="container">
+        <div class="container m-top">
             <div class="row justify-content-center align-items-center mobile">
                 <div class="col-xl-6 col-lg-8 col-md-12 me-4">
                     <img class="img-fluid img-register" src="{{ asset('img/registration.png') }}" alt="">

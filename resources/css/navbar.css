@@ -1,0 +1,22 @@
+.dropdown-menu{
+    --bs-dropdown-min-width: 5rem;
+}
+
+.img-logo   {
+    width: 150px;
+    height: auto;
+}
+
+.img-logo-register  {
+    width: 220px;
+    height: auto;
+}
+
+.btn-add{
+    border: 1px solid var(--azzuro);
+    border-radius: 10px;
+}
+.btn-add:hover{
+        transition: .2s;
+        border: 1px solid var(--bianco);
+}

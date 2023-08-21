@@ -1,5 +1,8 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+@import 'navbar.css';
+@import 'login.css';
+@import 'footer.css';
 
 *{
     margin: 0;
@@ -47,6 +50,15 @@ html {
 
 a{
     text-decoration: none;
+}
+
+.m-top  {
+    margin-top: 4.5rem;
+}
+
+.mt-announce    {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -191,6 +203,7 @@ button a {
 
 
 
+
 /* Section Cards */
 
 
@@ -209,79 +222,11 @@ button a {
 
 /* Section Login */
 
-.section-split input[type=text],
-.section-split input[type=email],
-.section-split input[type=number],
-.section-split input[type=file],
-.section-split select,
-.section-split textarea,
-.section-split input[type=password] {
-   display: block;
-   text-align: center;
-   width: 100%;
-   height: 40px;
-   border: 0;
-   background: transparent;
-   border-bottom: 1px solid #ccc;
-   outline: 0;
-   margin-top: 10px;
-}
-
-.large  {
-    padding: 15px 50px;
-}
-
-.fz-large   {
-    font-size: 70px;
-}
-
-.card-registration,
-.card-create,
-.card-announcements  {
-    width: auto;
-    height: auto;
-    padding: 0 40px;
-    border-radius: 25px 75px 25px 75px;
-    background-color: var(--bianco);
-    box-shadow: 11px 11px 31px -7px rgba(71,71,71,1);
-    border-left: 2px solid var(--arancio);
-}
-
-.card-create  {
-    border-radius: 25px 0 0 25px;
-}
-
-.card-announcements {
-    border-radius: 0 25px 25px 0;
-    border-left: none;
-    border-right: 2px solid var(--arancio);
-    width: 49.5rem;
-    margin-left: 2rem;
-}
-
-.text-body-tertiary {
-    font-size: 14px;
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
-
-.btn-container  {
-    margin-left: 25px;
-}
-
-.bottom  {
-    margin-bottom: 10px;
-}
 /* End Section Login */
 
+/* Start Footer */
 
-
-
-
+/* End Footer */
 
 
 
@@ -364,6 +309,11 @@ button a {
     .bottom  {
         margin-bottom: 10px;
     }
+
+    .mt-announce    {
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+    }
 }
 
 @media(max-width:768px){
@@ -428,6 +378,11 @@ button a {
 
     .bottom  {
         margin-bottom: 10px;
+    }
+
+    .mt-announce    {
+        margin-top: 0;
+        margin-bottom: 0.25rem;
     }
 
 }
@@ -551,13 +506,24 @@ button a {
             margin-top: 20px;
             margin-left: 0;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-around;
             align-items: center;
         }
 
         .bottom  {
-            margin-bottom: 10px;
+            margin-bottom: 0px;
+        }
+
+        .mt-announce    {
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-content-container   {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
     }
