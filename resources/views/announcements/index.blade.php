@@ -38,27 +38,15 @@
             <p>{{$announcements->count()}} Annunci trovati</p>
             <div class="container">
             @foreach($announcements as $announcement)
-                <div class="container my-5">
-                    <div class="d-flex">
-                        <a href="{{route('annunci.show', $announcement)}}">
-                            <div class="card-box">
-                                <div class="card-img-box">
-                                    <img class="card-img" src="{{$announcement->url_image}}" alt="{{$announcement->title}}">
-                                </div>
-                                <div class="card-text-box">
-                                    <h3>{{$announcement->title}}</h3>
-                                    <span class="price">€{{$announcement->price}}</span>
-                                </div>
-                                <p>{{$announcement->description}}</p>
-                                <p>{{$announcement->updated_at}}</p>
-                            </div>
-                        </a>
-                    </div>
-                    @endforeach
+                <x-card-announcement>
+                    <x-slot:title>{{$announcement->title}}</x-slot>
+                    <x-slot:category>{{$announcement->category_id}}</x-slot>
+                    <x-slot:url_image>{{$announcement->url_image}}</x-slot>
+                    <x-slot:price>{{$announcement->price}}</x-slot>
+                    <x-slot:description>{{$announcement->description}}</x-slot>
+                </x-card-announcement>
+            @endforeach
                 </div>
-                
-
-
             </div>
 
 </x-main>
