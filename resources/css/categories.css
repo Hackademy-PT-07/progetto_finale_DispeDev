@@ -6,42 +6,42 @@
 }
 
 .item-1{
-    background-color: rgb(228, 118, 120);
-    border: 2px dashed rgb(228, 118, 120);
+    background-color: var(--salmone);
+    border: 2px dashed var(--salmone);
     }
 .item-1:hover{
         transition: .4s;
-        border: 2px dashed rgb(228, 118, 120);
-        background-color: #fff;
-        color: rgb(228, 118, 120);
+        border: 2px dashed var(--salmone);
+        background-color: var(--bianco);
+        color: var(--salmone);
     }
 .item-2{
-    background-color: rgb(214, 187, 124);
-    border: 2px dashed rgb(214, 187, 124);
+    background-color: var(--bronzo);
+    border: 2px dashed var(--bronzo);
     }
 .item-2:hover{
         transition: .4s;
-        border: 2px dashed rgb(214, 187, 124);
-        background-color: #fff;
-        color: rgb(214, 187, 124);
+        border: 2px dashed var(--bronzo);
+        background-color: var(--bianco);
+        color: var(--bronzo);
     }
 .item-3{
-    background-color: rgb(170, 145, 223);
-    border: 2px dashed rgb(170, 145, 223);
+    background-color: var(--viola);
+    border: 2px dashed var(--viola);
     }
 .item-3:hover{
         transition: .4s;
-        border: 2px dashed rgb(170, 145, 223);
-        background-color: #fff;
-        color: rgb(170, 145, 223);
+        border: 2px dashed var(--viola);
+        background-color: var(--bianco);
+        color: var(--viola);
     }
 .item-4{
-    background-color: rgb(131, 205, 196);
-    border: 2px dashed rgb(131, 205, 196);
+    background-color: var(--acquamarina);
+    border: 2px dashed var(--acquamarina);
     }
 .item-4:hover{
         transition: .4s;
-        border: 2px dashed rgb(131, 205, 196);
-        background-color: #fff;
-        color: rgb(131, 205, 196);
+        border: 2px dashed var(--acquamarina);
+        background-color: var(--bianco);
+        color: var(--acquamarina);
     }
