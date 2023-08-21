@@ -204,14 +204,6 @@ button a {
 /* Compra e vendi */
 
 
-<<<<<<< HEAD
-
-/* Section Cards */
-
-
-/* .card-radius   {
-    border-radius: 5px 55px 5px 5px;
-=======
 .buy-sell{
     background-color: var(--bianco);
     padding: 32px 20px;
@@ -291,7 +283,6 @@ button a {
     font-size: 16PX;
     margin-top: 20px;
     margin-bottom: 20px;
->>>>>>> 16a645f885747f3312d9f21956555b5aff3ef159
 }
 
 
@@ -301,8 +292,6 @@ button a {
 
 /* Section Login */
 
-<<<<<<< HEAD
-=======
 .section-split input[type=text],
 .section-split input[type=email],
 .section-split input[type=number],
@@ -361,7 +350,6 @@ button a {
 .bottom  {
     margin-bottom: 10px;
 }
->>>>>>> 16a645f885747f3312d9f21956555b5aff3ef159
 /* End Section Login */
 
 /* Start Footer */
@@ -792,23 +780,7 @@ button a {
         }
 
         .bottom  {
-<<<<<<< HEAD
-            margin-bottom: 0px;
-        }
-
-        .mt-announce    {
-            margin-top: 0;
-            margin-bottom: 0.25rem;
-        }
-
-        .footer-content-container   {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-=======
             margin-bottom: 10px;
         } */
->>>>>>> 16a645f885747f3312d9f21956555b5aff3ef159
 
 }
