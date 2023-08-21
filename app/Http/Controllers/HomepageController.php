@@ -15,4 +15,10 @@ class HomepageController extends Controller
 
         return view('homepage', compact('announcements'));
     }
+
+    public function filter()
+    {
+        $announcements = Announcement::find();
+        return view('announcements.index', compact('announcements'));
+    }
 }
