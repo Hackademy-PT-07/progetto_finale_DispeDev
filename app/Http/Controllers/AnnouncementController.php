@@ -54,6 +54,7 @@ class AnnouncementController extends Controller
     public function show($id)
     {
         $announcement=Announcement::find($id);
+    
         return view('announcements.show', compact('announcement'));
     }
 
