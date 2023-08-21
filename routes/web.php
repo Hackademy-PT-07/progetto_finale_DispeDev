@@ -23,11 +23,6 @@ Route::middleware("auth")->group(function(){
 
 Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
 Route::post('annunci/categorie', [AnnouncementController::class, 'filter'])->name('annunci.categoria');
-<<<<<<< HEAD
-
-Route::get('annunci/{announcement}/show', [AnnouncementController::class, 'show'])->name('annunci.show');
-=======
 Route::get('annunci/{id}/show', [AnnouncementController::class, 'show'])->name('annunci.show');
->>>>>>> cfad9092fc019bbfd1c7fce21babd9811aa66e54
 
 
