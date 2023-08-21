@@ -307,8 +307,7 @@ button a {
 }
 
 .card-registration,
-.card-create,
-.card-announcements  {
+.card-create {
     width: auto;
     height: auto;
     padding: 0 40px;
@@ -320,14 +319,6 @@ button a {
 
 .card-create  {
     border-radius: 25px 0 0 25px;
-}
-
-.card-announcements {
-    border-radius: 0 25px 25px 0;
-    border-left: none;
-    border-right: 2px solid var(--arancio);
-    width: 49.5rem;
-    margin-left: 2rem;
 }
 
 .text-body-tertiary {
@@ -503,6 +494,23 @@ button a {
         display: none;
     }
 
+    /* buy sell */
+    .buy-sell{
+        margin: 0;
+    }
+    
+    .buy-sell>div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-buy-sell{
+        border-radius: 10px;
+        padding: 0px 16px 20px;
+        width: 33%;
+        margin: 0!important;
+    }
+
     /* .select-categories{
         display: flex;
         justify-content: flex-start;
@@ -670,9 +678,38 @@ button a {
             font-size: 10px;
         }
 
-        /* card */
 
-        .card-container{
+        /* Compra e vendi */
+        .buy-sell{
+            margin: 0;
+        }
+
+        .buy-sell>div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box-buy-sell{
+            border-radius: 10px;
+            padding: 0px 16px 20px;
+            width: 90%;
+            margin: 0!important;
+        }
+
+        /* card */
+        .card-announcement{
+            flex-direction: column;
+        }
+
+        .card-announcement-img{
+            width: 330px;
+            height: auto;
+        }
+        
+
+
+
+        /* .card-container{
             width: 100%;
             background-color: red;
             border: 1px #353535;
@@ -723,6 +760,6 @@ button a {
 
         .bottom  {
             margin-bottom: 10px;
-        }
+        } */
 
 }

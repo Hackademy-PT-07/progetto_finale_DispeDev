@@ -15,7 +15,7 @@
     <div class="buy-sell">
         <div class="row justify-content-center align-items-center">
           <div class="col-4 box-buy-sell me-4">
-            <div class="text">
+            <div>
               <h2>Scegli presto.it</h2>
             </div>
             <div>
