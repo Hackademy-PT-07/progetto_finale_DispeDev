@@ -50,6 +50,7 @@
                                     <span class="price">€{{$announcement->price}}</span>
                                 </div>
                                 <p>{{$announcement->description}}</p>
+                                <p>{{$announcement->updated_at}}</p>
                             </div>
                         </a>
                     </div>
