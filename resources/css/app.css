@@ -5,6 +5,8 @@
 @import 'footer.css';
 @import 'card.css';
 @import 'buyandsell.css';
+@import 'search.css';
+@import 'categories';
 
 *{
     margin: 0;
@@ -81,126 +83,6 @@ button{
 button a {
     color: white;
 }
-
-/* navbar */
-.dropdown-menu{
-    --bs-dropdown-min-width: 5rem;
-}
-
-.img-logo   {
-    width: 150px;
-    height: auto;
-}
-
-.img-logo-register  {
-    width: 220px;
-    height: auto;
-}
-
-
-/* homepage */
-
-/* search bar */
-.search-box{
-    display:flex;
-    justify-content:space-around;
-    width: 750px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 140px;
-    background-color: var(--bianco);
-    border-radius: 15px ;
-    box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-
-
-
-}
-
-.search-box form{
-    display: flex;
-    align-items:center;
-    justify-content:space-around;
-
-}
-
-.search-input{
-    display: flex;
-    flex-direction: column;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.search-input input, select{
-    border: 1px solid #353535;
-    border-radius: 5px ;
-}
-
-.search-button{
-    padding: 10px 20px ;
-}
-
-/* categories */
-/* .select-categories{
-    display: none;
-}
-
-.categories-box{
-    width: 60%;
-}
-
-.categories-home{
-    margin-top: 5%;
-}
-
-*/
-.categories-items{
-    width: 180px;
-    height: 90px;
-    border-radius: 15px;
-    padding: 0;
-}
-
-.item-1{
-    background-color: rgb(228, 118, 120);
-    border: 2px dashed rgb(228, 118, 120);
-    }
-.item-1:hover{
-        transition: .4s;
-        border: 2px dashed rgb(228, 118, 120);
-        background-color: #fff;
-        color: rgb(228, 118, 120);
-    }
-.item-2{
-    background-color: rgb(214, 187, 124);
-    border: 2px dashed rgb(214, 187, 124);
-    }
-.item-2:hover{
-        transition: .4s;
-        border: 2px dashed rgb(214, 187, 124);
-        background-color: #fff;
-        color: rgb(214, 187, 124);
-    }
-.item-3{
-    background-color: rgb(170, 145, 223);
-    border: 2px dashed rgb(170, 145, 223);
-    }
-.item-3:hover{
-        transition: .4s;
-        border: 2px dashed rgb(170, 145, 223);
-        background-color: #fff;
-        color: rgb(170, 145, 223);
-    }
-.item-4{
-    background-color: rgb(131, 205, 196);
-    border: 2px dashed rgb(131, 205, 196);
-    }
-.item-4:hover{
-        transition: .4s;
-        border: 2px dashed rgb(131, 205, 196);
-        background-color: #fff;
-        color: rgb(131, 205, 196);
-    }
 
 @media(min-width: 768px) and (max-width: 1400px)   {
 
@@ -514,60 +396,57 @@ button a {
             height: auto;
     }
 
+    .card-container{
+        width: 100%;
+        background-color: red;
+        border: 1px #353535;
+    }
 
+    .img-register   {
+        display: none;
+    }
 
+    .card-registration  {
+        margin-left: -25px;
+    }
 
-        .card-container{
-            width: 100%;
-            background-color: red;
-            border: 1px #353535;
-        }
+    .card-create    {
+        width: 100vw;
+        margin-top: 10rem;
+        border-radius: 25px;
+    }
 
-        .img-register   {
-            display: none;
-        }
+    .card-announcements {
+        width: 100vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        border-radius: 25px;
+    }
 
-        .card-registration  {
-            margin-left: -25px;
-        }
+    .card-body   {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-evenly;
+    }
 
-        .card-create    {
-            width: 100vw;
-            margin-top: 10rem;
-            border-radius: 25px;
-        }
+    .card-header h5,
+    .card-header p    {
+        font-size: 10px;
+    }
 
-        .card-announcements {
-            width: 100vw;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 0;
-            border-radius: 25px;
-        }
+    .btn-container  {
+        margin-top: 20px;
+        margin-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-        .card-body   {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: space-evenly;
-        }
-
-        .card-header h5,
-        .card-header p    {
-            font-size: 10px;
-        }
-
-        .btn-container  {
-            margin-top: 20px;
-            margin-left: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .bottom  {
-            margin-bottom: 10px;
-        }
+    .bottom  {
+        margin-bottom: 10px;
+    }
 
 }
