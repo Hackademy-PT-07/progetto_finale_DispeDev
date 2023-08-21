@@ -7,10 +7,10 @@
             </div>
             <ul class="ps-0">
                 <li><i class="bi bi-info-circle"></i><a href="#">Assistenza</a></li>
-                <li><a href="#">Regole</a></li>
-                <li><a href="#">Sicurezza</a></li>
-                <li><a href="#">Condizioni</a></li>
-                <li><a href="#">Privacy</a></li>
+                <li><i class="bi bi-book"></i><a href="#">Regole</a></li>
+                <li><i class="bi bi-shield-check"></i><a href="#">Sicurezza</a></li>
+                <li><i class="bi bi-newspaper"></i><a href="#">Condizioni</a></li>
+                <li><i class="bi bi-shield-shaded"></i><a href="#">Privacy</a></li>
             </ul>
         </div>
 

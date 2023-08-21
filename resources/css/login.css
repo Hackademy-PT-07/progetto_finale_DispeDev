@@ -11,7 +11,7 @@
    height: 40px;
    border: 0;
    background: transparent;
-   border-bottom: 1px solid #ccc;
+   border-bottom: 1px solid var(--grigio);
    outline: 0;
    margin-top: 10px;
 }
@@ -32,7 +32,7 @@
     padding: 0 40px;
     border-radius: 25px 75px 25px 75px;
     background-color: var(--bianco);
-    box-shadow: 11px 11px 31px -7px rgba(71,71,71,1);
+    box-shadow: 11px 11px 31px -7px var(--dark-shadow);
     border-left: 2px solid var(--arancio);
 }
 

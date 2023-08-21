@@ -3,7 +3,7 @@
     height: 70%;
     background-color: var(--bianco);
     border-radius: 15px;
-    box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
+    box-shadow: 0px 10px 20px -7px var(--shadow);
     display: flex;
     flex-direction: row;
     margin: 10px auto 10px auto;
@@ -34,22 +34,25 @@
 }
 
 .card-announcement-text-box span{
-    color: red;
+    color: var(--arancio);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 20px;
 }
 .category-a{
-    color: red;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 5%;
+    color: var(--shadow);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 .card-announcement-text-box .last-update{
     font-size: 12px;
+    font-weight: 400;
+    color: var(--shadow);
 }
 .card-announcement-text-box p{
     font-size: 16PX;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
