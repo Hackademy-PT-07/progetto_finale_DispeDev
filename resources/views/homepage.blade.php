@@ -28,7 +28,8 @@
               <img class="img-fluid" src="{{ asset('img/vendi_gratis.png') }}" alt="Vendi gratis">
             </div>
             <div>
-              <button>Vendi gratis</button>
+              
+              <a href="{{route('annuncio.create')}}"><button>Vendi gratis</button></a>
             </div>
           </div>
   
@@ -37,7 +38,7 @@
               <img class="img-fluid" src="{{ asset('img/compra_online.png') }}" alt="Compra onlin">
             </div>
             <div>
-              <button>Compra online</button>
+            <a href="{{route('annunci.index')}}"><button>Compra online!</button></a>
             </div>
           </div>
         </div>
@@ -49,10 +50,11 @@
     @foreach($announcements as $announcement)
     <x-card-announcement>
                 <x-slot:title>{{$announcement->title}}</x-slot>
-                <x-slot:category>{{$announcement->category_id}}</x-slot>
+                <x-slot:category>{{$announcement->category->name}}</x-slot>
                 <x-slot:url_image>{{$announcement->url_image}}</x-slot>
                 <x-slot:price>{{$announcement->price}}</x-slot>
                 <x-slot:description>{{$announcement->description}}</x-slot>
+                <x-slot:updated>{{$announcement->updated_at->format("d/m/Y")}}</x-slot>
     </x-card-announcement>
     @endforeach
 

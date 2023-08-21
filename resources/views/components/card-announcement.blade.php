@@ -8,7 +8,7 @@
         <p>{{ $description }}</p>
         <div class="d-flex justify-content-end mt-4">
             <a href="" class="category-a">{{ $category }}</a>
-            <p class="last-update">Last updated 3 mins ago</p>
+            <p class="last-update">Ultima modifica: {{ $updated }}</p>
         </div>
     </div>
 </div>
