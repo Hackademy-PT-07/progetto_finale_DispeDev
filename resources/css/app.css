@@ -3,6 +3,10 @@
 @import 'navbar.css';
 @import 'login.css';
 @import 'footer.css';
+@import 'card.css';
+@import 'buyandsell.css';
+@import 'search.css';
+@import 'categories';
 
 *{
     margin: 0;
@@ -80,336 +84,8 @@ button a {
     color: white;
 }
 
-/* navbar */
-.dropdown-menu{
-    --bs-dropdown-min-width: 5rem;
-}
-
-.img-logo   {
-    width: 150px;
-    height: auto;
-}
-
-.img-logo-register  {
-    width: 220px;
-    height: auto;
-}
-
-
-/* homepage */
-
-/* search bar */
-.search-box{
-    display:flex;
-    justify-content:space-around;
-    width: 750px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 140px;
-    background-color: var(--bianco);
-    border-radius: 15px ;
-    box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-
-
-
-}
-
-.search-box form{
-    display: flex;
-    align-items:center;
-    justify-content:space-around;
-
-}
-
-.search-input{
-    display: flex;
-    flex-direction: column;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.search-input input, select{
-    border: 1px solid #353535;
-    border-radius: 5px ;
-}
-
-.search-button{
-    padding: 10px 20px ;
-}
-
-/* categories */
-/* .select-categories{
-    display: none;
-}
-
-.categories-box{
-    width: 60%;
-}
-
-.categories-home{
-    margin-top: 5%;
-}
-
-*/
-.categories-items{
-    width: 180px;
-    height: 90px;
-    border-radius: 15px;
-    padding: 0;
-}
-
-.item-1{
-    background-color: rgb(228, 118, 120);
-    border: 2px dashed rgb(228, 118, 120);
-    }
-.item-1:hover{
-        transition: .4s;
-        border: 2px dashed rgb(228, 118, 120);
-        background-color: #fff;
-        color: rgb(228, 118, 120);
-    }
-.item-2{
-    background-color: rgb(214, 187, 124);
-    border: 2px dashed rgb(214, 187, 124);
-    }
-.item-2:hover{
-        transition: .4s;
-        border: 2px dashed rgb(214, 187, 124);
-        background-color: #fff;
-        color: rgb(214, 187, 124);
-    }
-.item-3{
-    background-color: rgb(170, 145, 223);
-    border: 2px dashed rgb(170, 145, 223);
-    }
-.item-3:hover{
-        transition: .4s;
-        border: 2px dashed rgb(170, 145, 223);
-        background-color: #fff;
-        color: rgb(170, 145, 223);
-    }
-.item-4{
-    background-color: rgb(131, 205, 196);
-    border: 2px dashed rgb(131, 205, 196);
-    }
-.item-4:hover{
-        transition: .4s;
-        border: 2px dashed rgb(131, 205, 196);
-        background-color: #fff;
-        color: rgb(131, 205, 196);
-    }
-
-
-/* Compra e vendi */
-
-
-.buy-sell{
-    background-color: var(--bianco);
-    padding: 32px 20px;
-    border-radius: 15px;
-    margin: 20px 0px 20px 0px;
-}
-
-.box-buy-sell{
-    border-radius: 10px;
-    padding: 0px 16px 20px;
-    width: 31%;
-}
-
-.buy-sell h2{
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--blu);
-}
-
-.buy-sell span{
-    font-size: 16px;
-    color: var(--blu);
-    font-weight: 300;
-}
-
-/* Section Card annunci */
-.card-announcement{
-    width: 100%;
-    height: 70%;
-    background-color: var(--bianco);
-    border-radius: 15px;
-    box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-    display: flex;
-    flex-direction: row;
-    margin: 10px auto 10px auto;
-
-}
-
-.card-announcement-img{
-    width: auto;
-    height: 210px;
-    margin: 1rem;
-    object-fit:fill;
-}
-
-.card-announcement-text-box{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    margin-top: 10px;
-
-}
-
-.card-announcement-text-box h3{
-    font-weight: 700;
-    color: #0F4C5C;
-    font-size: 1.8rem;
-}
-
-.card-announcement-text-box span{
-    color: red;
-    font-weight: 700;
-    font-size: 14px;
-}
-.category-a{
-    color: red;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 5%;
-}
-.card-announcement-text-box .last-update{
-    font-size: 12px;
-}
-.card-announcement-text-box p{
-    font-size: 16PX;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-
-/* End Section Cards */
-
-
-/* Section Login */
-
-.section-split input[type=text],
-.section-split input[type=email],
-.section-split input[type=number],
-.section-split input[type=file],
-.section-split select,
-.section-split textarea,
-.section-split input[type=password] {
-   display: block;
-   text-align: center;
-   width: 100%;
-   height: 40px;
-   border: 0;
-   background: transparent;
-   border-bottom: 1px solid #ccc;
-   outline: 0;
-   margin-top: 10px;
-}
-
-.large  {
-    padding: 15px 50px;
-}
-
-.fz-large   {
-    font-size: 70px;
-}
-
-.card-registration,
-.card-create {
-    width: auto;
-    height: auto;
-    padding: 0 40px;
-    border-radius: 25px 75px 25px 75px;
-    background-color: var(--bianco);
-    box-shadow: 11px 11px 31px -7px rgba(71,71,71,1);
-    border-left: 2px solid var(--arancio);
-}
-
-.card-create  {
-    border-radius: 25px 0 0 25px;
-}
-
-.text-body-tertiary {
-    font-size: 14px;
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 0px;
-}
-
-.btn-container  {
-    margin-left: 25px;
-}
-
-.bottom  {
-    margin-bottom: 10px;
-}
-/* End Section Login */
-
-/* Start Footer */
-
-/* End Footer */
-
-
-
-
-
-
-
-
-/* card annunci in primo piano */
-
-
-/* .card-box{
-    box-shadow:0px 10px 13px -7px #000000;
-    background-color: var(--bianco);
-    width: 15rem;
-    height: 25rem;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.card-img{
-    border-radius: 25px;
-    padding: 1rem;
-}
-
-.card-text-box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-
-}
-
-.card-text-box h3{
-    font-weight: 700;
-    color: #0F4C5C;
-    font-size: 1.8rem;
-}
-
-.price{
-    color: red;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-.card-box p{
-    font-size: 1.2rem;
-    margin-left: 1.2rem;
-} */
-
 @media(min-width: 768px) and (max-width: 1400px)   {
-    
+
     .card-create    {
         width: 100vw;
         margin-top: 10rem;
@@ -452,19 +128,16 @@ button a {
         background-color: var(--bianco);
         border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-    
-    
-    
     }
-    
+
     .search-box form{
         display: flex;
         flex-direction: column;
         align-items:center;
         justify-content:space-around;
-    
+
     }
-    
+
     .search-input{
         display: flex;
         flex-direction: column;
@@ -478,7 +151,7 @@ button a {
         border-radius: 30px;
 
     }
-    
+
     .search-input input{
         border: 1px solid #353535;
         border-radius: 30px;
@@ -492,7 +165,7 @@ button a {
         margin-bottom: 20px;
         width: 100%;
     }
-    
+
     .search-button{
         border-radius: 30px;
         padding: 10px 20px ;
@@ -514,7 +187,7 @@ button a {
     .buy-sell{
         margin: 0;
     }
-    
+
     .buy-sell>div{
         display: flex;
         flex-direction: row;
@@ -527,21 +200,21 @@ button a {
         margin: 0!important;
     }
 
-    /* .select-categories{
+    .select-categories{
         display: flex;
         justify-content: flex-start;
         margin-top: 5%;
         margin-bottom: 5%;
-    } */
+    }
 
-    /* .select-categories select{
+    .select-categories select{
         width: 292px;
         height: 36px;
         margin-left: 37px;
         border-color: #676767;
         border-radius: 20px;
         padding: 5px;
-    } */
+    }
 
     .img-register   {
         display: none;
@@ -598,19 +271,16 @@ button a {
         background-color: var(--bianco);
         border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px rgb(182, 182, 182);
-    
-    
-    
     }
-    
+
     .search-box form{
         display: flex;
         flex-direction: column;
         align-items:center;
         justify-content:space-around;
-    
+
     }
-    
+
     .search-input{
         display: flex;
         flex-direction: column;
@@ -621,7 +291,7 @@ button a {
         margin:0;
         width: 100%;
     }
-    
+
     .search-input input{
         border: 1px solid #353535;
         border-radius: 30px;
@@ -635,7 +305,7 @@ button a {
     .select-categories{
         margin:10px 0px 10px 0px;
     }
-    
+
     .search-button{
         border-radius: 30px;
         padding: 10px 20px ;
@@ -663,64 +333,64 @@ button a {
             font-weight: 700;
             margin-top: 10px;
 
-        }
-        .categories-items i{
+    }
+    .categories-items i{
             color: var(--blu);
             font-size: 24px;
             margin-right: 5px;
             margin-left: 5px;
             margin-top: 30px;
-        }
+    }
 
-        .categories-box:last-child{
+    .categories-box:last-child{
             margin-right: 2px;
 
-        }
+    }
 
-        .mobile {
+    .mobile {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
+    }
 
-        .mobile .fz-large   {
+    .mobile .fz-large   {
             font-size: 50px;
-        }
+    }
 
-        .section-split input[type=text],
-        .section-split input[type=email],
-        .section-split input[type=password] {
+    .section-split input[type=text],
+    .section-split input[type=email],
+    .section-split input[type=password] {
             width: 100%;
-        }
+    }
 
-        input::placeholder  {
+    input::placeholder  {
             font-size: 10px;
-        }
+    }
 
 
         /* Compra e vendi */
-        .buy-sell{
+    .buy-sell{
             margin: 0;
-        }
+    }
 
-        .buy-sell>div{
+    .buy-sell>div{
             display: flex;
             flex-direction: column;
-        }
+    }
 
-        .box-buy-sell{
+    .box-buy-sell{
             border-radius: 10px;
             padding: 0px 16px 20px;
             width: 90%;
             margin: 0!important;
-        }
+    }
 
         /* card */
-        .card-announcement{
+    .card-announcement{
             flex-direction: column;
-        }
+    }
 
-        .card-announcement-img{
+    .card-announcement-img{
             width: 330px;
             height: auto;
         }
