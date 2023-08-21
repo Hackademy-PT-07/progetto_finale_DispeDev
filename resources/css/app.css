@@ -642,23 +642,21 @@ button a {
     }
 
     /* categorie */
-        .categories-box{
-            width: 90%;
-            padding-top:10px;
+    .categories-box{
+         width: 90%;
+        padding-top:10px;
 
-        }
-        .categories-items{
-            display:flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-            margin-right: 20px;
-
-
-        }
+    }
+    .categories-items{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
         .categories-items a{
             color: var(--blu);
             font-size: 14px;
@@ -726,61 +724,5 @@ button a {
             width: 330px;
             height: auto;
         }
-        
-
-
-
-        /* .card-container{
-            width: 100%;
-            background-color: red;
-            border: 1px #353535;
-        }
-
-        .img-register   {
-            display: none;
-        }
-
-        .card-registration  {
-            margin-left: -25px;
-        }
-
-        .card-create    {
-            width: 100vw;
-            margin-top: 10rem;
-            border-radius: 25px;
-        }
-
-        .card-announcements {
-            width: 100vw;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 0;
-            border-radius: 25px;
-        }
-
-        .card-body   {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: space-evenly;
-        }
-
-        .card-header h5,
-        .card-header p    {
-            font-size: 10px;
-        }
-
-        .btn-container  {
-            margin-top: 20px;
-            margin-left: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .bottom  {
-            margin-bottom: 10px;
-        } */
 
 }
