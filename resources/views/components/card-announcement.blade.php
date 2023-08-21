@@ -31,7 +31,7 @@
     </div>
 </div> -->
 
-
+<a href="{{route('annunci.show', $id)}}">
 <div class="card-announcement">
         <div class="card-img-box">
             <img class="card-announcement-img" src="{{ $url_image }}" alt="{{ $title }}">
@@ -45,6 +45,5 @@
                 <p class="last-update">Ultima modifica: {{$updated}}</p>
             </div>
         </div>
-        
-
 </div>
+</a>

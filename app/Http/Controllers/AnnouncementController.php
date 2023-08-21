@@ -51,8 +51,9 @@ class AnnouncementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Announcement $announcement)
+    public function show($id)
     {
+        $announcement=Announcement::find($id);
         return view('announcements.show', compact('announcement'));
     }
 
