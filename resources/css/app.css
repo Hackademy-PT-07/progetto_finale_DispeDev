@@ -410,5 +410,12 @@ button a {
     .card-announcement-img{
             width: 330px;
             height: auto;
-        }
+    }
+
+    .footer-content-container   {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
 }
