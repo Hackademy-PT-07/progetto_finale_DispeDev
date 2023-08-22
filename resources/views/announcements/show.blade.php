@@ -1,6 +1,6 @@
 <x-main>
     <x-slot:mainTitle>{{$announcement->title}}</x-slot>
-    <div class="container mt-announce">
+    <div class="container mt-announce show-announcement">
         <div class="row">
             <button class="btn-add back-button"><i class="bi bi-chevron-left"></i><a href="{{ route('annunci.index') }}"> indietro</a>
             </button>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-5">
-                <span class="last-update">Pubblicato il ....</span>
+                <span class="last-update">Annuncio creato il {{$announcement->created_at->format('d/m/Y')}}</span>
                 <h1 class="title-announcement">{{$announcement->title}}</h1>
                 <p class="price">€ {{$announcement->price}}</p>
                 <p>Categoria: <a href="" class="category">{{$announcement->category->name}}</a></p>
