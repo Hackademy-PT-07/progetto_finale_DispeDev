@@ -23,6 +23,7 @@ Route::middleware("auth")->group(function(){
 
 Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
 Route::post('annunci/categorie', [AnnouncementController::class, 'filter'])->name('annunci.categoria');
+Route::get('annunci/{id}', [HomepageController::class, 'filter'])->name("annunci.filter");
 Route::get('annunci/{id}/show', [AnnouncementController::class, 'show'])->name('annunci.show');
 
 
