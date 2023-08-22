@@ -1,5 +1,6 @@
 <div class="search-box">
-            <form action="">
+            <form action="{{route('annunci.categoria')}}" method="POST">
+                @csrf
                 <div class="search-input">
                     <label for="">Cosa cerchi?</label>
                     <input type="text" placeholder="Cerca">
@@ -7,18 +8,12 @@
                 <div class="search-input">
                     <label for="">In quale categoria?</label>
                     <div class="select-categories">
-                        <select name="" id="">
-                            <option value="" disabled selected>Segli una categoria</option>
-                            <option value="Auto">Auto</option>
-                            <option value="Moto">Moto</option>
-                            <option value="Nautica">Nautica</option>
-                            <option value="Elettronica">Elettronica</option>
-                            <option value="Casalinghi">Casalinghi</option>
-                            <option value="Arredamento">Arredamento</option>
-                            <option value="Giardinaggio">Giardinaggio</option>
-                            <option value="Animali">Animali</option>
-                            <option value="Immobili">Immobili</option>
-                            <option value="Lavoro">Lavoro</option>
+                        <select name="category_id" id="category_id">
+                            <option selected>Segli una categoria</option>
+                            @foreach($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                            
                         </select>
                 </div>
                 </div>
