@@ -1,0 +1,40 @@
+.back-button{
+    width:10% ;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+.img-carousel{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color:  var(--blu);
+}
+.title-announcement{
+    font-weight:700;
+    color: var(--blu);
+}
+.col-5 .last-update{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--shadow);
+}
+.col-5 .price{
+    color: var(--arancio);
+    font-weight: 700;
+    font-size: 20px;
+}
+.col-5 .category{
+    color: var(--shadow);
+    font-weight: 700;
+    font-size: 18px;
+}
+.col-5 h4{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--blu);
+}
+.col-5 hr{
+    margin-top: 5%;
+}
