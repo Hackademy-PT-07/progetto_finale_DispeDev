@@ -128,10 +128,7 @@ button a {
         margin-top: 0;
         margin-bottom: 0.25rem;
     }
-    /* show */
-    .show-announcement{
-
-    }
+    
 
 }
 
@@ -274,6 +271,40 @@ button a {
         margin: auto;
     }
 
+    /* show */
+    .show-announcement{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    }
+
+    .back-button{
+        width:20% ;
+        margin-left: 5%;
+        margin-bottom: 2%;
+        margin-top: 10%;
+    }
+
+    .img-carousel{
+        width: 80%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .announcement-desc{
+        display: flex;
+        width: 100%;
+    }
+    .desc-1{
+        width: 40%;
+        margin: 5% 5%;
+    }
+    .desc-2{
+        margin: 5% 0%;
+        width: 60%;
+    }
+
 }
 
 @media (max-width:576px) {
@@ -411,4 +442,6 @@ button a {
             width: 330px;
             height: auto;
         }
+    
+    
 }

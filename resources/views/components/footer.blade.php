@@ -35,7 +35,7 @@
             </div>
             <ul class="ps-0">
                 <li><i class="bi bi-android2"></i><a href="#">Per Android</a></li>
-                <li><i class="bi bi-apple"></i><a href="#">Per IOS</a></li>
+                <li><i class="bi bi-apple"></i><a href="#">Per iOS</a></li>
             </ul>
         </div>
     </div>

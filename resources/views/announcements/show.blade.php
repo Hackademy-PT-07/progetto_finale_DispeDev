@@ -1,11 +1,11 @@
 <x-main>
     <x-slot:mainTitle>{{$announcement->title}}</x-slot>
-    <div class="container mt-announce show-announcement">
+    <div class="container mt-announce">
         <div class="row">
             <button class="btn-add back-button"><i class="bi bi-chevron-left"></i><a href="{{ route('annunci.index') }}"> indietro</a>
             </button>
         </div>
-        <div class="row">
+        <div class="row show-announcement">
             <div class="col-7 img-carousel">
                 <!-- carousel -->
                 <div id="carouselExample" class="carousel slide bg-shadow">
@@ -30,14 +30,18 @@
                     </button>
                 </div>
             </div>
-            <div class="col-5">
-                <span class="last-update">Annuncio creato il {{$announcement->created_at->format('d/m/Y')}}</span>
-                <h1 class="title-announcement">{{$announcement->title}}</h1>
-                <p class="price">€ {{$announcement->price}}</p>
-                <p>Categoria: <a href="" class="category">{{$announcement->category->name}}</a></p>
+            <div class="col-5 announcement-desc">
+                <div class="desc-1">
+                    <span class="last-update">Annuncio creato il {{$announcement->created_at->format('d/m/Y')}}</span>
+                    <h1 class="title-announcement">{{$announcement->title}}</h1>
+                    <p class="price">€ {{$announcement->price}}</p>
+                    <p>Categoria: <a href="" class="category">{{$announcement->category->name}}</a></p>
+                </div>
                 <hr>
-                <h4>Descrizione del prodotto</h4>
-                <p>{{$announcement->description}}</p>
+                <div class="desc-2">
+                    <h4>Descrizione del prodotto</h4>
+                    <p>{{$announcement->description}}</p>
+                </div>
             </div>
         </div>
     </div>
