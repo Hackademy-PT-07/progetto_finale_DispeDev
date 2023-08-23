@@ -9,6 +9,7 @@
 @import 'workwithus.css';
 @import 'categories';
 @import 'show';
+@import 'indexannunci';
 
 *{
     margin: 0;
@@ -172,6 +173,7 @@ button a {
         margin-top: 2%;
     }
     .search-input input{
+        width: 100%;
         border: 1px solid var(--black-border);
         border-radius: 30px;
         height:36px;
@@ -186,6 +188,7 @@ button a {
     }
 
     .search-button{
+        width: 100%;
         border-radius: 30px;
         padding: 10px 20px ;
     }
@@ -358,6 +361,7 @@ button a {
     }
 
     .search-button{
+        margin-top: 2%;
         border-radius: 30px;
         padding: 10px 20px ;
     }
