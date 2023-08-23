@@ -1,7 +1,7 @@
 .search-box{
     display:flex;
     justify-content:space-around;
-    width: 750px;
+    width: 100%;
     height: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -12,9 +12,12 @@
 }
 
 .search-box form{
+    width: 100%;
     display: flex;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .search-input{
@@ -30,10 +33,12 @@
 }
 
 .search-input input, select{
+    width: 200%;
     border: 1px solid var(--black-border);
     border-radius: 5px ;
 }
 
 .search-button{
+    width: 200%;
     padding: 10px 20px ;
 }
