@@ -6,7 +6,8 @@
 @import 'card.css';
 @import 'buyandsell.css';
 @import 'search.css';
-@import 'categories';
+@import 'categories.css';
+@import 'workwithus.css';
 
 *{
     margin: 0;
@@ -87,7 +88,7 @@ button{
     color: var(--bianco);
     background-color: var(--azzuro);
     border-radius: 7px;
-    padding: 0.5% 3% 0.5% 3%;
+    padding: 2% 15% 2% 15%;
     border: none;
 }
 
@@ -268,12 +269,6 @@ button a {
         margin-bottom: 0.25rem;
     }
 
-    .footer-content-container   {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-    }
-
 }
 
 @media (max-width:576px) {
@@ -410,6 +405,11 @@ button a {
     .card-announcement-img{
             width: 330px;
             height: auto;
+    }
+
+    .work-img--container    {
+        margin-right: 40px;
+        margin-top: -100px;
     }
 
     .footer-content-container   {

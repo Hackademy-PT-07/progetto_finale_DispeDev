@@ -36,14 +36,14 @@
 .social-container ul li a,
 .app-container ul li a {
     text-decoration: none;
-    color: var(--grigio);
+    color: var(--bianco);
     font-size: 15px;
 }
 
 .help-container ul li i,
 .social-container ul li i,
 .app-container ul li i  {
-    color: var(--grigio);
+    color: var(--bianco);
     padding-right: 6px;
 }
 
@@ -53,11 +53,16 @@
     margin-bottom: 15px;
 }
 
+.footer-divisor {
+    width: 100%;
+    border: 1px solid var(--bianco);
+}
+
 .footer-copy-container   {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15px;
+/*     padding-top: 15px; */
     padding-bottom: 15px;
 }
 

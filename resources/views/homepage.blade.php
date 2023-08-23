@@ -1,7 +1,6 @@
 <x-main>
     <x-slot:mainTitle> Homepage </x-slot>
 
-
         <!-- searchbar -->
         <div class="container">
             <x-search_bar />
@@ -10,8 +9,6 @@
             @endforeach
             <!-- categories box -->
             <x-categories />
-
-
             <div class="buy-sell">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-4 box-buy-sell me-4">
@@ -28,7 +25,6 @@
                             <img class="img-fluid" src="{{ asset('img/vendi_gratis.png') }}" alt="Vendi gratis">
                         </div>
                         <div>
-
                             <a href="{{ route('annuncio.create') }}"><button>Vendi gratis</button></a>
                         </div>
                     </div>
@@ -44,8 +40,6 @@
                 </div>
             </div>
 
-
-
             <!-- card annunci in primo piano -->
             @foreach ($announcements as $announcement)
                 <x-card-announcement>
@@ -59,10 +53,24 @@
                 </x-card-announcement>
             @endforeach
 
+            {{-- Card Work With us --}}
+            <div class="work-container">
+                <div class="row flex-row justify-content-evenly work-content">
+                    <div class="text-container d-flex flex-column justify-content-center">
+                        <h2 class="work-title">
+                            Diventa un Revisore Presto.it
+                        </h2>
+                        <p class="work-description mt-2">Vorresti poter collaborare con il nostro Team ?
+                            <strong> Scopri come </strong> avere un'entrata extra con noi !!
+                        </p>
+                    </div>
+
+                    <div class="work-img--container ">
+                        <img src="{{ asset('img/work-with-us.png') }}" alt="">
+                        <a href="" class="d-flex justify-content-evenly btn-revisor mb-3"><button>Diventa
+                                Revisore</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-
-
-
 </x-main>
