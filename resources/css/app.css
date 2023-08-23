@@ -7,8 +7,9 @@
 @import 'buyandsell.css';
 @import 'search.css';
 @import 'workwithus.css';
-@import 'categories';
-@import 'show';
+@import 'categories.css';
+@import 'show.css';
+@import 'revisor.css';
 
 *{
     margin: 0;
@@ -32,6 +33,7 @@ html {
     --viola: #aa91df;
     --acquamarina: #83cdc4;
     --grigio: #ccc;
+    --rosso: #ff0000;
 
     --shadow: #acacac;
     --dark-shadow: #474747;
@@ -136,7 +138,43 @@ button a {
 
 }
 
+@media(min-width:768px) and (max-width:992px)   {
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .btn-add    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .revisor-icon   {
+        display: none;
+    }
+
+    .revisor-text   {
+        display: flex;
+        align-items: center;
+    }
+
+    .revisor-text span  {
+        font-size: 12px;
+        padding-bottom: 16px;
+        margin-left: -5px;
+    }
+}
+
 @media(max-width:768px){
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .btn-add    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 
     .search-box{
         display:flex;
@@ -269,9 +307,34 @@ button a {
         margin-bottom: 0.25rem;
     }
 
+    .revisor-icon   {
+        display: none;
+    }
+
+    .revisor-text   {
+        display: flex;
+        align-items: center;
+    }
+
+    .revisor-text span  {
+        font-size: 12px;
+        padding-bottom: 16px;
+        margin-left: -5px;
+    }
+
+    .revise-title   {
+        font-size: 25px;
+    }
+
 }
 
 @media (max-width:576px) {
+
+    .btn-add    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
     /* barra di ricerca */
     .search-box{
         display:flex;
@@ -418,4 +481,41 @@ button a {
         align-items: center;
         margin: auto;
     }
+
+    .revisor-icon   {
+        display: none;
+    }
+
+    .revisor-text   {
+        display: flex;
+        align-items: center;
+    }
+
+    .revisor-text span  {
+        font-size: 12px;
+        padding-bottom: 16px;
+        margin-left: -5px;
+    }
+
+    .revise-title   {
+        text-align: center;
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .content-item   {
+        font-size: 16px;
+    }
+
+    .content-item h5    {
+        font-size: 15px;
+        text-transform: none;
+        color: var(--black-border);
+    }
+
+    .check-container form .btn  {
+        width: 100px;
+        height: 50px;
+    }
+
 }

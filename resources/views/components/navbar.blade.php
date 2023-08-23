@@ -10,44 +10,50 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav fc-bianco">
                 @if (auth()->user())
-                    <!-- <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="{{ route('homepage') }}">Home</a>
-                </li> -->
                     <div class="row mx-3">
                         <button class="btn-add">
                             <a href="{{ route('annuncio.create') }}"><i class="bi bi-plus-square pe-2"></i>Inserisci
                                 annuncio</a>
                         </button>
                     </div>
-                    @if(Auth::user()->is_revisor)
-                    <li>
-                        <a href="{{route('revisor.index')}}" aria-current ="page">Zona revisore <span>{{ App\Models\Announcement::toBeRevisionedCount() }} <span>Unread messages</span> </span></a>
-                        
-                    </li>
+
+                    @if (Auth::user()->is_revisor)
+                        <li class="nav-item revisor-icon">
+                            <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page"><i
+                                    class="bi bi-bell-fill"></i>
+                            </a>
+                            <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+                        </li>
+                        <li class="nav-item revisor-text">
+                            <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page">Àrea Revisore
+                            </a>
+                            <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+                        </li>
                     @endif
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-light" href="{{ route('annunci.index') }}">Annunci</a>
+                        <a class="nav-link nav-text" href="{{ route('annunci.index') }}">Annunci</a>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                        <a class="nav-link dropdown-toggle nav-text" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu text-light">
+                        <ul class="dropdown-menu">
                             <li class="nav-item">
                                 <form action="/logout" method="POST">
                                     @csrf
-                                    <button class="btn text-black" type="submit">Esci</button>
+                                    <button class="btn text-black nav-text" type="submit">Esci</button>
                                 </form>
 
                             </li>
                         </ul>
                     </li>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link text-light fw-3" aria-current="page" href="/login">Accedi</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fw-3 nav-text" aria-current="page" href="/login">Accedi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fw-3" aria-current="page" href="/register">Registrati</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fw-3 nav-text" aria-current="page" href="/register">Registrati</a>
                     </li>
                 @endif
             </ul>

@@ -21,7 +21,7 @@
 .social-container h6,
 .app-container h6 {
     color: var(--panna);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -37,7 +37,7 @@
 .app-container ul li a {
     text-decoration: none;
     color: var(--bianco);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .help-container ul li i,
@@ -55,7 +55,7 @@
 
 .footer-divisor {
     width: 100%;
-    border: 1px solid var(--bianco);
+    border-bottom: 1px solid var(--bianco);
 }
 
 .footer-copy-container   {

@@ -20,3 +20,34 @@
         transition: .2s;
         border: 1px solid var(--bianco);
 }
+
+.nav-text   {
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--bianco);
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 5px;
+}
+
+.nav-text:hover {
+    color: var(--bianco);
+}
+
+.revisor-icon   {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.revisor-icon span  {
+    font-size: 12px;
+    padding-bottom: 25px;
+    margin-left: -10px;
+}
+
+.revisor-text   {
+    display: none;
+}

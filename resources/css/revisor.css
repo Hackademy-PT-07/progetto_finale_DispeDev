@@ -1,0 +1,68 @@
+.revise-title--container    {
+    background-color: var(--bianco);
+    margin-top: 7rem;
+    margin-bottom: 1.5rem;
+    padding: 30px 30px;
+    border-top: 1px solid var(--arancio);
+    border-right: 1px solid var(--arancio);
+    border-radius:20px 20px 0 0;
+    box-shadow: 0px 20px 30px -2px var(--shadow);
+}
+
+.revise-title   {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--azzuro);
+    display: flex;
+    justify-content: center;
+}
+
+.revise-content--container   {
+    background-color: var(--bianco);
+    margin-bottom: 3rem;
+    padding: 30px 30px;
+    border-bottom: 1px solid var(--arancio);
+    border-left: 1px solid var(--arancio);
+    border-radius:0 0 20px 20px;
+    box-shadow: 0px 20px 30px -2px var(--shadow);
+}
+
+.carounsel-item img {
+    width: auto;
+    height: 400px;
+}
+
+.content-container  {
+    margin-top: 1.5rem;
+}
+
+.content-item   {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--blu);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--shadow);
+}
+
+.content-item h5    {
+    font-size: 18px;
+    text-transform: none;
+    color: var(--black-border);
+}
+
+.check-container    {
+    display: flex;
+    justify-content: center;
+}
+
+.check-container form   {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.check-container form .btn  {
+    width: 200px;
+    height: 70px;
+}
