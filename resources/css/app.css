@@ -6,6 +6,7 @@
 @import 'card.css';
 @import 'buyandsell.css';
 @import 'search.css';
+@import 'workwithus.css';
 @import 'categories';
 @import 'show';
 
@@ -82,7 +83,7 @@ button{
     color: var(--bianco);
     background-color: var(--azzuro);
     border-radius: 7px;
-    padding: 0.5% 3% 0.5% 3%;
+    padding: 2% 15% 2% 15%;
     border: none;
 }
 
@@ -441,7 +442,17 @@ button a {
     .card-announcement-img{
             width: 330px;
             height: auto;
-        }
-    
-    
+    }
+
+    .work-img--container    {
+        margin-right: 40px;
+        margin-top: -100px;
+    }
+
+    .footer-content-container   {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
 }
