@@ -39,12 +39,12 @@
                         <span class="small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-                <div class="mb-4 section-split">
+                <!--<div class="mb-4 section-split">
 
                     <input type="file" wire:model="url_image" name="url_image" id="url_image"
                         class="form form-control" placeholder="inserisci delle immagini">
 
-                </div>
+                </div>!-->
                 <div class="mb-4 section-split">
 
                     <textarea name="description" wire:model="description" id="description" placeholder="Inserisci una descrizione"

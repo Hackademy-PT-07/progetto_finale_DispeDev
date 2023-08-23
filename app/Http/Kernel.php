@@ -1,11 +1,22 @@
 <?php
 
 namespace App\Http;
-
+use App\Console\Commands\MakeUserRevisor;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+#use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
+
+/*class Kernel extends ConsoleKernel{
+    
+}*/
+
+
 
 class Kernel extends HttpKernel
 {
+    protected $commands = [
+        MakeUserRevisor::class,
+    ];
     /**
      * The application's global HTTP middleware stack.
      *
@@ -64,5 +75,6 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'isRevisor' => \App\Http\Middleware\IsRevisor::class,
     ];
 }

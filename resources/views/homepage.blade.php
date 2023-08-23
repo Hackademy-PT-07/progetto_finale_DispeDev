@@ -3,7 +3,14 @@
 
         <!-- searchbar -->
         <div class="container">
+          
             <x-search_bar />
+
+
+            @if(session('message'))
+                    <div class="alert alert-success text-center">{{session('message')}}</div>
+                    @endif
+           
             @foreach ($announcements as $announcement)
                 <img src="{{ Storage::url($announcement->url_image) }}" alt="">
             @endforeach
@@ -54,9 +61,16 @@
             @endforeach
 
             {{-- Card Work With us --}}
+            
+                    @if(session('access.denied'))
+                    <div class="alert alert-danger text-center"><a href="#"></a>{{session('access.denied')}}</div>
+                    @endif
+            
+                   
             <div class="work-container">
                 <div class="row flex-row justify-content-evenly work-content">
                     <div class="text-container d-flex flex-column justify-content-center">
+                   
                         <h2 class="work-title">
                             Diventa un Revisore Presto.it
                         </h2>
@@ -67,7 +81,7 @@
 
                     <div class="work-img--container ">
                         <img src="{{ asset('img/work-with-us.png') }}" alt="">
-                        <a href="" class="d-flex justify-content-evenly btn-revisor mb-3"><button>Diventa
+                        <a href="{{route('diventa.revisore')}}" class="d-flex justify-content-evenly btn-revisor mb-3"><button>Diventa
                                 Revisore</button></a>
                     </div>
                 </div>

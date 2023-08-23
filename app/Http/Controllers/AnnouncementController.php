@@ -15,8 +15,10 @@ class AnnouncementController extends Controller
     public function index()
     {
 
-        $announcements = Announcement::all();
+        $announcements = Announcement::where('is_accepted', True)->get()->sortByDesc('created_at');
         $totalAnnouncements = $announcements->count();
+
+        
 
         return view('announcements.index', compact('announcements', 'totalAnnouncements'));
     }
