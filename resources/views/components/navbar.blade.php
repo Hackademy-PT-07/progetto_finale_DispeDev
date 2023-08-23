@@ -19,6 +19,12 @@
                                 annuncio</a>
                         </button>
                     </div>
+                    @if(Auth::user()->is_revisor)
+                    <li>
+                        <a href="{{route('revisor.index')}}" aria-current ="page">Zona revisore <span>{{ App\Models\Announcement::toBeRevisionedCount() }} <span>Unread messages</span> </span></a>
+                        
+                    </li>
+                    @endif
                     <li class="nav-item dropdown">
                         <a class="nav-link text-light" href="{{ route('annunci.index') }}">Annunci</a>
                     <li class="nav-item dropdown">

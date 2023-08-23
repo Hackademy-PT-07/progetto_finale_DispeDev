@@ -6,8 +6,9 @@
 @import 'card.css';
 @import 'buyandsell.css';
 @import 'search.css';
-@import 'categories.css';
 @import 'workwithus.css';
+@import 'categories';
+@import 'show';
 
 *{
     margin: 0;
@@ -77,12 +78,6 @@ a{
     margin-bottom: 4rem;
 }
 
-
-/* Hover Session */
-.fc-bianco:hover    {
-    color: var(--bianco);
-}
-
 /* button */
 button{
     color: var(--bianco);
@@ -95,6 +90,14 @@ button{
 button a {
     color: var(--bianco);
 }
+
+
+/* Hover Session */
+.fc-bianco:hover    {
+    color: var(--bianco);
+}
+
+
 
 @media(min-width: 768px) and (max-width: 1400px)   {
 
@@ -126,6 +129,11 @@ button a {
         margin-top: 0;
         margin-bottom: 0.25rem;
     }
+    /* show */
+    .show-announcement{
+
+    }
+
 }
 
 @media(max-width:768px){
@@ -163,7 +171,9 @@ button a {
         border-radius: 30px;
 
     }
-
+    .search-input label{
+        margin-top: 2%;
+    }
     .search-input input{
         border: 1px solid var(--black-border);
         border-radius: 30px;
@@ -215,17 +225,7 @@ button a {
     .select-categories{
         display: flex;
         justify-content: flex-start;
-        margin-top: 5%;
         margin-bottom: 5%;
-    }
-
-    .select-categories select{
-        width: 292px;
-        height: 36px;
-        margin-left: 37px;
-        border-color: var(--gray-border);
-        border-radius: 20px;
-        padding: 5px;
     }
 
     .img-register   {
