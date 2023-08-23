@@ -37,7 +37,6 @@
                     <p class="price">€ {{$announcement->price}}</p>
                     <p>Categoria: <a href="" class="category">{{$announcement->category->name}}</a></p>
                 </div>
-                <hr>
                 <div class="desc-2">
                     <h4>Descrizione del prodotto</h4>
                     <p>{{$announcement->description}}</p>
