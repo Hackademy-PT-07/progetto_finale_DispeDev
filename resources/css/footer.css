@@ -38,6 +38,7 @@
     text-decoration: none;
     color: var(--bianco);
     font-size: 14px;
+    padding: 5px;
 }
 
 .help-container ul li i,
@@ -55,7 +56,7 @@
 
 .footer-divisor {
     width: 100%;
-    border-bottom: 1px solid var(--bianco);
+    border-bottom: 2px solid var(--bianco);
 }
 
 .footer-copy-container   {

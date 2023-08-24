@@ -44,7 +44,7 @@
         <div class="footer-divisor my-3"></div>
         <img class="footer-img" src="{{ asset('img/logo-presto-bianco.png') }}" alt="">
         <div class="footer-copy fc-bianco">
-            © 2023 Copyright & all rights reserved
+            © 2023 DispeDev Copyright & all rights reserved
         </div>
     </div>
 </div>
