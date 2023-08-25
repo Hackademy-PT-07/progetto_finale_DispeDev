@@ -2,8 +2,8 @@
     <x-slot:mainTitle>Annunci</x-slot>
         <div class="container">
             <x-search_bar />
-            <h1>Annunci</h1>
-            <p>{{$totalAnnouncements}} Annunci trovati</p>
+            <h1>{{$totalAnnouncements}} Annunci trovati</h1>
+            
             <div class="container">
             @forelse($announcementsSearch as $announcement)
                 <x-card-announcement>

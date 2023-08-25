@@ -33,7 +33,7 @@ Route::middleware("auth")->group(function(){
 Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
 Route::get('annuncio/{id}', [AnnouncementController::class, 'show'])->name('annunci.show');
 Route::get('annunci/{id}', [HomepageController::class, 'filterAnnouncements'])->name("annunci.filter");
-Route::post('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
+Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
 Route::get('/category/show/{category}}', [HomepageController::class, 'filterCategory'])->name('annunci.categoria');
 
 
