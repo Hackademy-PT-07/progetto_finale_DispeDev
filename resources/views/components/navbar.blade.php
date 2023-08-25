@@ -40,6 +40,9 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
+                                <div>
+                                    <a href="{{route('i.tuoi.annunci')}}">i tuoi annunci</a>
+                                </div>
                                 <form action="/logout" method="POST">
                                     @csrf
                                     <button class="btn text-black nav-text" type="submit">Esci</button>

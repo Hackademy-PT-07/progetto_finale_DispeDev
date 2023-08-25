@@ -20,6 +20,11 @@ use Illuminate\Auth\Middleware\IsRevisor;
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
 Route::middleware("auth")->group(function(){
+
+    Route::get('i/tuoi/annunci', function(){
+        return view('auth.announcements-show');
+    })->name('i.tuoi.annunci');
+
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
     Route::get('lavora-con-noi/revisore', [RevisorController::class, 'workWithUs'])->name('diventa.revisore');
     

@@ -3,7 +3,7 @@
         <div class="container">
             <x-search_bar />
             <h1>Annunci</h1>
-            <p>{{$announcementsSearch->count()}} Annunci trovati</p>
+            <p>{{$totalAnnouncements}} Annunci trovati</p>
             <div class="container">
             @forelse($announcementsSearch as $announcement)
                 <x-card-announcement>

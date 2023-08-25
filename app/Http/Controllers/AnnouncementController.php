@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AnnouncementController extends Controller
 {
@@ -32,9 +33,9 @@ class AnnouncementController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Announcement $announcement)
     {
-        return view('announcements.create');
+        return view('announcements.create', compact('announcement'));
     }
 
     /**
