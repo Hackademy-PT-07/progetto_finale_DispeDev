@@ -4,7 +4,7 @@
             <img class="card-announcement-img" src="{{ $url_image }}" alt="{{ $title }}">
         </div>
         <div class="card-announcement-text-box">
-            <a href="{{route('annunci.filter', $category)}}" class="category-a">{{ $category }}</a>
+            <a href="{{route('annunci.categoria', ['category' => $categoria])}}" class="category-a">{{ $category }}</a>
             <h3>{{ $title }}</h3>
             <span>€{{ $price }}</span>
             <p>{{ $description }}</p>

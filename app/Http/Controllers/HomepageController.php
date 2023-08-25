@@ -17,10 +17,15 @@ class HomepageController extends Controller
         return view('homepage', compact('announcements'));
     }
 
-    public function filter(Category $category)
+    public function filterCategory(Category $categories)
     {
-        $category = Category::all();
-        $annoucements = Announcement::all();
-        return view('category.index', compact('category', 'annoucements'));
+        $announcements = Announcement::all();
+        return view('announcements.category', compact('categories', 'announcements'));
+    }
+
+    public function filterAnnouncements(Category $category)
+    {
+        $announcements = Announcement::all();
+        return view('announcements.index', compact('category', 'announcements'));
     }
 }

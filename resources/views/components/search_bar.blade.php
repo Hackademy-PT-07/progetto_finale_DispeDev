@@ -1,5 +1,5 @@
 <div class="search-box">
-    <form action="{{ route('annunci.categoria') }}" method="POST">
+    <form action="{{ route('annunci.ricerca') }}" method="POST">
         @csrf
         <div class="search-input">
             <label for="">Cosa cerchi?</label>

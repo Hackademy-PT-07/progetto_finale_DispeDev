@@ -25,13 +25,8 @@ class AnnouncementController extends Controller
 
     public function filter(Request $request)
     {
-        $announcementsSearch = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10); 
-
-       // $category = Category::find($request->category_id);
-
-        //$announcements = $category->announcements()->get();
-
-        return view('announcements.index', compact( 'announcementsSearch'));
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->get();
+        return view('announcements.index', compact('announcements'));
     }
 
     /**
