@@ -10,6 +10,7 @@
                     <x-slot:id>{{$announcement->id}}</x-slot>
                     <x-slot:title>{{$announcement->title}}</x-slot>
                     <x-slot:category>{{$announcement->category->name}}</x-slot>
+                    <x-slot:categoria>{{$announcement->category->id}}</x-slot:categoria>
                     <x-slot:url_image>{{$announcement->url_image}}</x-slot>
                     <x-slot:price>{{$announcement->price}}</x-slot>
                     <x-slot:description>{{$announcement->description}}</x-slot>

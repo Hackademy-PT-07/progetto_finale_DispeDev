@@ -20,7 +20,7 @@ class HomepageController extends Controller
     public function filterCategory(Category $categories)
     {
         $announcements = Announcement::all();
-        return view('announcements.category', compact('categories', 'announcements'));
+        return view('category.index', compact('categories', 'announcements'));
     }
 
     public function filterAnnouncements(Category $category)

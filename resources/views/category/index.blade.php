@@ -1,9 +1,9 @@
 <x-main>
     <x-slot:mainTitle>Annunci</x-slot:mainTitle>
-    <p>{{$category->announcements()->count()}} Annunci trovati</p>
+    <p>{{$categories->announcements()->count()}} Annunci trovati</p>
     <div class="container">
-        @if($category->announcements->isNotEmpty())
-            @foreach($category->announcements->where('is_accepted', true) as $announcement)
+        @if($categories->announcements->isNotEmpty())
+            @foreach($categories->announcements->where('is_accepted', true) as $announcement)
             <x-card-announcement>
                 <x-slot:category>{{$announcement->category->name}}</x-slot:category>
                 <x-slot:categoria>{{$announcement->category->id}}</x-slot:categoria>
@@ -13,5 +13,7 @@
                 <x-slot:price>{{$announcement->price}}</x-slot:price>
                 <x-slot:description>{{$announcement->description}}</x-slot:description>
             </x-card-announcement>
+            @endforeach
+            @endif
     </div>
 </x-main>
