@@ -3,9 +3,9 @@
         <div class="container">
             <x-search_bar />
             <h1>Annunci</h1>
-            <p>{{$announcements->count()}} Annunci trovati</p>
+            <p>{{$announcementsSearch->count()}} Annunci trovati</p>
             <div class="container">
-            @foreach($announcements as $announcement)
+            @forelse($announcementsSearch as $announcement)
                 <x-card-announcement>
                     <x-slot:id>{{$announcement->id}}</x-slot>
                     <x-slot:title>{{$announcement->title}}</x-slot>
@@ -15,7 +15,9 @@
                     <x-slot:description>{{$announcement->description}}</x-slot>
                     <x-slot:updated>{{$announcement->updated_at->format('d/m/Y')}}</x-slot>
                 </x-card-announcement>
-            @endforeach
+                @empty
+                <p>Non ci sono annunci per questa categoria</p>
+            @endforelse
                 </div>
             </div>
 

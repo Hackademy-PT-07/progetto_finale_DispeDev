@@ -3,7 +3,7 @@
         @csrf
         <div class="search-input">
             <label for="">Cosa cerchi?</label>
-            <input type="text" placeholder="Cerca">
+            <input type="text" name="searched" placeholder="Cerca">
         </div>
         <div class="search-input">
             <label for="">In quale categoria?</label>

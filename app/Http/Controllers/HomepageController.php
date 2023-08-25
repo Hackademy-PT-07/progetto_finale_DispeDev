@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
@@ -16,9 +17,10 @@ class HomepageController extends Controller
         return view('homepage', compact('announcements'));
     }
 
-    public function filter()
+    public function filter(Category $category)
     {
-        $announcements = Announcement::find();
-        return view('announcements.index', compact('announcements'));
+        $category = Category::all();
+        $annoucements = Announcement::all();
+        return view('category.index', compact('category', 'annoucements'));
     }
 }
