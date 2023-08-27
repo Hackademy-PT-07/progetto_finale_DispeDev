@@ -34,19 +34,18 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-text" href="{{ route('annunci.index') }}">Annunci</a>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-text" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown nav-text" href="#" role="button">
                             {{ auth()->user()->name }}
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="nav-item">
-                                <form action="/logout" method="POST">
-                                    @csrf
-                                    <button class="btn text-black nav-text" type="submit">Esci</button>
-                                </form>
-
-                            </li>
-                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button class="btn text-black revisor-icon" type="submit"><i
+                                    class="bi bi-box-arrow-left nav-text"></i></button>
+                            <button class="btn text-black revisor-text nav-text" type="submit"><i
+                                    class="bi bi-box-arrow-left nav-text"></i> Log out</button>
+                        </form>
                     </li>
                 @else
                     <li class="nav-item dropdown">

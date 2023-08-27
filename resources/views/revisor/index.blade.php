@@ -15,10 +15,10 @@
                     <div class="carousel slide" id="carousel" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/200/300" alt="foto">
+                                <img class="img-fluid" src="https://picsum.photos/200/300" alt="foto">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/200/300" alt="foto2">
+                                <img class="img-fluid" src="https://picsum.photos/200/300" alt="foto2">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="carousel"
