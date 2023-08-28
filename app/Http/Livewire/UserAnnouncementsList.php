@@ -42,6 +42,7 @@ class UserAnnouncementsList extends Component
         $this->price = $announcement->price;
         $this->category = $announcement->category->name;
         $this->description = $announcement->description;
+        //deve salvare
 
     }
 

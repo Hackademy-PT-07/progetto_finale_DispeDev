@@ -25,7 +25,8 @@ class HomepageController extends Controller
 
     public function filterAnnouncements(Category $category)
     {
-        $announcements = Announcement::all();
+        dd($category);
+        $announcements = Announcement::where('category_id', $category)->where('is_accepted', true)->get();
         return view('announcements.index', compact('category', 'announcements'));
     }
 }

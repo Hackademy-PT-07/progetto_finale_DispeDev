@@ -13,15 +13,14 @@ class CreateAnnouncement extends Component
 {
     use WithFileUploads;
     
-    /*
     public $user_id;
     public $category_id;
     public $title;
     public $description;
     public $url_image;
     public $price;
-*/
-public $announcement;
+
+    private $announcement;
 
 protected $listeners = [
     'edit',
@@ -46,9 +45,11 @@ protected $listeners = [
 
     ];
 
-    public function mount()
+    public function mount(Announcement $announcement)
     {
-        $this->announcement = new Announcement();
+        $this->announcement = $announcement;
+        $this->title = $announcement->title;
+
     }
 
     public function store(){
@@ -94,6 +95,9 @@ protected $listeners = [
     public function editAnnouncementUser($user_id)
     {
         $this->announcement = Announcement::find($user_id);
+        $this->announcement->update([
+            'title' => $this->title,
+        ]);
     }
 
     public function render()

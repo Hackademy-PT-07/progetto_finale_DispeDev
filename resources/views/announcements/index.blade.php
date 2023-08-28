@@ -2,10 +2,11 @@
     <x-slot:mainTitle>Annunci</x-slot>
         <div class="container">
             <x-search_bar />
+            
             <h1 class="style-title">{{$totalAnnouncements}} Annunci trovati</h1>
             
             <div class="container">
-            @forelse($announcementsSearch as $announcement)
+            @forelse($announcements as $announcement)
                 <x-card-announcement>
                     <x-slot:id>{{$announcement->id}}</x-slot>
                     <x-slot:title>{{$announcement->title}}</x-slot>
@@ -19,6 +20,7 @@
                 @empty
                 <p>Non ci sono annunci per questa categoria</p>
             @endforelse
+            
                 </div>
             </div>
 

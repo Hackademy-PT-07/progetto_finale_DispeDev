@@ -6,9 +6,11 @@
                     <i class="bi bi-car-front-fill"></i>Auto
                 </button>
             </a>
+            <a href="{{ route('annunci.filter', 2) }}">
             <button class="categories-items item-2 mx-3">
                 <i class="bi bi-bicycle"></i>Moto
             </button>
+            </a>
             <button class="categories-items item-3 mx-3">
                 <i class="bi bi-cpu-fill"></i>Elettronica
             </button>
