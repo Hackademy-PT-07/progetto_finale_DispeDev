@@ -20,7 +20,7 @@ class CreateAnnouncement extends Component
     public $url_image;
     public $price;
 
-    private $announcement;
+    public $announcement;
 
 protected $listeners = [
     'edit',

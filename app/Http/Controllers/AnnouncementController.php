@@ -28,26 +28,30 @@ class AnnouncementController extends Controller
 
     public function filter(Request $request)
     {
-        dd($request->searched);
+        
         $searched = $request->searched;
-
-        //$category_id = Category::find($request->category_id);
+        
+        $category_id = $request->category_id;
+        $announcements = null;
 
         
-        //Filtra per categoria, se specificata
-
-       /*
-        if(!$category_id)) 
+        if(!isset($category_id))
         {
-            $results = $results->where('category_id', $category_id);
+            $announcements = Announcement::search($searched)->where('is_accepted', true)->get();  
         }
-        return view('announcements.index', compact('results'));
-        */
-
-      // filtraggio esito:negativo
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->get();
-        $totalAnnouncements = $announcements->count();
+        elseif (!isset($searched))
+        {
+            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->get();
+             
+            
+        }
+        else{
+            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->get();
+            
+        }
         
+        $totalAnnouncements = $announcements->count();
+
         return view('announcements.index', compact('announcements', 'totalAnnouncements'));
         
     }
