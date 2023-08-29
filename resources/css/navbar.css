@@ -15,7 +15,6 @@
 
 .btn-add{
     border: 1px solid var(--azzuro);
-    border-radius: 10px;
 }
 .btn-add:hover{
         transition: .2s;
