@@ -99,7 +99,6 @@ a{
 button{
     color: var(--bianco);
     background-color: var(--azzuro);
-    border-radius: 7px;
     padding: 2% 15% 2% 15%;
     border: none;
 }
@@ -199,7 +198,6 @@ button a {
         height: 250px;
         margin-top: 90px;
         background-color: var(--bianco);
-        border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
@@ -221,8 +219,6 @@ button a {
         margin:0;
         width: 100%;
         height: 36px;
-        border-radius: 30px;
-
     }
     .search-input label{
         margin-top: 2%;
@@ -230,7 +226,6 @@ button a {
     .search-input input{
         width: 100%;
         border: 1px solid var(--black-border);
-        border-radius: 30px;
         height:36px;
     }
     .search-input input::placeholder{
@@ -238,13 +233,14 @@ button a {
         padding-left: 10px;
     }
     .select-categories{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
         width: 100%;
     }
 
     .search-button{
         width: 100%;
-        border-radius: 30px;
         padding: 10px 20px ;
     }
 
@@ -404,7 +400,6 @@ button a {
         height: 230px;
         margin-top: 90px;
         background-color: var(--bianco);
-        border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
@@ -413,7 +408,6 @@ button a {
         flex-direction: column;
         align-items:center;
         justify-content:space-around;
-
     }
 
     .search-input{
@@ -429,7 +423,6 @@ button a {
 
     .search-input input{
         border: 1px solid var(--black-border);
-        border-radius: 30px;
         height:36px;
         margin:5px 0px 5px 0px;
     }
@@ -438,12 +431,13 @@ button a {
         padding-left: 10px;
     }
     .select-categories{
+        display: flex;
+        flex-direction: column;
         margin:10px 0px 10px 0px;
     }
 
     .search-button{
         margin-top: 2%;
-        border-radius: 30px;
         padding: 10px 20px ;
     }
 

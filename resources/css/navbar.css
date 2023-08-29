@@ -5,6 +5,7 @@
 .img-logo   {
     width: 150px;
     height: auto;
+    margin: 10px 0px 10px 50px;
 }
 
 .img-logo-register  {
@@ -14,7 +15,6 @@
 
 .btn-add{
     border: 1px solid var(--azzuro);
-    border-radius: 10px;
 }
 .btn-add:hover{
         transition: .2s;
