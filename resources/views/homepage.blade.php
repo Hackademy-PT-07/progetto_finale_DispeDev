@@ -20,10 +20,10 @@
                 <div class="row justify-content-center align-items-center">
                     <div class="col-4 box-buy-sell me-4">
                         <div>
-                            <h2>Scegli presto.it</h2>
+                            <h2>{{__('ui.selectPrestoIt')}}</h2>
                         </div>
                         <div>
-                            <span>Compra e vendi in piena libertà.</span>
+                            <span>{{__('ui.slogan')}}</span>
                         </div>
                     </div>
 
@@ -32,7 +32,7 @@
                             <img class="img-fluid" src="{{ asset('img/vendi_gratis.png') }}" alt="Vendi gratis">
                         </div>
                         <div>
-                            <a href="{{ route('annuncio.create') }}"><button>Vendi gratis</button></a>
+                            <a href="{{ route('annuncio.create') }}"><button>{{__('ui.earn1')}}</button></a>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
                             <img class="img-fluid" src="{{ asset('img/compra_online.png') }}" alt="Compra onlin">
                         </div>
                         <div>
-                            <a href="{{ route('annunci.index') }}"><button>Compra online!</button></a>
+                            <a href="{{ route('annunci.index') }}"><button>{{__('ui.buyOnline')}}</button></a>
                         </div>
                     </div>
                 </div>
