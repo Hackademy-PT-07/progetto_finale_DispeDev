@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 @import 'navbar.css';
 @import 'login.css';
 @import 'footer.css';
