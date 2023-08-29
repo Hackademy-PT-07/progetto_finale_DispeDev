@@ -18,8 +18,15 @@ use Illuminate\Auth\Middleware\IsRevisor;
 |
 */
 
+Route::group(['prefix' => '{locale}'], function()
+{
+    Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
-Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
+})->middleware('setLocale');
+
+    
+
+
 
 Route::middleware("auth")->group(function(){
 
