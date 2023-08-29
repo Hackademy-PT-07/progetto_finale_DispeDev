@@ -1,13 +1,15 @@
 .card-announcement{
-    width: 98%;
+    width: 100%;
     height: 70%;
     background-color: var(--bianco);
     box-shadow: 0px 10px 20px -7px var(--shadow);
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     margin: 10px auto 20px auto;
     transition-duration: .2s;
     transition-delay: 0.1s;
+    border-radius: 5px;
 }
 
 .card-announcement:hover{
@@ -55,6 +57,7 @@
     font-size: 12px;
     font-weight: 400;
     color: var(--shadow);
+    margin-top: 40px;
 }
 .card-announcement-text-box p{
     font-size: 16PX;
