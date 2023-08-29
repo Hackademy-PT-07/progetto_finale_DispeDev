@@ -15,28 +15,21 @@
                             annuncio</a>
                     </button>
                 </div>
-                <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cambia lingua
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{url('it')}}">Italiano</a></li>
-                            <li><a class="dropdown-item" href="{{url('en')}}">Inglese</a></li>
-                            <li><a class="dropdown-item" href="{{url('ch')}}">中国人</a></li>
-                        </ul>
-                    </div>
+                
 
                 @if (Auth::user()->is_revisor)
+
                 <li class="nav-item revisor-icon">
-                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page"><i class="bi bi-bell-fill"></i>
-                    </a>
-                    <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+
+                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page"><i class="bi bi-bell-fill"></i></a>
+                        <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </li>
+
                 <li class="nav-item revisor-text">
-                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page">Àrea Revisore
-                    </a>
-                    <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
+                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page">Àrea Revisore</a>
+                        <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </li>
+
                 @endif
 
                 <li class="nav-item dropdown">
@@ -59,16 +52,17 @@
                     </ul>
                 </li>
                 @else
-                <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cambia lingua
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Italiano</a></li>
-                            <li><a class="dropdown-item" href="#">Inglese</a></li>
-                            <li><a class="dropdown-item" href="#">中国人</a></li>
-                        </ul>
-                    </div>
+
+                <li class="nav-item">
+                    <x-lang lang="it" nation="it" />    
+                </li>
+                <li class="nav-item">
+                    <x-lang lang="en" nation="gb" />
+                </li>
+                <li class="nav-item">
+                    <x-lang lang="ch" nation="cn" />
+                </li>
+                
                 <li class="nav-item dropdown">
                     <a class="nav-link fw-3 nav-text" aria-current="page" href="/login">Accedi</a>
                 </li>
