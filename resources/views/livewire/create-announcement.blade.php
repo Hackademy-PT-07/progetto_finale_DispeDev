@@ -57,9 +57,7 @@
             </form>
         </div>
 
-        <div class="card-announcements col-8">
-            <livewire:user-announcements-list />
-        </div>
+        
     </div>
 </div>
 

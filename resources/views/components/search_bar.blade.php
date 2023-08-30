@@ -1,12 +1,12 @@
-<div class="search-box">
-    <form action="{{ route('annunci.categoria') }}" method="POST">
+<div class="container search-box">
+    <form action="{{ route('annunci.ricerca') }}" method="GET">
         @csrf
         <div class="search-input">
-            <label for="">Cosa cerchi?</label>
-            <input type="text" placeholder="Cerca">
+            <label for="searched">Cosa cerchi?</label>
+            <input type="text" name="searched" placeholder="Cerca...">
         </div>
         <div class="search-input">
-            <label for="">In quale categoria?</label>
+            <label for="category_id">In quale categoria?</label>
             <div class="select-categories">
                 <select name="category_id" id="category_id">
                     <option selected>Segli una categoria</option>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="search-input">
-            <button class="search-button"><i class="bi bi-search"></i></button>
+            <button type='submit' class="search-button"><i class="bi bi-search"></i></button>
         </div>
     </form>
 </div>

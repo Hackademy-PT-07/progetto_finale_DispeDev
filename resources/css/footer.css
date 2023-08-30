@@ -38,6 +38,7 @@
     text-decoration: none;
     color: var(--bianco);
     font-size: 14px;
+    padding: 5px;
 }
 
 .help-container ul li i,
@@ -49,7 +50,7 @@
 
 .divisor    {
     width: 50px;
-    border: 2px solid var(--azzuro);
+    border-bottom: 4px solid var(--azzuro);
     margin-bottom: 15px;
 }
 

@@ -13,13 +13,19 @@ class CreateAnnouncement extends Component
 {
     use WithFileUploads;
     
+    /*
     public $user_id;
     public $category_id;
     public $title;
     public $description;
     public $url_image;
     public $price;
+*/
+public $announcement;
 
+protected $listeners = [
+    'edit',
+];
 
 
     protected function rules()
@@ -40,7 +46,10 @@ class CreateAnnouncement extends Component
 
     ];
 
-    
+    public function mount()
+    {
+        $this->announcement = new Announcement();
+    }
 
     public function store(){
         
@@ -59,8 +68,10 @@ class CreateAnnouncement extends Component
             'user_id'=> auth()->user()->id,
         ]);
 
-        $this->newAnnouncement();
+        $this->resetImputFields();
 
+        $this->emitTo('user-announcements-list', 'loadUserAnnouncements');
+        
 
          session()->flash('success', 'Annuncio creato correttamente.');
 
@@ -69,15 +80,21 @@ class CreateAnnouncement extends Component
 
     public function newAnnouncement(){
 
+        $this->announcement = new Announcement;
+        /*
         $this->title = '';
         $this->description = '';
         $this->price = '';
         $this->category_id = '';
         $this->url_image = '';
-
+        */
     }
 
-    
+
+    public function editAnnouncementUser($user_id)
+    {
+        $this->announcement = Announcement::find($user_id);
+    }
 
     public function render()
     {
@@ -85,4 +102,5 @@ class CreateAnnouncement extends Component
 
         return view('livewire.create-announcement', compact('categories'));
     }
+
 }

@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 use App\Mail\workWithUs;
 use Illuminate\Http\Request;
 use App\Models\Announcement;
-use Auth;
-use Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
+use App\Models\User;
 
 class RevisorController extends Controller
 {
