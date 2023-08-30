@@ -1,6 +1,6 @@
 <x-main>
     <x-slot:mainTitle>
-        Homepage
+        {{__('ui.login')}}
         </x-slot>
         <div class="container m-top">
             <div class="row">
@@ -12,17 +12,15 @@
                         <img class="img-logo-register" src="{{ asset('img/logo-presto-blu.png') }}" alt="">
                     </div>
                     <div class="text-center mt-4">
-                        <h1 class="h2 clr-text-blu">Bentornato!</h1>
-                        <p class="lead clr-text-blu">
-                            Accedi con il tuo account per continuare
-                        </p>
+                        <h1 class="h2 clr-text-blu">{{__('ui.welcomeBack')}}</h1>
+                        <p class="lead clr-text-blu">{{__('ui.loginWithAccount')}}</p>
                     </div>
                     <form action="/login" method="POST">
                         @csrf
                         <div class="container">
                             <div class="form-group mb-4 section-split">
                                 <input class="form-control form-control-lg" type="email" name="email" id="email"
-                                    placeholder="Inserisci la tua email">
+                                    placeholder="{{__('ui.insertYourEmail')}}">
                                 @error('email')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
@@ -30,27 +28,26 @@
                             <div class="form-group section-split">
 
                                 <input class="form-control form-control-lg" type="password" name="password"
-                                    id="password" placeholder="Inserisci la password">
+                                    id="password" placeholder="{{__('ui.insertYourPass')}}">
                                 @error('password')
                                     <span class="small text-danger">{{ $message }}</span>
                                 @enderror
                                 <small>
-                                    <a href="">Password dimenticata?</a>
+                                    <a href="">{{__('ui.forgottenPass')}}</a>
                                 </small>
                             </div>
                             <div>
                                 <div class="custom-control custom-checkbox align-items-center">
                                     <input type="checkbox" class="custom-control-input" value="remember-me"
                                         name="remember-me" checked="">
-                                    <label class="custom-control-label text-small clr-text-blu">Ricordami
-                                        la prossima volta</label>
+                                    <label class="custom-control-label text-small clr-text-blu">{{__('ui.rememberMe')}}</label>
                                 </div>
                             </div>
                             <div class="text-center mt-5">
-                                <button type="submit" class="action_btn fc-bianco large">Accedi</button>
+                                <button type="submit" class="action_btn fc-bianco large">{{__('ui.login')}}</button>
                             </div>
                             <div class="mt-5 text-center">
-                                <p>Non hai un account?<a href="/register"> Registrati!</a></p>
+                                <p>{{__('ui.haventAccount')}}<a href="/register"> {{__('ui.register')}}</a></p>
                             </div>
                         </div>
                     </form>

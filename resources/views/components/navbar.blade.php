@@ -11,8 +11,7 @@
                 @if (auth()->user())
                 <div class="row mx-3">
                     <button class="btn-add">
-                        <a href="{{ route('annuncio.create') }}"><i class="bi bi-plus-square pe-2"></i>Inserisci
-                            annuncio</a>
+                        <a href="{{ route('annuncio.create') }}"><i class="bi bi-plus-square pe-2"></i>{{__('ui.insertAnnouncement')}}</a>
                     </button>
                 </div>
                 
@@ -26,14 +25,14 @@
                 </li>
 
                 <li class="nav-item revisor-text">
-                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page">Àrea Revisore</a>
+                    <a href="{{ route('revisor.index') }}" class="nav-text " aria-current="page">{{__('ui.revisorArea')}}</a>
                         <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                 </li>
 
                 @endif
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link nav-text" href="{{ route('annunci.index') }}">Annunci</a>
+                    <a class="nav-link nav-text" href="{{ route('annunci.index') }}">{{__('ui.announcements')}}</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle nav-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ auth()->user()->name }}
@@ -41,11 +40,11 @@
                     <ul class="dropdown-menu">
                         <li class="nav-item">
                             <div>
-                                <a href="{{route('i.tuoi.annunci')}}">i tuoi annunci</a>
+                                <a href="{{route('i.tuoi.annunci')}}">{{__('ui.yourAnnouncements')}}</a>
                             </div>
                             <form action="/logout" method="POST">
                                 @csrf
-                                <button class="btn text-black nav-text" type="submit">Esci</button>
+                                <button class="btn text-black nav-text" type="submit">{{__('ui.logout')}}</button>
                             </form>
 
                         </li>
@@ -64,10 +63,10 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link fw-3 nav-text" aria-current="page" href="/login">Accedi</a>
+                    <a class="nav-link fw-3 nav-text" aria-current="page" href="/login">{{__('ui.login')}}</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link fw-3 nav-text" aria-current="page" href="/register">Registrati</a>
+                    <a class="nav-link fw-3 nav-text" aria-current="page" href="/register">{{__('ui.register')}}</a>
                 </li>
                 @endif
             </ul>

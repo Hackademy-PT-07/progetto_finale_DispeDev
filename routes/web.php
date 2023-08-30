@@ -18,7 +18,7 @@ use Illuminate\Auth\Middleware\IsRevisor;
 |
 */
 
-Route::middleware("setLocaleMiddleware")->group(function(){
+
 
 Route::post('/lingua/{lang}', [HomepageController::class, 'setLanguage'])->name('scegli.lingua');
 
@@ -56,6 +56,4 @@ Route::get('revisor/',[RevisorController::class, 'index'])->name('revisor.index'
 Route::patch('accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('accept_announcement');
 #Rotta per rifiuto annuncio
 Route::patch('rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('reject_announcement');
-});
-
 });
