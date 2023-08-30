@@ -1,5 +1,5 @@
 <x-main>
-    <x-slot:mainTitle> Homepage </x-slot>
+    <x-slot:mainTitle>Presto.it</x-slot>
 
         <!-- searchbar -->
         <div class="container">
