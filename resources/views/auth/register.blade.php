@@ -1,6 +1,6 @@
 <x-main>
     <x-slot:mainTitle>
-        Registrati
+        {{__('ui.register')}}
         </x-slot>
         <div class="container m-top">
             <div class="row justify-content-center align-items-center mobile">
@@ -13,9 +13,9 @@
                     </div>
 
                     <div class="text-center mt-4 mb-3">
-                        <h2 class="fs-3 clr-text-blu">Benvenuto!</h2>
+                        <h2 class="fs-3 clr-text-blu">{{__('ui.welcome')}}</h2>
                         <p class="fs-5 lead clr-text-blu">
-                            Registrati il tuo nuovo account per continuare
+                            {{__('ui.registerNewAcc')}}
                         </p>
                     </div>
 
@@ -24,7 +24,7 @@
                         <div class="mb-4 section-split">
                             <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="nameHelp" value="{{ old('name') }}"
-                                placeholder="Inserisci il tuo Nome">
+                                placeholder="{{__('ui.insertName')}}">
                             @error('name')
                                 <span class="small text-danger">{{ $message }}</span>
                             @enderror
@@ -32,26 +32,26 @@
                         <div class="mb-4 section-split">
                             <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" value="{{ old('email') }}"
-                                placeholder="Inserisci la tua email">
+                                placeholder="{{__('ui.insertYourEmail')}}">
                             @error('email')
                                 <span class="small text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="mb-4 section-split">
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Inserisci la tua password">
+                                placeholder="{{__('ui.insertYourPass')}}">
                             @error('password')
                                 <span class="small text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="mb-4 section-split">
                             <input type="password" name="password_confirmation" class="form-control"
-                                id="exampleInputPassword1" placeholder="Re-inserisci la tua password">
+                                id="exampleInputPassword1" placeholder="{{__('ui.confirmPass')}}">
                             @error('password')
                                 <span class="small text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <button class="large mt-2 mb-4" type="submit">Registrati</button>
+                        <button class="large mt-2 mb-4" type="submit">{{__('ui.register')}}</button>
                     </form>
                 </div>
             </div>
