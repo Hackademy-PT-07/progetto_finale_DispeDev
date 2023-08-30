@@ -6,6 +6,7 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\RevisorController;
 use Illuminate\Auth\Middleware\IsRevisor;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,10 @@ use Illuminate\Auth\Middleware\IsRevisor;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+
+Route::post('/lingua/{lang}', [HomepageController::class, 'setLanguage'])->name('scegli.lingua');
 
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
@@ -29,10 +34,11 @@ Route::middleware("auth")->group(function () {
     Route::get('lavora-con-noi/revisore', [RevisorController::class, 'workWithUs'])->name('diventa.revisore');
 });
 
+Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
 Route::get('annunci', [AnnouncementController::class, 'index'])->name('annunci.index');
 Route::get('annuncio/{id}', [AnnouncementController::class, 'show'])->name('annunci.show');
-Route::get('annunci/{id}', [HomepageController::class, 'filterAnnouncements'])->name("annunci.filter");
-Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
+Route::get('annunci/{category}', [HomepageController::class, 'filterAnnouncements'])->name("annunci.filter");
+
 Route::get('/category/show/{category}}', [HomepageController::class, 'filterCategory'])->name('annunci.categoria');
 
 

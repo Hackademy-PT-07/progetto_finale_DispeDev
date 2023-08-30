@@ -16,12 +16,11 @@ class Announcement extends Model
 
     public function toSearcheableArray()
     {
-        $category = $this->category;
+        
         $array = [
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
-            'category' => $category,
         ];
         return $array;
     }

@@ -8,20 +8,20 @@ use App\Models\Category;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
+use App\Jobs\ResizeImage;
 
 class CreateAnnouncement extends Component
 {
     use WithFileUploads;
     
-    /*
     public $user_id;
     public $category_id;
     public $title;
     public $description;
     public $url_image;
     public $price;
-*/
-public $announcement;
+
+    public $announcement;
 
 protected $listeners = [
     'edit',
@@ -46,27 +46,34 @@ protected $listeners = [
 
     ];
 
-    public function mount()
+    public function mount(Announcement $announcement)
     {
-        $this->announcement = new Announcement();
+        $this->announcement = $announcement;
+        $this->title = $announcement->title;
+
     }
 
     public function store(){
         
-        /*$this->validate([
-
-            'url_image' => 'image|max:1024', // 1MB Max
-
-        ]);*/
-    
-        $category = Category::find($this->category_id); /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
-        $category->announcements()->create([
+        $this->validate();
+        $category = Category::find($this->category_id)->announcements->create($this->validate()); /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
+        /*$category->announcements()->create([
             'title'=> $this->title,
             'description'=>$this->description,
             'price'=>$this->price,
             #'url_image'=>$this->url_image->store('photos'),
             'user_id'=> auth()->user()->id,
-        ]);
+        ]);*/
+        if(count($this->url_image)){
+            foreach($this->url_image as $image){
+                /*$this->announcement->images()->create(['path'=> $image->store('images', 'public')]);*/
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path'=> $image->store($newFileName, 'public')]);
+            
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+            }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+        }
 
         $this->resetImputFields();
 
@@ -94,6 +101,9 @@ protected $listeners = [
     public function editAnnouncementUser($user_id)
     {
         $this->announcement = Announcement::find($user_id);
+        $this->announcement->update([
+            'title' => $this->title,
+        ]);
     }
 
     public function render()

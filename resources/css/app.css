@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 @import 'navbar.css';
 @import 'login.css';
 @import 'footer.css';
@@ -106,9 +107,9 @@ a{
 button{
     color: var(--bianco);
     background-color: var(--azzuro);
-    border-radius: 7px;
     padding: 2% 15% 2% 15%;
     border: none;
+    border-radius: 5px;
 }
 button:active {
     transform: scale(0.95);
@@ -192,7 +193,6 @@ button a {
         height: 250px;
         margin-top: 90px;
         background-color: var(--bianco);
-        border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
@@ -214,8 +214,6 @@ button a {
         margin:0;
         width: 100%;
         height: 36px;
-        border-radius: 30px;
-
     }
     .search-input label{
         margin-top: 2%;
@@ -223,7 +221,6 @@ button a {
     .search-input input{
         width: 100%;
         border: 1px solid var(--black-border);
-        border-radius: 30px;
         height:36px;
     }
     .search-input input::placeholder{
@@ -231,13 +228,14 @@ button a {
         padding-left: 10px;
     }
     .select-categories{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 20px;
         width: 100%;
     }
 
     .search-button{
         width: 100%;
-        border-radius: 30px;
         padding: 10px 20px ;
     }
 
@@ -364,7 +362,12 @@ button a {
 }
 
 @media (max-width:576px) {
-
+    /* nav */
+    .img-logo   {
+        width: 150px;
+        height: auto;
+        margin: 5px 0px 5px 10px;
+    }
     .btn-add    {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -379,7 +382,6 @@ button a {
         height: 230px;
         margin-top: 90px;
         background-color: var(--bianco);
-        border-radius: 15px ;
         box-shadow: 0px 10px 20px -7px var(--shadow);
     }
 
@@ -388,7 +390,6 @@ button a {
         flex-direction: column;
         align-items:center;
         justify-content:space-around;
-
     }
 
     .search-input{
@@ -404,7 +405,6 @@ button a {
 
     .search-input input{
         border: 1px solid var(--black-border);
-        border-radius: 30px;
         height:36px;
         margin:5px 0px 5px 0px;
     }
@@ -413,12 +413,13 @@ button a {
         padding-left: 10px;
     }
     .select-categories{
+        display: flex;
+        flex-direction: column;
         margin:10px 0px 10px 0px;
     }
 
     .search-button{
         margin-top: 2%;
-        border-radius: 30px;
         padding: 10px 20px ;
     }
 
@@ -498,14 +499,59 @@ button a {
 
         /* card */
     .card-announcement{
-            flex-direction: column;
+        margin: 10px auto 10px auto;
     }
-
+    .card-img-box{
+        width: 40%;
+        height: auto;
+        display: flex;
+    }
     .card-announcement-img{
-            width: 330px;
-            height: auto;
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        object-fit:cover;
     }
 
+    .card-announcement-text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 60%;
+        margin-top: 10px;
+
+    }
+
+    .card-announcement-text-box h3{
+        font-weight: 700;
+        color: #0F4C5C;
+        font-size: 16px;
+        margin: 0;
+    }
+    .card-announcement-text-box span{
+        color: var(--arancio);
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .category-a{
+        color: var(--shadow);
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .card-announcement-text-box p{
+        font-size: 12PX;
+        margin: 0;
+    }
+    .card-announcement-text-box .last-update{
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--shadow);
+        margin-top: 10px;
+    }
+
+    /* _______ */
     .work-img--container    {
         margin-right: 40px;
         margin-top: -100px;

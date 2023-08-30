@@ -32,7 +32,7 @@
         </div>
         <div class="card-body d-flex justify-content-between">
             <div class="text-container">
-                <h5 class="card-title">{{$announcement->title}}</h5>
+                <h5 class="card-title" wire:model='title'>{{$announcement->title}}</h5>
                 <img class="img-fluid" src="{{$announcement->url_image}}" alt="{{$announcement->title}}">
                 <div>
                 <p class="card-text small">{{$announcement->description}}</p>

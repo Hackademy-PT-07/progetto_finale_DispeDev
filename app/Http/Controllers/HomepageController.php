@@ -15,6 +15,13 @@ class HomepageController extends Controller
         return view('homepage', compact('announcements'));
     }
 
+    public function setLanguage($lang)
+    {
+        session()->put('locale', $lang);
+
+        return redirect()->back();
+    }
+
     public function filterCategory(Category $categories)
     {
         $announcements = Announcement::all();
@@ -23,7 +30,9 @@ class HomepageController extends Controller
 
     public function filterAnnouncements(Category $category)
     {
-        $announcements = Announcement::all();
-        return view('announcements.index', compact('category', 'announcements'));
+        
+        $announcements = Category::find($category->id)->announcements()->where('is_accepted', true)->get();
+        $totalAnnouncements = $announcements->count();
+        return view('announcements.index', compact('category', 'announcements','totalAnnouncements'));
     }
 }

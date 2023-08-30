@@ -18,45 +18,41 @@ class AnnouncementController extends Controller
     public function index()
     {
 
-        $announcementsSearch = Announcement::where('is_accepted', True)->get()->sortByDesc('created_at');
-        $totalAnnouncements = $announcementsSearch->count();
+        $announcements = Announcement::where('is_accepted', True)->get()->sortByDesc('created_at');
+        $totalAnnouncements = $announcements->count();
 
         
 
-        return view('announcements.index', compact('announcementsSearch', 'totalAnnouncements'));
+        return view('announcements.index', compact('announcements', 'totalAnnouncements'));
     }
 
     public function filter(Request $request)
     {
-        /* Prova filtraggio esito:negativo
-        $searched = $request->imput('searched');
-        $category_id = $request->select('category_id');
-
-        $tnt = new TNTsearch();
-        $tnt->loadConfig([
-            'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'database' => env('DB_DATABASE', 'presto'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'rootroot'),
-            'storage' => storage_path(),
-        ]);
-
-        $tnt->selectIndex('announcements.index');
-        $results = $tnt->search($searched);
         
-        //Filtra per categoria, se specificata
+        $searched = $request->searched;
+        
+        $category_id = $request->category_id;
+        $announcements = null;
 
-        if(!empty($category_id)) 
+        
+        if(!isset($category_id))
         {
-            $results = $results->where('category_id', $category_id);
+            $announcements = Announcement::search($searched)->where('is_accepted', true)->get();  
         }
-        return view('announcements.index', compact('results'));
-        */
+        elseif (!isset($searched))
+        {
+            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->get();
+             
+            
+        }
+        else{
+            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->get();
+            
+        }
+        
+        $totalAnnouncements = $announcements->count();
 
-      // filtraggio esito:negativo
-        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->get();
-        return view('announcements.index', compact('announcements'));
+        return view('announcements.index', compact('announcements', 'totalAnnouncements'));
         
     }
     
