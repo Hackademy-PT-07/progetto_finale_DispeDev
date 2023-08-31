@@ -1,40 +1,46 @@
 <x-main>
-    <x-slot:mainTitle>{{ $announcement->title }}</x-slot>
-        <div class="container mt-announce">
-            <div class="row">
-                <button class="btn-add back-button"><i class="bi bi-chevron-left"></i><a
-                        href="{{ route('annunci.index') }}"> indietro</a>
-                </button>
-            </div>
-            <div class="row show-announcement">
-                <div class="col-7 img-carousel">
-                    <!-- carousel -->
-                    <div id="carouselExample" class="carousel slide bg-shadow">
+    <x-slot:mainTitle>{{$announcement->title}}</x-slot>
+    <div class="container mt-announce">
+        <div class="row">
+            <button class="btn-add back-button"><i class="bi bi-chevron-left"></i><a href="{{ route('annunci.index') }}"> indietro</a>
+            </button>
+        </div>
+        <div class="row show-announcement">
+            <div class="col-7 img-carousel">
+            @if ($announcement->images)
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ $announcement->url_image }}" class="d-block w-100"
-                                    alt="{{ $announcement->title }}">
+                            @foreach($announcement->images as $image)
+                            <div class="carousel-item @if($loop->first)active @endif">
+                                <img src="{{$image->getUrl(400,300)}}" alt="foto">
+                                </div>
+                        
+                            @endforeach
                             </div>
+                            @else
                             <div class="carousel-item">
-                                <img src="{{ $announcement->url_image }}" class="d-block w-100"
-                                    alt="{{ $announcement->title }}">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ $announcement->url_image }}" class="d-block w-100"
-                                    alt="{{ $announcement->title }}">
+                                <img src="https://picsum.photos/200/300" alt="foto2">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        <button class="carousel-control-prev" type="button" data-bs-target="carousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        <button class="carousel-control-next" type="button" data-bs-target="carousel"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+                    @endif
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
                 <div class="col-5 announcement-desc">
                     <div class="desc-1">
