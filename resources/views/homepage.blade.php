@@ -116,18 +116,24 @@
 
     <h2 class="style-title">{{__('ui.lastAnnouncements')}}</h2>
     <!-- card annunci in primo piano -->
-    @foreach ($announcements as $announcement)
-        <x-card-announcement>
-            <x-slot:id>{{ $announcement->id }}</x-slot>
-            <x-slot:title>{{ $announcement->title }}</x-slot>
-            <x-slot:category>{{ $announcement->category->name }}</x-slot>
-            <x-slot:url_image>{{ $announcement->url_image }}</x-slot>
-            <x-slot:price>{{ $announcement->price }}</x-slot>
-            <x-slot:categoria>{{ $announcement->category->id }}</x-slot:categoria>
-            <x-slot:description>{{ $announcement->description }}</x-slot>
-            <x-slot:updated>{{ $announcement->updated_at->format('d/m/Y') }}</x-slot>
-        </x-card-announcement>
-    @endforeach
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                @foreach ($announcements as $announcement)
+            <x-card-announcement>
+                <x-slot:id>{{ $announcement->id }}</x-slot>
+                <x-slot:title>{{ $announcement->title }}</x-slot>
+                <x-slot:category>{{ $announcement->category->name }}</x-slot>
+                <x-slot:url_image>{{ $announcement->url_image }}</x-slot>
+                <x-slot:price>{{ $announcement->price }}</x-slot>
+                <x-slot:categoria>{{ $announcement->category->id }}</x-slot:categoria>
+                <x-slot:description>{{ $announcement->description }}</x-slot>
+                <x-slot:updated>{{ $announcement->updated_at->format('d/m/Y') }}</x-slot>
+            </x-card-announcement>
+        @endforeach
+         </div>
+        </div>
+    </div>
 
 
     </div>
