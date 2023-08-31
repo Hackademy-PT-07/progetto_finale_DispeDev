@@ -12,6 +12,7 @@
 @import 'show.css';
 @import 'revisor.css';
 @import 'freatures.css';
+@import 'createannounce.css';
 
 *{
     margin: 0;
@@ -96,11 +97,6 @@ a{
 
 .m-top  {
     margin-top: 4.5rem;
-}
-
-.mt-announce    {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
 }
 
 /* button */

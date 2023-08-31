@@ -9,15 +9,15 @@ return [
     'logout' => '登出',
     'login' => '登录',
     'register' => '登记',
-     //form Login
-     'welcomeBack' => '欢迎回来',
-     'loginWithAccount' => '使用您的帐户登录以继续',
-     'insertYourEmail' => '插入您的电子邮件',
-     'insertYourPass' => '请输入您的密码',
-     'forgottenPass' => '忘记密码了吗？',
-     'rememberMe' => '下次记得我',
-     'haventAccount' => '没有帐户？',
-     //form registrazione
+    //form Login
+    'welcomeBack' => '欢迎回来',
+    'loginWithAccount' => '使用您的帐户登录以继续',
+    'insertYourEmail' => '插入您的电子邮件',
+    'insertYourPass' => '请输入您的密码',
+    'forgottenPass' => '忘记密码了吗？',
+    'rememberMe' => '下次记得我',
+    'haventAccount' => '没有帐户？',
+    //form registrazione
     'welcome' => '欢迎',
     'insertName' => '输入你的名字',
     'registerNewAcc' => '注册您的新帐户以继续',
@@ -59,7 +59,7 @@ return [
     'descriptionPlaceholder' => '输入描述',
     'button' => '发布广告',
     //pagina annunci
-    'lastAnnouncements' => '最新公告发布', 
+    'lastAnnouncements' => '最新公告发布',
     'titleIndex' => '广告',
     'findendAnnouncements' => '找到公告',
     'notFindedAnnouncements' => '该类别没有公告',
@@ -82,8 +82,7 @@ return [
     'thirtd_two' => '如果发生不可预见的事件，您将获得退款',
     'fourth_two' => '免费',
     //card work homepage
-    'first_third' => '积极为使 Presto 社区成为一个快乐的地方做出贡献
+    'first_three' => '积极为使 Presto 社区成为一个快乐的地方做出贡献
     返回哪个，',
-    'second_third' => '成为审稿人',
+    'second_three' => '成为审稿人',
 ];
-

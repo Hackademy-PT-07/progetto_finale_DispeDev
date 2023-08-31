@@ -11,22 +11,29 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 @if (auth()->user())
-                    <li class="nav-item">
-                        <x-lang lang="it" nation="it" />
-                    </li>
-                    <li class="nav-item">
-                        <x-lang lang="en" nation="gb" />
-                    </li>
-                    <li class="nav-item">
-                        <x-lang lang="ch" nation="cn" />
-                    </li>
                     <div class="row mx-2">
                         <button class="btn-add">
                             <a href="{{ route('annuncio.create') }}"><i
                                     class="bi bi-plus-square pe-2"></i>{{ __('ui.insertAnnouncement') }}</a>
                         </button>
                     </div>
-
+                    <div class="dropdown">
+                        <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-flag-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <x-lang lang="it" nation="it" /> Italian
+                            </li>
+                            <li>
+                                <x-lang lang="en" nation="gb" /> English
+                            </li>
+                            <li>
+                                <x-lang lang="ch" nation="cn" /> Cinese
+                            </li>
+                        </ul>
+                    </div>
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item revisor-icon">
                             <a href="{{ route('revisor.index') }}" class="nav-text "

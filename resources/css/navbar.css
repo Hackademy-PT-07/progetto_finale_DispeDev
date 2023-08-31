@@ -55,3 +55,13 @@
 .revisor-text   {
     display: none;
 }
+
+.flag-container {
+    padding: 10px;
+}
+
+.dropdown-menu li   {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
