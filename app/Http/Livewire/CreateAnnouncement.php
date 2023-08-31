@@ -3,12 +3,14 @@
 namespace App\Http\Livewire;
 
 use App\Models\Announcement;
-
+use App\Models\User;
 use App\Models\Category;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\ResizeImage;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
 {
@@ -18,7 +20,9 @@ class CreateAnnouncement extends Component
     public $category_id;
     public $title;
     public $description;
-    public $url_image;
+    public $images = [];
+    public $image;
+    public $temporary_images;
     public $price;
 
     public $announcement;
@@ -34,7 +38,9 @@ protected $listeners = [
             'title' => 'required',
             'description' => 'required',
             'category_id' => 'required',
-            'price' => 'required'
+            'price' => 'required',
+            'images.*'=>'image',
+            'temporary_images.*'=>'image',
         ];
     }
 
@@ -43,8 +49,16 @@ protected $listeners = [
         'description.required' => 'Il campo non può essere vuoto.',
         'category_id.required' => 'Il campo non può essere vuoto',
         'price.required' => 'Il campo non può essere vuoto.',
+        'temporary_images.required'=>'Immagine richiesta',
+        'temporary_images.*.image'=>'I file devono essere immagini',
+        'temporary_images.*.max'=>'Immagine deve essere di massimo 1mb',
+        'images.image'=>'Il file deve essere di tipo immagine',
+       
+
 
     ];
+
+
 
     public function mount(Announcement $announcement)
     {
@@ -53,19 +67,44 @@ protected $listeners = [
 
     }
 
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+        ])){
+            foreach($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
+
+
+    public function removeImage($key){
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+
+    }
     public function store(){
         
         $this->validate();
-        $category = Category::find($this->category_id)->announcements->create($this->validate()); /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
-        /*$category->announcements()->create([
+       /* $this->announcement->user()->associate(Auth::user());
+        $this->announcement = Category::find($this->category_id)->announcements()->create($this->validate());
+        */
+       /*$category =  Category::find($this->category_id);*/
+         /* mi trova la categoria con quel tipo di category id e da category mi crea l'annuncio */ 
+         
+         $this->announcement = Announcement::create([
             'title'=> $this->title,
             'description'=>$this->description,
             'price'=>$this->price,
-            #'url_image'=>$this->url_image->store('photos'),
+           'category_id'=> $this->category_id,
             'user_id'=> auth()->user()->id,
-        ]);*/
-        if(count($this->url_image)){
-            foreach($this->url_image as $image){
+        ]);
+       /* $this->announcement->user()->associate(Auth::user());*/
+        
+        $this->announcement->save(); 
+        if(count($this->images)){
+            foreach($this->images as $image){
                 /*$this->announcement->images()->create(['path'=> $image->store('images', 'public')]);*/
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=> $image->store($newFileName, 'public')]);
@@ -75,26 +114,28 @@ protected $listeners = [
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
-        $this->resetImputFields();
+        $this->cleanForm();
 
         $this->emitTo('user-announcements-list', 'loadUserAnnouncements');
         
 
-         session()->flash('success', 'Annuncio creato correttamente.');
-
+         session()->flash('success', 'Annuncio creato correttamente. Verra\' inserito dopo la revisione');
+        $this->cleanForm();
         
     }
 
-    public function newAnnouncement(){
+    public function cleanForm(){
 
-        $this->announcement = new Announcement;
-        /*
+      
+        
         $this->title = '';
         $this->description = '';
         $this->price = '';
         $this->category_id = '';
-        $this->url_image = '';
-        */
+        $this->images = [];
+        $this->temporary_images=[];
+
+        
     }
 
 
