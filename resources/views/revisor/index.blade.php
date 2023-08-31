@@ -13,10 +13,16 @@
             <div class="row revise-content--container">
                 <div>
                     <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+                        @if ($announcementToCheck->images)
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://picsum.photos/200/300" alt="foto">
+                            @foreach($announcementToCheck->images as $image)
+                            <div class="carousel-item @if($loop->first)active @endif">
+                                <img src="{{Storage::url($image->path)}}" alt="foto">
+                                </div>
+                        
+                            @endforeach
                             </div>
+                            @else
                             <div class="carousel-item">
                                 <img src="https://picsum.photos/200/300" alt="foto2">
                             </div>
@@ -32,7 +38,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-
+                    @endif
                     <div class="content-container">
                         <div class="content-item">
                             Titolo:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>

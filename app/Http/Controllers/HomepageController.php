@@ -11,7 +11,7 @@ class HomepageController extends Controller
     public function homepage()
     {
         
-        $announcements = Announcement::where('is_accepted', True)->take(6)->get()->sortByDesc('created_at');
+        $announcements = Announcement::where('is_accepted', True)->orderBy('created_at', 'desc')->take(6)->get();
         
 
         return view('homepage', compact('announcements'));
