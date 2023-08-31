@@ -13,12 +13,6 @@
         <x-categories />
     </div>
 
-<<<<<<< HEAD
-    <div class="freatures-container">
-        <div class="freatures-title">
-            <h1>{{ __('ui.selectPrestoIt') }}</h1>
-            <h4>{{ __('ui.slogan') }}</h4>
-=======
         <!-- searchbar -->
         <div class="container">
           
@@ -120,7 +114,6 @@
             @endforelse
 
             
->>>>>>> bd3b04d34f505cd4fe3a9cad7b13d1a1e5ef2b0e
         </div>
         <div class="container freatures-content">
             <div class="freatures-card">
