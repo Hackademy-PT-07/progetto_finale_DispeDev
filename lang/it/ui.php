@@ -48,6 +48,7 @@ return [
     'motorcycle' => 'Moto',
     'electronics' => 'Elettronica',
     'household' => 'Casalinghi',
+    'nautical' => 'Nautica',
     //form create annunci
     'pageTitle' => 'Crea il tuo annuncio',
     ///livewire create annunci
@@ -67,4 +68,21 @@ return [
     'slogan' => 'Compra e vendi in piena libertà',
     'earn1' => 'Vendi gratis',
     'buyOnline' => 'Compra online!',
+    'workWithUs' => 'Lavora con noi',
+    //card earn homepage
+    'first_one' => 'Con Presto puoi fare affari ',
+    'second_one' => 'in tutto il mondo',
+    'thirtd_one' => ' e scegliere se affidarti a noi per la spedizione, ',
+    'fourth_one' => 'senza costi aggiuntivi',
+    //card buy homepage
+    'first_two' => 'Con Presto paghi online e ricevere il tuo pacco dove preferisci.
+    Inoltre grazie alla  ',
+    'second_two' => 'Protezione Acquisti',
+    'thirtd_two' => '  verrai rimborsato in caso di imprevisti',
+    'fourth_two' => 'senza costi aggiuntivi',
+    //card work homepage
+    'first_three' => 'Contribuisci attivamente a rendere la community di Presto un posto sereno su
+    cui tornare, ',
+    'second_three' => 'diventa un revisore',
+    
 ];

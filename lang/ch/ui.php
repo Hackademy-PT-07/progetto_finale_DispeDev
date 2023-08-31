@@ -48,6 +48,7 @@ return [
     'motorcycle' => '摩托车',
     'electronics' => '电子产品',
     'household' => '家庭',
+    'nautical' => '航海',
     //form create annunci
     'pageTitle' => '制作您的广告',
     //livewire create annunci
@@ -67,5 +68,21 @@ return [
     'slogan' => '自由买卖',
     'earn1' => '免费出售',
     'buyOnline' => '网上商店!',
+    'workWithUs' => '跟我们工作',
+    //card earn homepage
+    'first_one' => '您可以与 Presto 开展业务 ',
+    'second_one' => '全球',
+    'thirtd_one' => '并选择是否依靠我们发货，',
+    'fourth_one' => '无额外费用',
+    //card buy homepage
+    'first_two' => '使用 Presto.您可以在线支付并在您愿意的任何地方接收包裹。
+    也感谢',
+    'second_two' => '购买保护',
+    'thirtd_two' => '如果发生不可预见的事件，您将获得退款',
+    'fourth_two' => '免费',
+    //card work homepage
+    'first_third' => '积极为使 Presto 社区成为一个快乐的地方做出贡献
+    返回哪个，',
+    'second_third' => '成为审稿人',
 ];
 

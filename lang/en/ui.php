@@ -48,6 +48,7 @@ return [
     'motorcycle' => 'Motorcycle',
     'electronics' => 'Electronics',
     'household' => 'Household',
+    'nautical' => 'Nautical',
     //form create annunci
     'pageTitle' => 'Create your ad',
     ///livewire create annunci
@@ -67,4 +68,21 @@ return [
     'slogan' => 'Buy and sell freely',
     'earn1' => 'Sell for free',
     'buyOnline' => 'Buy online!',
+    'workWithUs' => 'Work with us',
+    //card earn homepage
+    'first_one' => 'You can do business with Presto ',
+    'second_one' => 'worldwide',
+    'thirtd_one' => ' and choose whether to rely on us for the shipment, ',
+    'fourth_one' => 'no extra cost',
+    //card buy homepage
+    'first_two' => 'With Presto you pay online and receive your package wherever you prefer.
+    Also thanks to the ',
+    'second_two' => 'Purchasing Protection',
+    'thirtd_two' => ' you will be refunded in case of unforeseen events',
+    'fourth_two' => 'free of charge',
+    //card work homepage
+    'first_three' => 'Actively contribute to making the Presto community a happy place on
+    which to return, ',
+    'second_three' => 'become a reviewer',
+    
 ];

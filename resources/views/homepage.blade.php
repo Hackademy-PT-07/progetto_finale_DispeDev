@@ -1,5 +1,5 @@
 <x-main>
-    <x-slot:mainTitle> Homepage </x-slot>
+    <x-slot:mainTitle> presto.it </x-slot>
     <!-- searchbar -->
     <div class="container">
         <x-search_bar />
@@ -15,28 +15,24 @@
 
     <div class="freatures-container">
         <div class="freatures-title">
-            <h1>Scegli presto.it</h1>
-            <h4>Compra e vendi in piena libertà.</h4>
+            <h1>{{__('ui.selectPrestoIt')}}</h1>
+            <h4>{{__('ui.slogan')}}</h4>
         </div>
         <div class="container freatures-content">
             <div class="freatures-card">
                 <img class="freatures-img" src="{{ asset('img/sell-online.png') }}" alt="Vendi online">
-                <h4 class="freature-desc">Con Presto puoi fare affari <strong>in tutta Italia</strong> e scegliere se
-                    affidarti a
-                    noi per la spedizione, <strong>senza costi aggiuntivi.</strong></h4>
-                <button class="card-btn">Vendi Online</button>
+                <h4 class="freature-desc">{{__('ui.first_one')}}<strong>{{__('ui.second_one')}}</strong>{{__('ui.thirtd_one')}}<strong>{{__('ui.fourth_one')}}</strong></h4>
+                    <a href="{{ route('annuncio.create') }}"><button class="card-btn">{{__('ui.earn1')}}</button></a>
             </div>
             <div class="freatures-card">
                 <img class="freatures-img" src="{{ asset('img/buy-online.png') }}" alt="Compra online">
-                <h4 class="freature-desc">Con Presto paghi online e ricevere il tuo pacco dove preferisci.
-                    Inoltre grazie alla <strong>Protezione Acquisti</strong> sei rimborsato in caso di imprevisti.</h4>
-                <button class="card-btn">Compra Online</button>
+                <h4 class="freature-desc">{{__('ui.first_two')}}<strong>{{__('ui.second_two')}}</strong>{{__('ui.thirtd_two')}}</h4>
+                    <a href="{{ route('annunci.index') }}"><button class="card-btn">{{__('ui.buyOnline')}}</button></a>
             </div>
             <div class="freatures-card">
                 <img class="freatures-img" src="{{ asset('img/work-with-us.png') }}" alt="Lavora con Noi">
-                <h4 class="freature-desc">Contribuisci attivamente a rendere la community di Presto un posto sereno su
-                    cui tornare, <strong>diventa un revisore</strong></h4>
-                <button class="card-btn">Lavora con noi</button>
+                <h4 class="freature-desc">{{__('ui.first_third')}}<strong>{{__('ui.second_third')}}</strong></h4>
+                    <a href="{{route('diventa.revisore')}}"><button class="card-btn">{{__('ui.workWithUs')}}</button></a>
             </div>
         </div>
     </div>
