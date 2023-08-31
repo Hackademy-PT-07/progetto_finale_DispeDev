@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row revise-title--container">
                 <h2 class="revise-title">
-                    {{ $announcementToCheck ? "__('ui.announcementsToReview')" : "__('ui.notAdsToReview')" }}
+                    {{ $announcementToCheck ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
                 </h2>
                 @if ($announcementToCheck)
             </div>
@@ -13,10 +13,16 @@
             <div class="row revise-content--container">
                 <div>
                     <div class="carousel slide" id="carousel" data-bs-ride="carousel">
+                        @if ($announcementToCheck->images)
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="img-fluid" src="https://picsum.photos/200/300" alt="foto">
+                        @foreach($announcementToCheck->images as $image)
+                            <div class="carousel-item @if($loop->first)active @endif">
+                                <img src="{{$image->getUrl(400,300)}}" alt="foto">
+                                </div>
+                        
+                            @endforeach
                             </div>
+                            @else
                             <div class="carousel-item">
                                 <img class="img-fluid" src="https://picsum.photos/200/300" alt="foto2">
                             </div>
@@ -32,19 +38,21 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-
+                    @endif
                     <div class="content-container">
                         <div class="content-item">
-                            {{__('ui.titlePlaceholder')}}:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>
+                            Titolo:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>
+                        </div>
+
+
+                        <div class="content-item">
+                            Categoria:<h5 class="content-category"> {{ $announcementToCheck->category->name }}</h5>
                         </div>
                         <div class="content-item">
-                        {{__('ui.category')}}:<h5 class="content-category"> {{ $announcementToCheck->category->name }}</h5>
-                        </div>
-                        <div class="content-item">
-                            {{__('ui.description')}}:<h5 class="content-text"> {{ $announcementToCheck->description }}</h5>
+                            Descrizione:<h5 class="content-text"> {{ $announcementToCheck->description }}</h5>
                         </div>
                         <div class="content-item mb-4">
-                            {{__('ui.publishedAt')}}:<h5 class="content-footer">
+                            Pubblicato il:<h5 class="content-footer">
                                 {{ $announcementToCheck->created_at->format('d/m/Y') }}</h5>
                         </div>
                     </div>
@@ -54,14 +62,14 @@
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">{{__('ui.accept')}}</button>
+                            <button type="submit" class="btn btn-success shadow">Accetta</button>
                         </form>
 
                         <form action="{{ route('reject_announcement', ['announcement' => $announcementToCheck]) }}"
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">{{__('ui.reject')}}</button>
+                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
                         </form>
                     </div>
 

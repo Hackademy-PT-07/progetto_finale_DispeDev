@@ -1,7 +1,7 @@
-<a class="a-card" href="{{ route('annunci.show', $id) }}">
+<!--<a href="{{ route('annunci.show', $id) }}">
     <div class="card-announcement">
         <div class="card-img-box">
-            <img class="card-announcement-img" src="{{ $url_image }}" alt="{{ $title }}">
+            <img class="card-announcement-img" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200/300' }}" alt="{{ $title }}">
         </div>
         <div class="card-announcement-text-box">
             <a href="{{route('annunci.categoria', ['category' => $categoria])}}" class="category-a">{{ $category }}</a>
