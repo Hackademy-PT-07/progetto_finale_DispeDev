@@ -1,8 +1,10 @@
 .buy-sell{
     background-color: var(--bianco);
-    padding: 32px 20px;
-    margin: 20px 0px 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
     box-shadow: 0px 10px 20px -7px var(--shadow);
+    border-radius: 5px;
 }
 
 .box-buy-sell{

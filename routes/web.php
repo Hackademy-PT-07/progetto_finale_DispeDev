@@ -24,17 +24,14 @@ Route::post('/lingua/{lang}', [HomepageController::class, 'setLanguage'])->name(
 
 Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
+Route::middleware("auth")->group(function () {
 
-
-Route::middleware("auth")->group(function(){
-
-    Route::get('i/tuoi/annunci', function(){
+    Route::get('i/tuoi/annunci', function () {
         return view('auth.announcements-show');
     })->name('i.tuoi.annunci');
 
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
     Route::get('lavora-con-noi/revisore', [RevisorController::class, 'workWithUs'])->name('diventa.revisore');
-    
 });
 
 Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
@@ -50,10 +47,10 @@ Route::get('accetta/revisore/{user}', [RevisorController::class, 'makeRevisor'])
 
 
 #Rotte per revisor
-Route::middleware("isRevisor")->group(function(){
-Route::get('revisor/',[RevisorController::class, 'index'])->name('revisor.index');
-#Rotta per accettazione annuncio
-Route::patch('accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('accept_announcement');
-#Rotta per rifiuto annuncio
-Route::patch('rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('reject_announcement');
+Route::middleware("isRevisor")->group(function () {
+    Route::get('revisor/', [RevisorController::class, 'index'])->name('revisor.index');
+    #Rotta per accettazione annuncio
+    Route::patch('accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('accept_announcement');
+    #Rotta per rifiuto annuncio
+    Route::patch('rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('reject_announcement');
 });

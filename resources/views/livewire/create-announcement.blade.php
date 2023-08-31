@@ -5,9 +5,9 @@
             <div class="mt-4">
 
                 @if($announcement->id)
-                    <h3>Modifica annuncio</h1>
+                    <h3>{{__('ui.editAnnouncement')}}</h1>
                 @else
-                    <h3>Crea annuncio</h1>
+                    <h3>{{__('ui.createAnnouncement')}}</h1>
                 @endif
 
             </div>
@@ -15,14 +15,14 @@
                 @csrf
                 <div class="mb-4 section-split">
 
-                    <input type="text" name="title" class="form-control" id="title" wire:model="title" value="{{ old('title') }}" placeholder="Titolo">
+                    <input type="text" name="title" class="form-control" id="title" wire:model="title" value="{{ old('title') }}" placeholder="{{__('ui.titlePlaceholder')}}">
                     @error('title')
                     <span class="small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-4 section-split">
 
-                    <input type="number" name="price" class="form-control" id="price" wire:model="price" value="{{ old('price') }}" placeholder="Prezzo">
+                    <input type="number" name="price" class="form-control" id="price" wire:model="price" value="{{ old('price') }}" placeholder="{{__('ui.pricePlaceholder')}}">
                     @error('price')
                     <span class="small text-danger">{{ $message }}</span>
                     @enderror
@@ -31,7 +31,7 @@
                     <div>
 
                         <select class="form-select" wire:model="category_id" name="category_id" aria-label="Default select example">
-                            <option selected>Scegli la categoria</option>
+                            <option selected>{{__('ui.selectCategories')}}</option>
                             @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
@@ -67,12 +67,12 @@
                 </div>
                 <div class="mb-4 section-split">
 
-                    <textarea name="description" wire:model="description" id="description" placeholder="Inserisci una descrizione" class="form form-control" placeholder="inserisci una descrizione">{{ old('decription') }}</textarea>
+                    <textarea name="description" wire:model="description" id="description" placeholder="{{__('ui.descriptionPlaceholder')}}" class="form form-control">{{ old('decription') }}</textarea>
                     @error('description')
                     <span class="small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-                <button class="mt-3 mb-4 large" type="submit">Inserisci annuncio</button>
+                <button class="mt-3 mb-4 large" type="submit">{{__('ui.button')}}</button>
             </form>
         </div>
         

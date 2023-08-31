@@ -50,13 +50,13 @@
 
 .divisor    {
     width: 50px;
-    border: 2px solid var(--azzuro);
+    border-bottom: 4px solid var(--azzuro);
     margin-bottom: 15px;
 }
 
 .footer-divisor {
     width: 100%;
-    border-bottom: 2px solid var(--bianco);
+    border-bottom: 1px solid var(--bianco);
 }
 
 .footer-copy-container   {

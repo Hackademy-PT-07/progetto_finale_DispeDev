@@ -8,7 +8,7 @@
             <h3>{{ $title }}</h3>
             <span>€{{ $price }}</span>
             <p>{{ $description }}</p>
-            <div class="d-flex justify-content-end mt-4">
+            <div class="d-flex justify-content-end">
                 <p class="last-update">Ultima modifica: {{ $updated }}</p>
             </div>
         </div>

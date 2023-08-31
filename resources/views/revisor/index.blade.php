@@ -24,7 +24,7 @@
                             </div>
                             @else
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/200/300" alt="foto2">
+                                <img class="img-fluid" src="https://picsum.photos/200/300" alt="foto2">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="carousel"

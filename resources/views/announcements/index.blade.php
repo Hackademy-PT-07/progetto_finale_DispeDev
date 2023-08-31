@@ -1,11 +1,10 @@
 <x-main>
-    <x-slot:mainTitle>Annunci</x-slot>
+    <x-slot:mainTitle>{{ __('ui.titleIndex') }}</x-slot>
+    <div class="container">
+        <x-search_bar />
+        <h1 class="style-title">{{ $totalAnnouncements }} Annunci trovati</h1>
+
         <div class="container">
-            <x-search_bar />
-            
-            <h1 class="style-title">{{$totalAnnouncements}} Annunci trovati</h1>
-            
-            <div class="container">
             @forelse($announcements as $announcement)
                 <x-card-announcement>
                     <x-slot:id>{{$announcement->id}}</x-slot>
@@ -17,11 +16,9 @@
                     <x-slot:description>{{$announcement->description}}</x-slot>
                     <x-slot:updated>{{$announcement->updated_at->format('d/m/Y')}}</x-slot>
                 </x-card-announcement>
-                @empty
+            @empty
                 <p>Non ci sono annunci per questa categoria</p>
             @endforelse
-            
-                </div>
-            </div>
-
+        </div>
+    </div>
 </x-main>

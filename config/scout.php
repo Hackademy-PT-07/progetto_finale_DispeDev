@@ -116,20 +116,6 @@ return [
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
 
-
-    'tntsearch' => [
-        'storage' => storage_path(),
-        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
-        'fuzzy' => [
-            'prefix_lenght' => 2,
-            'max_expansions' => 50,
-            'distance' => 2
-        ],
-        'asYouType' => false,
-        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
-        'maxDocs' => env('TNTSEARCH_BOOLEAN', 500),
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Meilisearch Configuration
@@ -151,6 +137,19 @@ return [
             //     'filterableAttributes'=> ['id', 'name', 'email'],
             // ],
         ],
+    ],
+
+    'tntsearch' => [
+        'storage' => storage_path(),
+        'fuzzines' => env('TNTSEARCH_FUZZINESS', TRUE),
+        'fuzzy' => [
+            'prefix_lenght' => 2,
+            'max_expansions' => 50,
+            'distance' => 2
+        ],
+        'asYouType' => FALSE,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', FALSE),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
     ],
 
 ];

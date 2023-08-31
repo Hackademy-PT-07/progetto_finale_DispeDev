@@ -11,6 +11,7 @@
 @import 'categories.css';
 @import 'show.css';
 @import 'revisor.css';
+@import 'freatures.css';
 
 *{
     margin: 0;
@@ -24,8 +25,9 @@ html {
 }
 
 :root {
-    --arancio: #E36414;
+    --arancio: #e36314;
     --blu: #0F4C5C;
+    --blu-scuro: #2F4858;
     --panna: #FCF6EB;
     --azzuro: #048BA8;
     --bianco: #ffffff;
@@ -33,6 +35,7 @@ html {
     --bronzo: #d6bb7c;
     --viola: #aa91df;
     --acquamarina: #83cdc4;
+    --arancio-chiaro: #85defb;
     --grigio: #ccc;
     --rosso: #ff0000;
 
@@ -40,11 +43,16 @@ html {
     --dark-shadow: #474747;
 
     --black-border: #353535;
+    --black-light: #CED2C4;
     --gray-border: #676767;
 }
 
 .bg-body-arancio    {
     background-color: var(--arancio);
+}
+
+.bg-body-footer    {
+    background-color: var(--black-border);
 }
 
 .bg-shadow  {
@@ -101,6 +109,7 @@ button{
     background-color: var(--azzuro);
     padding: 2% 15% 2% 15%;
     border: none;
+    border-radius: 5px;
 }
 button:active {
     transform: scale(0.95);
@@ -163,20 +172,6 @@ button a {
         margin-bottom: 20px;
     }
 
-    .revisor-icon   {
-        display: none;
-    }
-
-    .revisor-text   {
-        display: flex;
-        align-items: center;
-    }
-
-    .revisor-text span  {
-        font-size: 12px;
-        padding-bottom: 16px;
-        margin-left: -5px;
-    }
 }
 
 @media(max-width:768px){
@@ -252,9 +247,7 @@ button a {
         width: 100%;
     }
 
-    .categories-home{
-        display: none;
-    }
+
 
     /* buy sell */
     .buy-sell{
@@ -320,24 +313,8 @@ button a {
         margin-bottom: 0.25rem;
     }
 
-    .revisor-icon   {
-        display: none;
-    }
-
-    .revisor-text   {
-        display: flex;
-        align-items: center;
-    }
-
-    .revisor-text span  {
-        font-size: 12px;
-        padding-bottom: 16px;
-        margin-left: -5px;
-    }
-
     .revise-title   {
         font-size: 25px;
-
     }
 
     .footer-content-container   {
@@ -385,7 +362,12 @@ button a {
 }
 
 @media (max-width:576px) {
-
+    /* nav */
+    .img-logo   {
+        width: 150px;
+        height: auto;
+        margin: 5px 0px 5px 10px;
+    }
     .btn-add    {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -517,14 +499,59 @@ button a {
 
         /* card */
     .card-announcement{
-            flex-direction: column;
+        margin: 10px auto 10px auto;
     }
-
+    .card-img-box{
+        width: 40%;
+        height: auto;
+        display: flex;
+    }
     .card-announcement-img{
-            width: 330px;
-            height: auto;
+        width: 100%;
+        height: auto;
+        margin: 10px;
+        object-fit:cover;
     }
 
+    .card-announcement-text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 60%;
+        margin-top: 10px;
+
+    }
+
+    .card-announcement-text-box h3{
+        font-weight: 700;
+        color: #0F4C5C;
+        font-size: 16px;
+        margin: 0;
+    }
+    .card-announcement-text-box span{
+        color: var(--arancio);
+        font-weight: 700;
+        font-size: 14px;
+    }
+    .category-a{
+        color: var(--shadow);
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .card-announcement-text-box p{
+        font-size: 12PX;
+        margin: 0;
+    }
+    .card-announcement-text-box .last-update{
+        font-size: 10px;
+        font-weight: 400;
+        color: var(--shadow);
+        margin-top: 10px;
+    }
+
+    /* _______ */
     .work-img--container    {
         margin-right: 40px;
         margin-top: -100px;
@@ -548,21 +575,6 @@ button a {
     .social-container{
         border-bottom: 1px solid var(--panna);
     }
-    .revisor-icon   {
-        display: none;
-    }
-
-    .revisor-text   {
-        display: flex;
-        align-items: center;
-    }
-
-    .revisor-text span  {
-        font-size: 12px;
-        padding-bottom: 16px;
-        margin-left: -5px;
-    }
-
     .revise-title   {
         text-align: center;
         font-size: 20px;

@@ -3,7 +3,7 @@
 }
 
 .img-logo   {
-    width: 150px;
+    width: 180px;
     height: auto;
     margin: 10px 0px 10px 50px;
 }
@@ -22,12 +22,13 @@
 }
 
 .nav-text   {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--bianco);
     text-transform: capitalize;
     text-decoration: none;
     list-style: none;
+    margin-left: 5px;
     margin-right: 5px;
 }
 
@@ -38,14 +39,17 @@
 .revisor-icon   {
     display: flex;
     align-items: center;
-    margin-right: 5px;
-    margin-left: 5px;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .revisor-icon span  {
-    font-size: 12px;
-    padding-bottom: 25px;
-    margin-left: -10px;
+    color: var(--bianco);
+    font-weight: 600;
+    font-size: 13px;
+    padding-bottom: 18px;
+    margin-left: -5px;
 }
 
 .revisor-text   {

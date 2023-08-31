@@ -1,8 +1,23 @@
+.categories-home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categories-container   {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .categories-items{
     width: 180px;
     height: 90px;
+    border-radius: 7px;
     padding: 0;
     box-shadow: 0px 10px 20px -7px var(--shadow);
+    border-radius: 5px;
 }
 
 .item-1{
@@ -45,3 +60,14 @@
         background-color: var(--bianco);
         color: var(--acquamarina);
     }
+
+    .item-5{
+        background-color: var(--arancio-chiaro);
+        border: 2px dashed var(--arancio-chiaro);
+        }
+    .item-5:hover{
+            transition: .4s;
+            border: 2px dashed var(--arancio-chiaro);
+            background-color: var(--bianco);
+            color: var(--arancio-chiaro);
+        }

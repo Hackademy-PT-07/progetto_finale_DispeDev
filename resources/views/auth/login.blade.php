@@ -13,7 +13,7 @@
                     </div>
                     <div class="text-center mt-4">
                         <h1 class="h2 clr-text-blu">{{__('ui.welcomeBack')}}</h1>
-                        <p class="lead clr-text-blu">{{__('ui.loginWithAccount')}}</p>
+                        <p class="lead clr-text-blu">{{__('ui.loginWhithAccount')}}</p>
                     </div>
                     <form action="/login" method="POST">
                         @csrf
