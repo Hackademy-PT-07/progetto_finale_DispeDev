@@ -31,7 +31,7 @@
             </div>
             <div class="freatures-card">
                 <img class="freatures-img" src="{{ asset('img/work-with-us.png') }}" alt="Lavora con Noi">
-                <h4 class="freature-desc">{{__('ui.first_third')}}<strong>{{__('ui.second_third')}}</strong></h4>
+                <h4 class="freature-desc">{{__('ui.first_three')}}<strong>{{__('ui.second_three')}}</strong></h4>
                     <a href="{{route('diventa.revisore')}}"><button class="card-btn">{{__('ui.workWithUs')}}</button></a>
             </div>
         </div>
