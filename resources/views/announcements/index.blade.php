@@ -23,8 +23,6 @@
                         </div>
                     </div>
                 </a>
-
-
                 @empty
                 <p>Non ci sono annunci da visualizzare</p>
                 @endforelse

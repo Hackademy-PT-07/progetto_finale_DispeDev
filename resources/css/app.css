@@ -12,6 +12,7 @@
 @import 'show.css';
 @import 'revisor.css';
 @import 'freatures.css';
+@import 'createannounce.css';
 
 *{
     margin: 0;
@@ -91,16 +92,12 @@ a{
     color: var(--blu);
     margin-top: 3%;
     margin-bottom: 1%;
+    margin-left: 5%;
     text-shadow: 2px 2px 4px var(--grigio);
 }
 
 .m-top  {
     margin-top: 4.5rem;
-}
-
-.mt-announce    {
-    margin-top: 8rem;
-    margin-bottom: 4rem;
 }
 
 /* button */
@@ -158,7 +155,41 @@ button a {
         margin-bottom: 0.25rem;
     }
 
+    .categories-container   {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: .5rem;
+    }
 
+    .categories-items   {
+        margin-top: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .search-box form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-input   {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .search-input input[type=text]  {
+        max-width: 350px;
+    }
+
+    .select-categories  {
+        margin-bottom: 25px;
+    }
 }
 
 @media(min-width:768px) and (max-width:992px)   {
@@ -170,6 +201,13 @@ button a {
     .btn-add    {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .freatures-content  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
 }
@@ -288,13 +326,13 @@ button a {
         border-radius: 25px;
     }
 
-    .card-announcements {
+    /* .card-announcements {
         width: 100vw;
         margin-top: 50px;
         margin-bottom: 50px;
         margin-left: 0;
         border-radius: 25px;
-    }
+    } */
 
     .btn-container  {
         margin-left: 0;
@@ -359,6 +397,53 @@ button a {
         width: 60%;
     }
 
+    .search-box {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .freatures-content  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .freatures-title h1 {
+        font-size: 64px;
+    }
+
+    .freatures-title h4 {
+        font-size: 18px;
+    }
+
+    .categories-container   {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: .5rem;
+    }
+
+    .categories-items   {
+        margin-top: 20px;
+    }
+
+    .search-box {
+        margin-top: 7rem;
+    }
+
+    .select-categories  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .search-input button {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width:576px) {
@@ -498,7 +583,7 @@ button a {
     }
 
         /* card */
-    .card-announcement{
+    /* .card-announcement{
         margin: 10px auto 10px auto;
     }
     .card-img-box{
@@ -549,7 +634,7 @@ button a {
         font-weight: 400;
         color: var(--shadow);
         margin-top: 10px;
-    }
+    } */
 
     /* _______ */
     .work-img--container    {
@@ -630,5 +715,17 @@ button a {
         width: 100%;
         padding: 5% 5%;
         margin: 0;
+    }
+
+    .freatures-title    {
+        text-align: center;
+    }
+
+    .freatures-title h1 {
+        font-size: 56px;
+    }
+
+    .freatures-title h4 {
+        font-size: 15px;
     }
 }
