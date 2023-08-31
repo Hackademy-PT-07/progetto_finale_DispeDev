@@ -85,5 +85,14 @@ return [
     'first_three' => 'Actively contribute to making the Presto community a happy place on
     which to return, ',
     'second_three' => 'become a reviewer',
+    //annunci da revisionare
+    'announcementToReview' => 'Announcements to review',
+    'announcementsToReview' => 'Here is the announcement for review',
+    'notAdsToReview' => 'There are no ads to review',
+    'category' => 'Category',
+    'description' => 'Description',
+    'publishedAt' => 'Posted on',
+    'accept' => 'Accept',
+    'reject' => 'Reject',
     
 ];

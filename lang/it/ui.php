@@ -85,5 +85,14 @@ return [
     'first_three' => 'Contribuisci attivamente a rendere la community di Presto un posto sereno su
     cui tornare, ',
     'second_three' => 'diventa un revisore',
+    //annunci da revisionare
+    'announcementsToReview' => 'Ecco l\'annuncio da revisionare',
+    'announcementToReview' => 'Annunci da revisionare',
+    'notAdsToReview' => 'Non ci sono annunci da revisionare',
+    'category' => 'Categoria',
+    'description' => 'Descrizione',
+    'publishedAt' => 'Pubblicato il',
+    'accept' => 'Accetta',
+    'reject' => 'Rifiuta',
     
 ];

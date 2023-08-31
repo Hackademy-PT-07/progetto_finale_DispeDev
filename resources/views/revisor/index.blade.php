@@ -1,10 +1,10 @@
 <x-main>
-    <x-slot:mainTitle> Annunci da revisionare </x-slot>
+    <x-slot:mainTitle>{{__('ui.announcementToReview')}}</x-slot>
 
         <div class="container">
             <div class="row revise-title--container">
                 <h2 class="revise-title">
-                    {{ $announcementToCheck ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare' }}
+                    {{ $announcementToCheck ? "__('ui.announcementsToReview')" : "__('ui.notAdsToReview')" }}
                 </h2>
                 @if ($announcementToCheck)
             </div>
@@ -35,16 +35,16 @@
 
                     <div class="content-container">
                         <div class="content-item">
-                            Titolo:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>
+                            {{__('ui.titlePlaceholder')}}:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>
                         </div>
                         <div class="content-item">
-                            Categoria:<h5 class="content-category"> {{ $announcementToCheck->category->name }}</h5>
+                        {{__('ui.category')}}:<h5 class="content-category"> {{ $announcementToCheck->category->name }}</h5>
                         </div>
                         <div class="content-item">
-                            Descrizione:<h5 class="content-text"> {{ $announcementToCheck->description }}</h5>
+                            {{__('ui.description')}}:<h5 class="content-text"> {{ $announcementToCheck->description }}</h5>
                         </div>
                         <div class="content-item mb-4">
-                            Pubblicato il:<h5 class="content-footer">
+                            {{__('ui.publishedAt')}}:<h5 class="content-footer">
                                 {{ $announcementToCheck->created_at->format('d/m/Y') }}</h5>
                         </div>
                     </div>
@@ -54,14 +54,14 @@
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-success shadow">Accetta</button>
+                            <button type="submit" class="btn btn-success shadow">{{__('ui.accept')}}</button>
                         </form>
 
                         <form action="{{ route('reject_announcement', ['announcement' => $announcementToCheck]) }}"
                             method="POST">
                             @csrf
                             @method('PATCH')
-                            <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                            <button type="submit" class="btn btn-danger shadow">{{__('ui.reject')}}</button>
                         </form>
                     </div>
 

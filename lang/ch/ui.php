@@ -85,5 +85,14 @@ return [
     'first_third' => '积极为使 Presto 社区成为一个快乐的地方做出贡献
     返回哪个，',
     'second_third' => '成为审稿人',
+    //annunci da revisionare
+    'announcementToReview' => '待审查的公告',
+    'announcementsToReview' => '这是供审核的公告',
+    'notAdsToReview' => '没有要审核的广告',
+    'category' => '类别',
+    'description' => '描述',
+    'publishedAt' => '发表于',
+    'accept' => '接受',
+    'reject' => '拒绝',
 ];
 
