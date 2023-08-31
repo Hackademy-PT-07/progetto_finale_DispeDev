@@ -114,7 +114,7 @@
         </div> --}}
 
 
-    <h2 class="style-title">Ultimi annunci pubblicati</h2>
+    <h2 class="style-title">{{__('ui.lastAnnouncements')}}</h2>
     <!-- card annunci in primo piano -->
     @foreach ($announcements as $announcement)
         <x-card-announcement>

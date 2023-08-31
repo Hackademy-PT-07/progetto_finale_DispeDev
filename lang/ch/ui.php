@@ -59,6 +59,7 @@ return [
     'descriptionPlaceholder' => '输入描述',
     'button' => '发布广告',
     //pagina annunci
+    'lastAnnouncements' => '最新公告发布', 
     'titleIndex' => '广告',
     'findendAnnouncements' => '找到公告',
     'notFindedAnnouncements' => '该类别没有公告',

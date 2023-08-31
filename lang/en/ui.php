@@ -59,6 +59,7 @@ return [
     'descriptionPlaceholder' => 'Enter a description',
     'button' => 'Post ad',
     //pagina annunci
+    'lastAnnouncements' => 'Latest announcements published', 
     'titleIndex' => 'Ads',
     'findendAnnouncements' => 'Found announcements',
     'notFindedAnnouncements' => 'There are no announcements for this category',

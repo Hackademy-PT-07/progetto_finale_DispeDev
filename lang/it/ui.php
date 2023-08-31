@@ -59,6 +59,7 @@ return [
     'descriptionPlaceholder' => 'Inserisci una descrizione',
     'button' => 'Inserisci annuncio',
     //pagina annunci
+    'lastAnnouncements' => 'Ultimi annunci pubblicati', 
     'titleIndex' => 'Annunci',
     'findendAnnouncements' => 'Annunci trovati',
     'notFindedAnnouncements' => 'Non ci sono annunci per questa categoria',
