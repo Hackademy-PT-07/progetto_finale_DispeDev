@@ -24,13 +24,13 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <x-lang lang="it" nation="it" /> Italian
+                                <x-lang lang="it" nation="it" /> Italiano
                             </li>
                             <li>
                                 <x-lang lang="en" nation="gb" /> English
                             </li>
                             <li>
-                                <x-lang lang="ch" nation="cn" /> Cinese
+                                <x-lang lang="ch" nation="cn" /> 中国人
                             </li>
                         </ul>
                     </div>
