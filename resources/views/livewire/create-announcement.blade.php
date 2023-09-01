@@ -67,7 +67,7 @@
                                 @foreach ($dbimages as $key => $image)
                                     <div class="img-container col my-3">
                                         <div class="img-preview mx-auto shadow rounded"
-                                            style="background-image:url({{ 'storage/'.$image->path }});">
+                                            style="background-image:url({{ 'storage/' . $image->path }});">
                                         </div>
                                         <button type="button"
                                             class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
