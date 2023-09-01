@@ -2,15 +2,17 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Announcement;
 use App\Models\User;
-use App\Models\Category;
 use Livewire\Component;
-use Livewire\WithFileUploads;
-use Illuminate\Support\Facades\Storage;
+use App\Models\Category;
 use App\Jobs\ResizeImage;
+use App\Models\Announcement;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Collection;
+
 
 class CreateAnnouncement extends Component
 {
@@ -24,11 +26,11 @@ class CreateAnnouncement extends Component
     public $image;
     public $temporary_images;
     public $price;
-
+    public $dbimages;
     public $announcement;
 
 protected $listeners = [
-    'edit',
+    'editAnnouncementUser',
 ];
 
 
@@ -117,6 +119,8 @@ protected $listeners = [
         $this->cleanForm();
 
         $this->emitTo('user-announcements-list', 'loadUserAnnouncements');
+
+        
         
 
          session()->flash('success', 'Annuncio creato correttamente. Verra\' inserito dopo la revisione');
@@ -139,12 +143,16 @@ protected $listeners = [
     }
 
 
-    public function editAnnouncementUser($user_id)
+    public function editAnnouncementUser($announcement)
     {
-        $this->announcement = Announcement::find($user_id);
-        $this->announcement->update([
-            'title' => $this->title,
-        ]);
+        $this->announcement = Announcement::find($announcement);
+        $this->title = $this->announcement->title;
+        $this->description = $this->announcement->description;
+        $this->price = $this->announcement->price;
+        $this->category_id = $this->announcement->category_id;
+        $this->dbimages = $this->announcement->images()->get()->toArray();
+
+         
     }
 
     public function render()
