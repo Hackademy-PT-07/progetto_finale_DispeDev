@@ -63,6 +63,7 @@ return [
     'titleIndex' => 'Ads',
     'findendAnnouncements' => 'Found announcements',
     'notFindedAnnouncements' => 'There are no announcements for this category',
+    'lastUpdate' => 'Last update',
     //Homepage
     'allAnnouncement' => 'here are our announcements!',
     'selectPrestoIt' => 'Choose presto.it',
@@ -70,6 +71,7 @@ return [
     'earn1' => 'Sell for free',
     'buyOnline' => 'Buy online!',
     'workWithUs' => 'Work with us',
+    'empty' => 'There are no ads to display',
     //card earn homepage
     'first_one' => 'You can do business with Presto ',
     'second_one' => 'worldwide',
@@ -94,5 +96,7 @@ return [
     'publishedAt' => 'Posted on',
     'accept' => 'Accept',
     'reject' => 'Reject',
+    //lavora con noi
+    'workWithUs' => 'Work with us!',
     
 ];

@@ -63,6 +63,7 @@ return [
     'titleIndex' => '广告',
     'findendAnnouncements' => '找到公告',
     'notFindedAnnouncements' => '该类别没有公告',
+    'lastUpdate' => '最后更新',
     //Homepage
     'allAnnouncement' => '这是我们的公告',
     'selectPrestoIt' => '尽早选择.它',
@@ -70,6 +71,7 @@ return [
     'earn1' => '免费出售',
     'buyOnline' => '网上商店!',
     'workWithUs' => '跟我们工作',
+    'empty' => '没有可显示的广告',
     //card earn homepage
     'first_one' => '您可以与 Presto 开展业务 ',
     'second_one' => '全球',
@@ -95,4 +97,6 @@ return [
     'accept' => '接受',
     'reject' => '拒绝',
     'second_three' => '成为审稿人',
+    //lavora con noi
+    'workWithUs' => '跟我们工作',
 ];
