@@ -1,0 +1,76 @@
+@media(min-width: 768px) and (max-width: 1400px)   {
+
+    .card-create    {
+        width: 100vw;
+        margin-top: 10rem;
+        border-radius: 25px;
+    }
+
+    .card-announcements {
+        width: 100vw;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 0;
+        border-radius: 25px;
+    }
+
+    .btn-container  {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .bottom  {
+        margin-bottom: 10px;
+    }
+
+    .mt-announce    {
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+    }
+
+    .categories-container   {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: .5rem;
+    }
+
+    .categories-items   {
+        margin-top: 20px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .search-box form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-input   {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search-input input[type=text]  {
+        width: 850px;
+    }
+
+    .select-categories select   {
+        width: 850px;
+    }
+
+    .select-categories  {
+        margin-bottom: 10px;
+    }
+
+    .search-button  {
+        width: 200px;
+
+    }
+}

@@ -6,13 +6,12 @@
         <x-success />
         <div class="container mt-5">
             <div class="row">
-                <div class="col-5 d-flex card-create">
+                <div class="create-card--container">
                     <livewire:create-announcement />
+                </div>
+                <div class="user-announcements--container">
                     <livewire:user-announcements-list />
                 </div>
-                {{--                 <div class="col-5">
-
-                </div> --}}
             </div>
         </div>
     </div>
