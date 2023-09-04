@@ -19,6 +19,7 @@ class UserAnnouncementsList extends Component
     public $description;
     public $announcementEdited;
 
+    
 
     protected $listeners = [
         'loadUserAnnouncements',
@@ -30,11 +31,11 @@ class UserAnnouncementsList extends Component
         $this->announcements=auth()->user()->announcements;
     }
 
-    public function editAnnouncementUser($announcementEdited)
+    /*public function editAnnouncementUser($announcements)
     {
-        /*
-        $this->emitTo('create-announcement', 'edit', $announcement);
-        */
+       
+        //$this->emitTo('create-announcement', 'edit', $announcement);
+       
         $this->editModal = true;
         $announcement = Announcement::findOrFail($announcementEdited);
         $this->announcementEdited = $announcement->id;
@@ -44,9 +45,15 @@ class UserAnnouncementsList extends Component
         $this->description = $announcement->description;
         //deve salvare
 
+    }*/
+
+
+    public function editAnnouncementUser($announcement)
+    {
+        $this->emitTo('create-announcement', 'editAnnouncementUser', $announcement);
     }
 
-    public function updateAnnouncementUser()
+    /*public function updateAnnouncementUser()
     {
         $this->validate();
 
@@ -59,7 +66,7 @@ class UserAnnouncementsList extends Component
         ]);
 
         $this->resetImputFields();
-    }
+    }*/
 
     public function deleteAnnouncement(Announcement $announcement)
     {
@@ -71,6 +78,8 @@ class UserAnnouncementsList extends Component
     {
         $this->loadUserAnnouncements();
     }
+
+    
 
     public function render()
     {
@@ -86,5 +95,7 @@ class UserAnnouncementsList extends Component
         $this->description = '';
         $this->editModal = false;
     }
+
+
 }
 

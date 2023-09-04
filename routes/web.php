@@ -31,7 +31,8 @@ Route::middleware("auth")->group(function () {
     })->name('i.tuoi.annunci');
 
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
-    Route::get('lavora-con-noi/revisore', [RevisorController::class, 'workWithUs'])->name('diventa.revisore');
+    Route::get('lavora-con-noi', [RevisorController::class, 'workWithUsForm'])->name('diventa.revisore');
+    Route::post('lavora-con-noi/mail', [RevisorController::class, 'workWithUs'])->name('invia.mail');
 });
 
 Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');

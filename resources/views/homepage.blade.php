@@ -42,17 +42,18 @@
         <div class="container">
 
 
-            <h2 class="style-title">Ultimi annunci pubblicati</h2>
+            <h2 class="style-title">{{__('ui.lastAnnouncements')}}</h2>
             <!-- card annunci in primo piano -->
             @forelse ($announcements as $announcement)
 
-            <a href="{{ route('annunci.show', $announcement->id) }}">
+            
                 <div class="card-announcement">
+                <a href="{{ route('annunci.show', $announcement->id) }}">
                     <div class="card-img-box">
                         <img class="card-announcement-img" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,300) : 'https://picsum.photos/200/300' }}" alt="{{ $announcement->title }}">
                     </div>
                     <div class="card-announcement-text-box">
-                        <a href="{{route('annunci.categoria', ['category' => $announcement->category_id])}}" class="category-a">{{ $announcement->category->name }}</a>
+                    <a href="{{route('annunci.filter', ['category' => $announcement->category_id])}}" class="category-a">{{ $announcement->category->name }}</a>
                         <h3>{{ $announcement->title }}</h3>
                         <span>€{{ $announcement->price }}</span>
                         <p>{{ $announcement-> description }}</p>
@@ -60,12 +61,13 @@
                             <p class="last-update">Ultima modifica: {{ $announcement->updated_at }}</p>
                         </div>
                     </div>
+                    </a>
                 </div>
-            </a>
+            
 
 
             @empty
-            <p>Non ci sono annunci da visualizzare</p>
+            <p>{{__('ui.empty')}}</p>
             @endforelse
 
 

@@ -1,0 +1,26 @@
+@media(min-width:768px) and (max-width:992px)   {
+
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .btn-add    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .freatures-content  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-input input[type=text]  {
+        width: 550px;
+    }
+
+    .select-categories select   {
+        width: 550px;
+    }
+}

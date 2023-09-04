@@ -63,6 +63,7 @@ return [
     'titleIndex' => 'Annunci',
     'findendAnnouncements' => 'Annunci trovati',
     'notFindedAnnouncements' => 'Non ci sono annunci per questa categoria',
+    'lastUpdate' => 'Ultima modifica',
     //Homepage
     'allAnnouncement' => 'ecco i nostri annunci!',
     'selectPrestoIt' => 'Scegli presto.it',
@@ -70,6 +71,7 @@ return [
     'earn1' => 'Vendi gratis',
     'buyOnline' => 'Compra online!',
     'workWithUs' => 'Lavora con noi',
+    'empty' => 'Non ci sono annunci da visualizzare',
     //card earn homepage
     'first_one' => 'Con Presto puoi fare affari ',
     'second_one' => 'in tutto il mondo',
@@ -94,5 +96,7 @@ return [
     'publishedAt' => 'Pubblicato il',
     'accept' => 'Accetta',
     'reject' => 'Rifiuta',
+    //lavora con noi
+    'workWithUs' => 'Lavora con noi',
     
 ];

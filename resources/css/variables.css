@@ -1,0 +1,22 @@
+:root {
+    --arancio: #e36314;
+    --blu: #0F4C5C;
+    --blu-scuro: #2F4858;
+    --panna: #FCF6EB;
+    --azzuro: #048BA8;
+    --bianco: #ffffff;
+    --salmone: #e47678;
+    --bronzo: #d6bb7c;
+    --viola: #aa91df;
+    --acquamarina: #83cdc4;
+    --arancio-chiaro: #85defb;
+    --grigio: #ccc;
+    --rosso: #ff0000;
+
+    --shadow: #acacac;
+    --dark-shadow: #474747;
+
+    --black-border: #353535;
+    --black-light: #CED2C4;
+    --gray-border: #676767;
+}

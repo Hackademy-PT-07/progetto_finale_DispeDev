@@ -24,13 +24,13 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <x-lang lang="it" nation="it" /> Italian
+                                <x-lang lang="it" nation="it" /> Italiano
                             </li>
                             <li>
                                 <x-lang lang="en" nation="gb" /> English
                             </li>
                             <li>
-                                <x-lang lang="ch" nation="cn" /> Cinese
+                                <x-lang lang="ch" nation="cn" /> 中国人
                             </li>
                         </ul>
                     </div>
@@ -65,15 +65,23 @@
                         </li>
                     </ul>
                 @else
-                    <li class="nav-item">
-                        <x-lang lang="it" nation="it" />
-                    </li>
-                    <li class="nav-item">
-                        <x-lang lang="en" nation="gb" />
-                    </li>
-                    <li class="nav-item">
-                        <x-lang lang="ch" nation="cn" />
-                    </li>
+                <div class="dropdown">
+                        <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-flag-fill"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <x-lang lang="it" nation="it" /> Italiano
+                            </li>
+                            <li>
+                                <x-lang lang="en" nation="gb" /> English
+                            </li>
+                            <li>
+                                <x-lang lang="ch" nation="cn" /> 中国人
+                            </li>
+                        </ul>
+                    </div>
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-text" aria-current="page" href="/login">{{ __('ui.login') }}</a>
                     </li>

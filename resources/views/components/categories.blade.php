@@ -24,7 +24,7 @@
                 </a>
                 <a href="{{ route('annunci.filter', 3) }}">
                     <button class="categories-items item-5 mx-3">
-                    <i class="fa-solid fa-sailboat"></i></i> {{ __('ui.nautical') }}
+                        <i class="fa-solid fa-sailboat"></i></i> {{ __('ui.nautical') }}
                     </button>
                 </a>
             </div>

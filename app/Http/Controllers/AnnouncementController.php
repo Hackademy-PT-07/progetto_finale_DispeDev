@@ -18,10 +18,8 @@ class AnnouncementController extends Controller
     public function index()
     {
 
-        $announcements = Announcement::where('is_accepted', True)->get()->sortByDesc('created_at');
+        $announcements = Announcement::where('is_accepted', True)->orderBy('created_at', 'desc')->get();
         $totalAnnouncements = $announcements->count();
-
-        
 
         return view('announcements.index', compact('announcements', 'totalAnnouncements'));
     }
@@ -37,16 +35,16 @@ class AnnouncementController extends Controller
         
         if(!isset($category_id))
         {
-            $announcements = Announcement::search($searched)->where('is_accepted', true)->get();  
+            $announcements = Announcement::search($searched)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();  
         }
         elseif (!isset($searched))
         {
-            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->get();
+            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
              
             
         }
         else{
-            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->get();
+            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->orderBy('created_at', 'desc')->get();
             
         }
         

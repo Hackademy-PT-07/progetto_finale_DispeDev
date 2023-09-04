@@ -26,8 +26,15 @@ class RevisorController extends Controller
         return redirect()->back()->with('success', 'Annuncio rifiutato correttamente.');
     }
 
+    public function workWithUsForm(){
+        
+        return view('revisor.workWithUs');
+
+    }
+
     public function workWithUs(){
         Mail::to('admin@presto.it')->send(new workWithUs(Auth::user()));
+        
         
         return redirect()->back()->with('message', 'Grazie per la tua richiesta di diventare revisore, ti risponderemo al piu\' presto');
 
