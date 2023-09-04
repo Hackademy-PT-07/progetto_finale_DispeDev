@@ -96,7 +96,7 @@
     transition-delay: 0.1s;
 }
 .card-announcement:hover{
-    width: 102%;
+    width: 100%;
     transition-duration: .2s;
     transition-delay: 0.1s;
 }
