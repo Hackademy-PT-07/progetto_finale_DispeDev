@@ -4,8 +4,8 @@
     </x-slot>
     <div class="container">
         <x-success />
-        <div class="container mt-5">
-            <div class="row">
+        <div class="container my-5">
+            <div class="row announcements-container">
                 <div class="create-card--container">
                     <livewire:create-announcement />
                 </div>

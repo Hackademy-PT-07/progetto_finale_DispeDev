@@ -82,3 +82,8 @@ button a {
 .fc-bianco:hover    {
     color: var(--bianco);
 }
+
+.mt-announce    {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}

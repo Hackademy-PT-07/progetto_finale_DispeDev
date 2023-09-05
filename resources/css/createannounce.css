@@ -1,12 +1,138 @@
-.mt-announce    {
-    margin-top: 6rem;
-    margin-bottom: 4rem;
-}
-
 .card-create    {
     margin: auto;
 }
 
-.card-container {
-    padding: 20px;
+/* Container Principale */
+
+.announcements-container    {
+    display: flex;
+    border-radius: 10px;
+    margin-top: 8rem;
+    width: 100%;
+    height: 95%;
+    padding: 30px 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(132deg, rgba(255,255,255,1) 41%, rgba(252,246,235,1) 100%);
+    box-shadow: 0px 20px 30px -1px var(--shadow);
 }
+
+/* Fine Container Principale */
+
+/* Container Creazione Annuncio */
+
+.create-card--container {
+    display: flex;
+    align-items: center;
+    /* background-color: var(--bianco); */
+    width: 500px;
+    border-right: 1px solid var(--gray-border);
+}
+
+.card-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-create--title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    text-shadow: 1px 2px 7px rgba(0,0,0,0.4);
+}
+
+.section-text input[type=text],
+.section-text input[type=number],
+.section-text input[type=file],
+.section-text select,
+.section-text textarea {
+   display: block;
+   width: 100%;
+   text-align: center;
+   height: 45px;
+   border: 0;
+   background: transparent;
+   border-bottom: 1px solid var(--grigio);
+   outline: 0;
+   margin-top: 10px;
+}
+
+.section-text textarea  {
+    height: 100px;
+    text-align: center ;
+}
+
+/* Fine Container Creazione Annuncio */
+
+/* Container Lista Annunci */
+
+.user-announcements--container  {
+    display: flex;
+    align-items: center;
+    width: 750px;
+    /* background-color: var(--bianco); */
+}
+
+.card-list--title   {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 2px 7px rgba(0,0,0,0.4);
+}
+
+.announcement-container {
+    border: 1px solid var(--grigio);
+    padding: 10px 20px;
+    height: 130px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0px 20px 30px -1px var(--shadow);
+}
+
+.card-category--container   {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grigio);
+    margin-bottom: 5px;
+}
+
+.category-title {
+    font-size: 13px;
+    color: var(--shadow);
+}
+
+.last-update    {
+    font-size: 13px;
+    color: var(--shadow);
+}
+
+.card-body  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-img--container    {
+    width: 30%;
+}
+
+.card-description--container    {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+}
+
+.btn-container  {
+    width: 10%;
+}
+
+.btn-warning    {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+/* Fine Container Lista Annunci */
