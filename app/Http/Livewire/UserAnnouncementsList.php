@@ -33,7 +33,7 @@ class UserAnnouncementsList extends Component
 
     public function loadUserAnnouncements()
     {
-        $this->announcements = \App\Models\Announcement::where('user_id', auth()->user()->id)->paginate(3);
+        $this->announcements = \App\Models\Announcement::where('user_id', auth()->user()->id)->where('is_accepted', True)->orderBy('created_at', 'desc')->paginate(3);
         /* $this->announcements = auth()->user()->announcements; */
     }
 
