@@ -12,7 +12,7 @@ use App\Models\User;
 class RevisorController extends Controller
 {
     public function index(){
-        $announcementToCheck = Announcement::where('is_accepted', null)->first();
+        $announcementToCheck = Announcement::where('user_id', '!=', Auth::id())->where('is_accepted', null)->first();
         return view('revisor.index', compact('announcementToCheck'));
     }
 

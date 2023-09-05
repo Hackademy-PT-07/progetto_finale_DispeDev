@@ -16,11 +16,10 @@ class AnnouncementController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-
+    {   
         $announcements = Announcement::where('is_accepted', True)->orderBy('created_at', 'desc')->paginate(6);
-        $totalAnnouncements = $announcements->count();
-
+        $totalAnnouncements = $announcements->total();
+  
         return view('announcements.index', compact('announcements', 'totalAnnouncements'));
     }
 
