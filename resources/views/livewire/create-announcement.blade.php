@@ -77,7 +77,7 @@
                             </div>
                         </div>
                     @endif
-                    {{-- Descriptio Section --}}
+                    {{-- Description Section --}}
                     <div class="section-split mb-3">
                         <textarea name="description" wire:model="description" id="description"
                             placeholder="{{ __('ui.descriptionPlaceholder') }}" class="form form-control">{{ old('decription') }}</textarea>
