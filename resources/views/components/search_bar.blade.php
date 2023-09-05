@@ -14,7 +14,7 @@
                 @endforeach
             </select>
         </div>
-        <div class="search-input">
+        <div class="search-button">
             <button type='submit' class="search-button"><i class="bi bi-search"></i></button>
         </div>
     </form>

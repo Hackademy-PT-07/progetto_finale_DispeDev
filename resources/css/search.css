@@ -47,8 +47,9 @@
 }
 
 .search-button{
-    width: 200%;
+    width: 30%;
     padding: 10px 20px ;
+    text-align: center;
 }
 
 .search-input input[type=text] {

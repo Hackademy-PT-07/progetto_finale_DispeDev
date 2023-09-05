@@ -4,27 +4,27 @@
             <div class="container categories-container">
                 <a href="{{ route('annunci.filter', 1) }}">
                     <button class="categories-items item-1 mx-3">
-                        <i class="bi bi-car-front-fill"></i> {{ __('ui.car') }}
+                        <i class="bi bi-car-front-fill icon-category"></i> <span>{{ __('ui.car') }}</span>
                     </button>
                 </a>
                 <a href="{{ route('annunci.filter', 2) }}">
                     <button class="categories-items item-2 mx-3">
-                        <i class="bi bi-bicycle"></i> {{ __('ui.motorcycle') }}
+                        <i class="bi bi-bicycle icon-category"></i> <span>{{ __('ui.motorcycle') }}</span>
                     </button>
                 </a>
                 <a href="{{ route('annunci.filter', 4) }}">
                     <button class="categories-items item-3 mx-3">
-                        <i class="bi bi-cpu-fill"></i> {{ __('ui.electronics') }}
+                        <i class="bi bi-cpu-fill icon-category"></i> <span>{{ __('ui.electronics') }}</span>
                     </button>
                 </a>
                 <a href="{{ route('annunci.filter', 5) }}">
                     <button class="categories-items item-4 mx-3">
-                        <i class="bi bi-house-heart-fill"></i> {{ __('ui.household') }}
+                        <i class="bi bi-house-heart-fill icon-category"></i> <span>{{ __('ui.household') }}</span>
                     </button>
                 </a>
                 <a href="{{ route('annunci.filter', 3) }}">
                     <button class="categories-items item-5 mx-3">
-                        <i class="fa-solid fa-sailboat"></i></i> {{ __('ui.nautical') }}
+                        <i class="fa-solid fa-sailboat icon-category"></i></i> <span>{{ __('ui.nautical') }}</span>
                     </button>
                 </a>
             </div>
