@@ -18,7 +18,28 @@
                             @foreach($announcementToCheck->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
                                 <img src="{{$image->getUrl(400,300)}}" alt="foto">
+                                <div>
+                                    <h5>Tags</h5>
+                                    <div>
+                                        @if($image->labels)
+                                        @foreach($image->labels as $label)
+                                        <p>{{$label}}</p>
+                                        @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h5>Revisione Immagini</h5>
+                                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                        <p>Satira: <span class="{{$image->spoon}}"></span></p>
+                                        <p>Medicina: <span class="{{$image->medicine}}"></span></p>
+                                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                        <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                                    </div>
+                                </div>
                             </div>
+
 
                             @endforeach
                         </div>
@@ -74,28 +95,9 @@
         </div>
         </div>
 
-        <div>
-            <h5>Tags</h5>
-            <div>
-                @if($image->labels)
-                    @foreach($image->labels as $label)
-                        <p>{{$label}}</p>
-                    @endforeach
-                @endif
-            </div>
-        </div>
-        <div>
-            <div>
-                <h5>Revisione Immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Satira: <span class="{{$image->spoon}}"></span></p>
-                    <p>Medicina: <span class="{{$image->medicine}}"></span></p>
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
-            </div>
-        </div>
+
         @endif
 
-        
+
 
 </x-main>

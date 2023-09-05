@@ -154,7 +154,9 @@ protected $listeners = [
         $this->description = $this->announcement->description;
         $this->price = $this->announcement->price;
         $this->category_id = $this->announcement->category_id;
-        $this->dbimages = $this->announcement->images()->get()->toArray();
+        $this->dbimages = $this->announcement->images()->get();
+        
+
 
          
     }
