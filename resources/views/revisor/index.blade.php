@@ -62,8 +62,6 @@
                     <div class="content-item">
                         {{__('ui.titlePlaceholder')}}:<h5 class="content-title"> {{ $announcementToCheck->title }}</h5>
                     </div>
-
-
                     <div class="content-item">
                         {{__('ui.category')}}:<h5 class="content-category"> {{ $announcementToCheck->category->name }}</h5>
                     </div>
@@ -94,10 +92,5 @@
             </div>
         </div>
         </div>
-
-
         @endif
-
-
-
 </x-main>

@@ -11,7 +11,8 @@ class UserAnnouncementsList extends Component
 {
     use WithPagination;
 
-    public $announcements;
+    protected $paginationTheme = 'bootstrap';
+    protected $announcements;
     public $editModal = false;
     public $title;
     public $price;
@@ -19,23 +20,28 @@ class UserAnnouncementsList extends Component
     public $description;
     public $announcementEdited;
 
-    
+
 
     protected $listeners = [
         'loadUserAnnouncements',
     ];
 
+    public function mount()
+    {
+        $this->loadUserAnnouncements();
+    }
+
     public function loadUserAnnouncements()
     {
-        $this->announcements = \App\Models\Announcement::all();
-        $this->announcements=auth()->user()->announcements;
+        $this->announcements = \App\Models\Announcement::where('user_id', auth()->user()->id)->paginate(3);
+        /* $this->announcements = auth()->user()->announcements; */
     }
 
     /*public function editAnnouncementUser($announcements)
     {
-       
+
         //$this->emitTo('create-announcement', 'edit', $announcement);
-       
+
         $this->editModal = true;
         $announcement = Announcement::findOrFail($announcementEdited);
         $this->announcementEdited = $announcement->id;
@@ -67,26 +73,11 @@ class UserAnnouncementsList extends Component
 
         $this->resetImputFields();
     }*/
-
     public function deleteAnnouncement(Announcement $announcement)
     {
         $announcement->delete();
         $this->loadUserAnnouncements();
     }
-
-    public function mount() 
-    {
-        $this->loadUserAnnouncements();
-    }
-
-    
-
-    public function render()
-    {
-
-        return view('livewire.user-announcements-list');
-    }
-
     private function resetInputFields()
     {
         $this->title = '';
@@ -96,6 +87,20 @@ class UserAnnouncementsList extends Component
         $this->editModal = false;
     }
 
-
+    /* Prendere Annunci Paginate */
+    public function getAnnouncements()
+    {
+        return $this->announcements;
+    }
+    /* Prendere Links degli annunci */
+    public function getAnnouncementsLinks()
+    {
+        return $this->announcements->links();
+    }
+    /* Render */
+    public function render()
+    {
+        $this->loadUserAnnouncements();
+        return view('livewire.user-announcements-list');
+    }
 }
-

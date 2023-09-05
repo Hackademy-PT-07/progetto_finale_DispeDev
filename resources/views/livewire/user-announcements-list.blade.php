@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         I tuoi annunci
-        @foreach ($announcements as $announcement)
+        @foreach ($this->getAnnouncements() as $announcement)
             <div class="card my-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h6 class="text-body-tertiary mb-0">{{ $announcement->category->name }}</h6>
@@ -27,7 +27,7 @@
                 </div>
             </div>
         @endforeach
-
+        {{ $this->getAnnouncementsLinks() }}
 
     </div>
 </div>
