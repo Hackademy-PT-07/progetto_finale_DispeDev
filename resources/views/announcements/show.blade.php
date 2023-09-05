@@ -6,42 +6,33 @@
             </button>
         </div>
         <div class="row show-announcement">
-            <div class="col-7 img-carousel">
-            @if ($announcement->images)
-                        <div class="carousel-inner">
+            <div class="col-7 colImgCustom">
+                <div id="carouselExample" class="carousel slide" data-interval="false">
+                    <div class="carousel-inner">
+                        @if ($announcement->images)
                             @foreach($announcement->images as $image)
-                            <div class="carousel-item @if($loop->first)active @endif">
-                                <img src="{{$image->getUrl(400,300)}}" alt="foto">
+                                <div class="carousel-item @if($loop->first)active @endif">
+                                    <img src="{{$image->getUrl(400,300)}}" alt="foto">
                                 </div>
-                        
                             @endforeach
-                            </div>
-                            @else
-                            <div class="carousel-item">
-                                <img src="https://picsum.photos/200/300" alt="foto2">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="carousel"
-                            data-bs-slide="prev">
+                                @else
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/200/300" alt="foto2">
+                                    </div>
+                            
+                        @endif
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="carousel"
-                            data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    @endif
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
+                    
+            </div>
                 <div class="col-5 announcement-desc">
                     <div class="desc-1">
                         <span class="last-update">Annuncio creato il
