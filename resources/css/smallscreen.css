@@ -157,25 +157,31 @@
 
     /* show */
     .show-announcement{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 
     .back-button{
         width:16% ;
-        margin-left: 5%;
+        margin-left: 2%;
         margin-bottom: 2%;
-        margin-top: 13%;
+        margin-top: 15%;
     }
 
-
-    .img-carousel{
+    .carousel-item{
         width: 100%;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
     }
+    .colImgCustom{
+        width: 100%;
+        margin-bottom: 2%;
+        padding: 0;
+    }
+    .row{
+        margin-left: 0;
+    }
+
+    
 
     .announcement-desc{
         display: flex;

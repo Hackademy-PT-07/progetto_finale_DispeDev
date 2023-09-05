@@ -73,4 +73,11 @@
         width: 200px;
 
     }
+    .back-button{
+        width: 15%;
+        margin-top: 13%;
+    }
+    .show-announcement{
+        margin-bottom: 5%;
+    }
 }

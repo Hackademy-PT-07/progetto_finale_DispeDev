@@ -3,14 +3,15 @@
 namespace App\Jobs;
 
 use App\Models\Image;
-use Spatie\Image\Image as SpatieImage;
-use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
+use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class RemoveFaces implements ShouldQueue
 {
@@ -66,7 +67,16 @@ class RemoveFaces implements ShouldQueue
 
             $image = SpatieImage::load($srcPath);
 
-            $image->watermark(base_path('resources/img/censure.png'));
+            $image->watermark(base_path('resources/img/censure.png'))
+            ->watermarkPosition('top-left')->
+            watermarkPadding($bounds[0][0], $bounds[0][1])->
+            watermarkWidth($w, Manipulations::UNIT_PIXELS)->
+            watermarkHeight($h, Manipulations::UNIT_PIXELS)->
+            watermarkFit(Manipulations::FIT_STRETCH);
+            $image->save($srcPath);
+        }
+
+            $imageAnnotator->close();
         }
     }
-}
+
