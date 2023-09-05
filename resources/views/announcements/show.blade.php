@@ -35,14 +35,14 @@
             </div>
                 <div class="col-5 announcement-desc">
                     <div class="desc-1">
-                        <span class="last-update">Annuncio creato il
+                        <span class="last-update">{{__('ui.lastUpdate')}}
                             {{ $announcement->created_at->format('d/m/Y') }}</span>
                         <h1 class="title-announcement">{{ $announcement->title }}</h1>
                         <p class="price">€ {{ $announcement->price }}</p>
-                        <p>Categoria: <a href="" class="category">{{ $announcement->category->name }}</a></p>
+                        <p>{{__('ui.category')}}: <a href="{{ route('annunci.filter', ['category' => $announcement->category_id]) }}" class="category">{{ $announcement->category->name }}</a></p>
                     </div>
                     <div class="desc-2">
-                        <h4>Descrizione del prodotto</h4>
+                        <h4>{{__('ui.description')}}</h4>
                         <p>{{ $announcement->description }}</p>
                     </div>
                 </div>
