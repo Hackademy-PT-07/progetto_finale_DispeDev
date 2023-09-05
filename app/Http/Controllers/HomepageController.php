@@ -27,14 +27,14 @@ class HomepageController extends Controller
 
     public function filterCategory(Category $categories)
     {
-        $announcements = Announcement::all();
+        $announcements = Announcement::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
         return view('category.index', compact('categories', 'announcements'));
     }
 
     public function filterAnnouncements(Category $category)
     {
         
-        $announcements = Category::find($category->id)->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        $announcements = Category::find($category->id)->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         $totalAnnouncements = $announcements->count();
         return view('announcements.index', compact('category', 'announcements','totalAnnouncements'));
     }

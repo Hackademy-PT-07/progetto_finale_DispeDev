@@ -33,11 +33,11 @@ class AnnouncementController extends Controller
 
 
         if (!isset($category_id)) {
-            $announcements = Announcement::search($searched)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+            $announcements = Announcement::search($searched)->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         } elseif (!isset($searched)) {
-            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+            $announcements = Category::find($category_id)->announcements()->where('is_accepted', true)->orderBy('created_at', 'desc')->paginate(6);
         } else {
-            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->orderBy('created_at', 'desc')->get();
+            $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', $request->category_id)->orderBy('created_at', 'desc')->paginate(6);
         }
 
         $totalAnnouncements = $announcements->count();
