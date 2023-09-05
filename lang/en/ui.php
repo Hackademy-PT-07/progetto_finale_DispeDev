@@ -98,5 +98,8 @@ return [
     'reject' => 'Reject',
     //lavora con noi
     'workWithUs' => 'Work with us!',
+    'motivation' => 'Write to us why you want to become our reviewer',
+    'placeHolderWork' => 'Tell us a little about yourself...',
+    'sendEmail' => 'Send Mail',
     
 ];

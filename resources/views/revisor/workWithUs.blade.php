@@ -12,18 +12,17 @@
                         <div>
                             <div class="row mt-0">
                                 <div class="col-md-12 ">
-                                    <h4 class="">Lavora con noi</h4>
-                                    <p>Scrivici il perchè vuoi diventare un nostro revisore</p>
+                                    <h4 class="">{{__('ui.workWithUs')}}</h4>
+                                    <p>{{__('ui.motivation')}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12 mb-2">
-                                    <p class="mb-1">Message</p> <textarea id="message" type="text" placeholder="Parlaci un pò di te..." name="message" class="form-control input-box rm-border"></textarea>
+                                    <textarea id="message" type="text" placeholder="{{__('ui.placeHolderWork')}}" name="message" class="form-control input-box rm-border"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row justify-content-center mb-0">
-                                <div class="col-md-12 px-3"> <button type='submit' class="card-btn">Invia Mail
-                                </button> </div>
+                                <div class="col-md-12 px-3"> <button type='submit' class="card-btn">{{__('ui.sendEmail')}}</button> </div>
                             </div>
                         </div>
                     </form>

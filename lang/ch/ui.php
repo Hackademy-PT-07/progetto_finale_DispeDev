@@ -99,4 +99,8 @@ return [
     'second_three' => '成为审稿人',
     //lavora con noi
     'workWithUs' => '跟我们工作',
+    'motivation' => '写信给我们为什么你想成为我们的审稿人',
+    'placeHolderWork' => '告诉我们一些关于你自己的信息...',
+    'sendEmail' => '发送邮件',
+
 ];

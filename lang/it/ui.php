@@ -98,5 +98,9 @@ return [
     'reject' => 'Rifiuta',
     //lavora con noi
     'workWithUs' => 'Lavora con noi',
+    'motivation' => 'Scrivici il perchè vuoi diventare un nostro revisore',
+    'placeHolderWork' => 'Parlaci un pò di te...',
+    'sendEmail' => 'Invia Mail',
+
     
 ];
