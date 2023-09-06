@@ -32,8 +32,8 @@ class RevisorController extends Controller
 
     }
 
-    public function workWithUs(){
-        Mail::to('admin@presto.it')->send(new workWithUs(Auth::user()));
+    public function workWithUs(Request $request){
+        Mail::to('admin@presto.it')->send(new workWithUs(Auth::user(), $request));
         
         
         return redirect()->back()->with('message', 'Grazie per la tua richiesta di diventare revisore, ti risponderemo al piu\' presto');

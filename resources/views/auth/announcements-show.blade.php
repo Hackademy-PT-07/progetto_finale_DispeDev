@@ -1,10 +1,10 @@
 <x-main>
     <x-slot:mainTitle>{{ __('ui.yourAnnouncements') }}</x-slot>
-    <div class="container">
+    <div class="container mt-announce">
        
         <h1 class="style-title">{{$totalAnnouncements}} {{ __('ui.findendAnnouncements') }}</h1>
 
-        <div class="container">
+        <div class="container ">
             @forelse ($announcements as $announcement)
                 <a href="{{ route('annunci.show', $announcement->id) }}">
                     <div class="card-announcement">

@@ -17,13 +17,15 @@ class workWithUs extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
+    public $request;
   
 
 
-    public function __construct(User $user)
+    public function __construct(User $user, $request)
     {
          
         $this->user = $user;
+        $this->request = $request;
         
 
     }
