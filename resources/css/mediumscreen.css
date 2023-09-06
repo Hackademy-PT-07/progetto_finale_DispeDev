@@ -16,7 +16,7 @@
         justify-content: center;
     }
 
-    
+
 
     .search-input input[type=text]  {
         width: 550px;
@@ -24,5 +24,27 @@
 
     .select-categories select   {
         width: 550px;
+    }
+
+    .user-announcements--container  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .announcements-container    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-card--container     {
+        border-right: none;
+        width: 500px;
+    }
+
+    .announcements-container    {
+        padding: 0;
     }
 }

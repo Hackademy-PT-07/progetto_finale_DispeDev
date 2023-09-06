@@ -2,7 +2,7 @@
 
 </a> --}}
 
-<div class="card-announcement">
+{{-- <div class="card-announcement">
     <div class="card-img-box">
         <img class="card-announcement-img" src="{{ $url_image }}" alt="{{ $title }}">
     </div>
@@ -15,7 +15,5 @@
             <p class="last-update">Ultima modifica: {{ $updated }}</p>
         </div>
     </div>
-
-    </a>
     <a href="{{ route('annunci.categoria', ['category' => $categoria]) }}" class="category-a">{{ $category }}</a>
-</div>
+</div> --}}

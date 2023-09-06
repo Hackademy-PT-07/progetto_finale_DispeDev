@@ -98,7 +98,7 @@
         color: var(--blu);
         font-size: 12px;
         margin: 0;
-        padding: 10px; 
+        padding: 10px;
     }
     .categories-items span{
         display: none;
@@ -107,7 +107,7 @@
         color: var(--bianco);
         font-size: 24px;
     }
-    
+
     .mobile {
             display: flex;
             flex-direction: column;
@@ -308,5 +308,54 @@
 
     .select-categories select   {
         width: 100%;
+    }
+
+    .section-text input::placeholder,
+    .section-text textarea::placeholder {
+        font-size: 18px;
+    }
+
+    .announcement-container {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .card-body  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-img--container    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .img-announcement   {
+        object-fit: cover;
+    }
+
+    .card-description--container    {
+        margin-bottom: 50px;
+    }
+
+    .card-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-container  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .btn-warning    {
+        margin-bottom: 0;
+        margin-right: 25px;
     }
 }

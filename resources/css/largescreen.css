@@ -41,12 +41,28 @@
         margin-top: 20px;
     }
 
-    
+
     .back-button{
         width: 15%;
         margin-top: 13%;
     }
     .show-announcement{
         margin-bottom: 5%;
+    }
+
+    .create-card--container {
+        width: 350px;
+    }
+
+    .user-announcements--container  {
+        margin-right: auto;
+        margin-left: auto;
+        width: 60%;
+    }
+
+
+    .announcement-container {
+        width: 500px;
+        padding: 10px;
     }
 }
