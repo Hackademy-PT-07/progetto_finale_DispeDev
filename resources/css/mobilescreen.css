@@ -92,20 +92,23 @@
         margin: 10px 10px;
     }
     .categories-items{
-        width: 55px;
-        height: 55px;
+        width: 60px;
+        height: 60px;
         border-radius: 50px;
         color: var(--blu);
         font-size: 12px;
         margin: 0;
         padding: 10px;
+        margin: 0;
+        display: grid;
+        place-items: center;
     }
     .categories-items span{
         display: none;
     }
     .icon-category{
         color: var(--bianco);
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .mobile {
@@ -281,7 +284,24 @@
         padding: 5% 5%;
         margin: 0;
     }
-
+    .freatures-container{
+        margin-top: 20px;
+    }
+    .freatures-card{
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+    .freatures-img  {
+        width: 240px;
+    }
+    .card-btn   {
+        font-size: 18px;
+        width: 220px;
+        margin-top: 10px;
+    }
     .freatures-title    {
         text-align: center;
     }

@@ -1,4 +1,4 @@
-@media(min-width: 769px) and (max-width: 1440px)   {
+@media(min-width: 769px) and (max-width: 1439px)   {
 
     .card-create    {
         width: 100vw;
@@ -38,9 +38,18 @@
     }
 
     .categories-items   {
+        width: 140px;
+        height: 70px;
         margin-top: 20px;
     }
 
+
+    .card-btn   {
+        font-size: 18px;
+        padding: 20px;
+        width: 220px;
+        margin-top: 30px;
+    }
 
     .back-button{
         width: 15%;
