@@ -1,4 +1,4 @@
-@media(min-width: 768px) and (max-width: 1400px)   {
+@media(min-width: 769px) and (max-width: 1440px)   {
 
     .card-create    {
         width: 100vw;
@@ -41,38 +41,7 @@
         margin-top: 20px;
     }
 
-    .search-box {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .search-box form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .search-input   {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .search-input input[type=text]  {
-        width: 850px;
-    }
-
-    .select-categories select   {
-        width: 850px;
-    }
-
-    .select-categories  {
-        margin-bottom: 10px;
-    }
-
-    .search-button  {
-        width: 200px;
-
-    }
+    
     .back-button{
         width: 15%;
         margin-top: 13%;
