@@ -82,7 +82,7 @@
                 @endif
                 {{-- Description Section --}}
                 <div class="section-text mb-3">
-                    <textarea name="description" wire:model="description" id="description" rows="5"
+                    <textarea name="description" wire:model="description" id="description" rows="10"
                         placeholder="{{ __('ui.descriptionPlaceholder') }}" class="form form-control">{{ old('decription') }}</textarea>
                     @error('description')
                         <span class="small text-danger">{{ $message }}</span>
