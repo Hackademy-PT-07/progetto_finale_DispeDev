@@ -63,6 +63,14 @@ class AnnouncementController extends Controller
         return redirect()->back()->with(['success' => 'Annuncio creato correttamente.']);
     }
 
+    public function myAnnouncements(){
+
+        $announcements = Announcement::where('is_accepted', True)->where('user_id', '==', Auth::id())->orderBy('created_at', 'desc')->paginate(6);
+        $totalAnnouncements = $announcements->total();
+  
+        return view('announcements.index', compact('announcements', 'totalAnnouncements'));
+    }
+
     /**
      * Display the specified resource.
      */

@@ -33,6 +33,7 @@ Route::middleware("auth")->group(function () {
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
     Route::get('lavora-con-noi', [RevisorController::class, 'workWithUsForm'])->name('diventa.revisore');
     Route::post('lavora-con-noi/mail', [RevisorController::class, 'workWithUs'])->name('invia.mail');
+   // Route::get('i-miei-annunci', [AnnouncementController::class, 'myAnnouncements'])->name('annunci.user');
 });
 
 Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');
