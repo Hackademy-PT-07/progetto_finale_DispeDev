@@ -194,7 +194,7 @@
         margin-left: 0;
     }
 
-    
+
 
     .announcement-desc{
         display: flex;
@@ -285,5 +285,9 @@
 
     .search-input button {
         margin-bottom: 20px;
+    }
+
+    .create-card--container    {
+        border-right: none;
     }
 }

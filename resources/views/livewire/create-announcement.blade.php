@@ -52,16 +52,18 @@
                 @if (!empty($images) || !empty($dbimages))
                     <div class="section-text mb-3">
                         <p>Photo preview:</p>
-                        <div class="row border border-4 border-info rounded shadow py-4">
+                        <div class="row border border-4 border-info rounded shadow py-2 preview-container">
                             @if ($images != null)
                                 @foreach ($images as $key => $image)
-                                    <div class="img-container col my-3">
-                                        <div class="img-preview mx-auto shadow rounded"
+                                    <div class="img-container">
+                                        <div class="img-preview shadow rounded"
                                             style="background-image:url({{ $image->temporaryUrl() }});">
                                         </div>
-                                        <button type="button"
-                                            class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                            wire:click="removeImage({{ $key }})">Cancella</button>
+                                        <div class="img-btn--container">
+                                            <button type="button"
+                                                class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                                wire:click="removeImage({{ $key }})">Cancella</button>
+                                        </div>
                                     </div>
                                 @endforeach
                             @endif
