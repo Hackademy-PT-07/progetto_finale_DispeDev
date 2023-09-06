@@ -79,7 +79,20 @@
         width: 100%;
     }
 
-
+    /*button categorie */
+    .categories-items   {
+        width: 95px;
+        height: 95px;
+        border-radius: 50px;
+        display: grid;
+        place-items: center;
+    }
+    .icon-category{
+        font-size: 32px;
+    }
+    .categories-items span{
+        display: none;
+    }
 
     /* buy sell */
     .buy-sell{
@@ -203,13 +216,29 @@
         margin-left: auto;
     }
 
+    .freatures-card {
+        width: 30%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 25px auto 35px auto;
+    }
+
     .freatures-content  {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .freatures-img  {
+        width: 180px;
+    }
+    .card-btn   {
+        font-size: 14px;
+        padding: 10px;
+        width: 140px;
+        margin-top: 90px;
+    }
     .freatures-title h1 {
         font-size: 64px;
     }
