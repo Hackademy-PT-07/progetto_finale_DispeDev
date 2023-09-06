@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use Spatie\Image\Image;
+use App\Models\Image;
 use Illuminate\Bus\Queueable;
 use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
@@ -10,6 +10,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Spatie\Image\Image as WatermarkSpatieImage;
 
 class ResizeImage implements ShouldQueue
 {
@@ -39,8 +40,17 @@ class ResizeImage implements ShouldQueue
         $srcPath = storage_path() . '/app/public/' . $this->path . '/' . $this->fileName;
         $destPath = storage_path() . '/app/public/' . $this->path . "/crop_{$w}x{$h}_" . $this->fileName;
 
-        $croppedImage = Image::load($srcPath)
+
+
+
+        $croppedImage = WatermarkSpatieImage::load($srcPath)
                         ->crop(Manipulations::CROP_CENTER, $w, $h)
+                        ->watermark(base_path('public/img/logo_presto.it_bianco.png'))
+                        ->watermarkPosition('bottom-right')
+                        ->watermarkFit(Manipulations::FIT_STRETCH)
+                        ->watermarkWidth(40, Manipulations::UNIT_PERCENT)
+                        ->watermarkPadding(10)
+                        ->watermarkOpacity(60)
                         ->save($destPath);
     }
 }

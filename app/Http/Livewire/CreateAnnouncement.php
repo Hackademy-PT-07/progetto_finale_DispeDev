@@ -7,6 +7,7 @@ use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
+use App\Jobs\ApplyWatermark;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Collection;

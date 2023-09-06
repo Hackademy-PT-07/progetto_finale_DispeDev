@@ -47,15 +47,29 @@
                         <a class="nav-link nav-text" href="{{ route('annunci.index') }}">
                             {{ __('ui.announcements') }}</a>
                     </li>
+                    <div class="dropdown">
+                        <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{auth()->user()->name}}
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{route('i.tuoi.annunci')}}">I miei annunci</a>
+                            </li>
+
+                            <li class="nav-item dropdown nav-text">
+                                <form action="/logout" method="POST">
+                                @csrf
+                                <button class="btn nav-text text-dark" type="submit">{{ __('ui.logout') }}</button>
+                            </form>
+                            </li>
+
+                        </ul>
+                    </div>
                     <li class="nav-link nav-text" href="#" role="button">
-                        {{ auth()->user()->name }}
+                        
                     </li>
-                    <li class="nav-item dropdown nav-text">
-                        <form action="/logout" method="POST">
-                            @csrf
-                            <button class="btn nav-text" type="submit">{{ __('ui.logout') }}</button>
-                        </form>
-                    </li>
+                    
 
                     <ul class="dropdown-menu">
                         <li class="nav-item">

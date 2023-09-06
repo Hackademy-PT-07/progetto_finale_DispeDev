@@ -26,13 +26,12 @@ Route::get('/', [HomepageController::class, 'homepage'])->name('homepage');
 
 Route::middleware("auth")->group(function () {
 
-    Route::get('i/tuoi/annunci', function () {
-        return view('auth.announcements-show');
-    })->name('i.tuoi.annunci');
 
     Route::get('inserisci/annuncio', [AnnouncementController::class, 'create'])->name('annuncio.create');
+    Route::get('i-miei-annunci', [AnnouncementController::class, 'myAnnouncements'])->name('i.tuoi.annunci');
     Route::get('lavora-con-noi', [RevisorController::class, 'workWithUsForm'])->name('diventa.revisore');
     Route::post('lavora-con-noi/mail', [RevisorController::class, 'workWithUs'])->name('invia.mail');
+    
 });
 
 Route::get('annunci/ricerca', [AnnouncementController::class, 'filter'])->name('annunci.ricerca');

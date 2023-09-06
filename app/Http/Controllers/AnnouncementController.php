@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
-use App\Models\Announcement;
-use App\Models\Category;
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Category;
+use App\Models\Announcement;
+use Illuminate\Http\Request;
 use TeamTNT\TNTSearch\TNTSearch;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AnnouncementController extends Controller
 {
@@ -61,6 +62,14 @@ class AnnouncementController extends Controller
     {
 
         return redirect()->back()->with(['success' => 'Annuncio creato correttamente.']);
+    }
+
+    public function myAnnouncements(){
+
+        $announcements = Announcement::where('is_accepted', True)->where('user_id', '=', Auth::id())->orderBy('created_at', 'desc')->paginate(6);
+        $totalAnnouncements = $announcements->total();
+  
+        return view('auth.announcements-show', compact('announcements', 'totalAnnouncements'));
     }
 
     /**
