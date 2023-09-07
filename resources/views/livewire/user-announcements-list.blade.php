@@ -9,10 +9,7 @@
                         {{ $announcement->updated_at->format('d/m/Y') }}</h6>
                 </div>
                 <div class="card-body">
-                    <div class="card-img--container">
-                        <img class="img-announcement" src="{{ $announcement->url_image }}"
-                            alt="{{ $announcement->title }}">
-                    </div>
+                    
                     <div class="card-description--container">
                         <h5 class="card-title" wire:model='title'>{{ $announcement->title }}</h5>
                         <p class="card-text small">{{ $announcement->description }}</p>
