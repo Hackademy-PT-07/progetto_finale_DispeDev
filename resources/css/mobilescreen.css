@@ -202,6 +202,31 @@
         color: var(--shadow);
         margin-top: 10px;
     } */
+    .card-announcement {
+        height: 100px;
+    }
+    .card-announcement-text-box{
+        padding: 2px 4px;
+    }
+    .announcement-category{
+        font-size: 8px;
+        margin: 0;
+    }
+    .announcement-title{
+        font-size: 0.9rem;
+        margin: 0px!important;
+    }
+    .announcement-price{
+        font-size: 12px;
+    }
+    .announcement-descr{
+        font-size: 12PX;
+        margin: 0;
+    }
+    .last-update{
+        margin-top: -30px;
+        font-size: 10px;
+    }
 
     /* _______ */
     .work-img--container    {
