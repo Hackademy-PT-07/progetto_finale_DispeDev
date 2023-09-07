@@ -412,4 +412,42 @@
     .talk-about--you    {
         max-width: 250px;
     }
+
+    .style-title    {
+        margin-top: 24%;
+        margin-bottom: 5%;
+    }
+
+    .card-mobile    {
+        height: auto;
+    }
+
+    .img-mobile--container  {
+        width: 100%;
+    }
+
+    .img-mobile {
+        width: 40%;
+    }
+
+    .card-mobile--text  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-mobile--text a    {
+        margin-top: 5px;
+        text-decoration: none;
+        color: var(--shadow);
+    }
+    .card-mobile--text h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .card-mobile--text span {
+        font-weight: 600;
+        color: var(--arancio);
+        margin-bottom: 15px;
+    }
 }

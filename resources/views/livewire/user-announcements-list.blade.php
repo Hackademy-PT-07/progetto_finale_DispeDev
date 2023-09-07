@@ -4,8 +4,8 @@
         @foreach ($this->getAnnouncements() as $announcement)
             <div class="announcement-container">
                 <div class="card-category--container">
-                    <h6 class="category-title">{{ $announcement->category->name }}</h6>
-                    <h6 class="last-modify">Ultima modifica:
+                    <h6 class="category-title">{{ $announcement->category->name }} </h6>
+                    <h6 class="last-modify">
                         {{ $announcement->updated_at->format('d/m/Y') }}</h6>
                 </div>
                 <div class="card-body">
