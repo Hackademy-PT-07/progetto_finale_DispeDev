@@ -21,6 +21,10 @@
         border: 1px solid var(--bianco);
 }
 
+.btn-containers {
+    display: flex;
+}
+
 .nav-text   {
     font-size: 18px;
     font-weight: 400;
@@ -46,8 +50,8 @@
 
 .revisor-icon span  {
     color: var(--bianco);
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 10px;
     padding-bottom: 18px;
     margin-left: -5px;
 }
@@ -63,5 +67,44 @@
 .dropdown-menu li   {
     display: flex;
     align-items: center;
+    padding: 15px 20px 0px 20px;
+}
+
+.user-container {
+    margin-left: 10px;
+}
+
+.user-icon  {
+    font-size: 16px;
+}
+
+.user-content   {
     padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--blu);
+    font-weight: 600;
+}
+
+.username   {
+    color: var(--blu);
+    border-bottom: 1px solid var(--blu);
+}
+
+.username:hover   {
+    color: var(--blu);
+}
+
+.annunci-route a  {
+    text-decoration: none;
+    color: var(--blu);
+}
+
+.btn-esc    {
+    color: var(--blu);
+}
+
+.margin-top {
+    margin-top: 1px;
 }

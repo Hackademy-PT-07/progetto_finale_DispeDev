@@ -17,23 +17,50 @@
                                     class="bi bi-plus-square pe-2"></i>{{ __('ui.insertAnnouncement') }}</a>
                         </button>
                     </div>
-                    <div class="dropdown">
-                        <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i class="bi bi-flag-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <x-lang lang="it" nation="it" /> Italiano
-                            </li>
-                            <li>
-                                <x-lang lang="en" nation="gb" /> English
-                            </li>
-                            <li>
-                                <x-lang lang="ch" nation="cn" /> 中国人
-                            </li>
-                        </ul>
+                    <div class="btn-containers">
+                        <div class="dropdown">
+                            <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-flag-fill"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <x-lang lang="it" nation="it" /> Italiano
+                                </li>
+                                <li>
+                                    <x-lang lang="en" nation="gb" /> English
+                                </li>
+                                <li>
+                                    <x-lang lang="ch" nation="cn" /> 中国人
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown user-container">
+                            <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-fill-check user-icon"></i>
+                            </button>
+                            <ul class="dropdown-menu user-content">
+                                <li class="nav-item nav-text username">
+                                    <p>{{ auth()->user()->name }}</p>
+                                </li>
+                                <li class="nav-item nav-text annunci-route">
+                                    <a href="{{ route('i.tuoi.annunci') }}">I miei annunci</a>
+                                </li>
+
+                                <li class="nav-item dropdown nav-text">
+                                    <form action="/logout" method="POST">
+                                        @csrf
+                                        <button class="btn nav-text btn-esc"
+                                            type="submit">{{ __('ui.logout') }}</button>
+                                    </form>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
+
                     @if (Auth::user()->is_revisor)
                         <li class="nav-item revisor-icon">
                             <a href="{{ route('revisor.index') }}" class="nav-text "
@@ -44,32 +71,14 @@
                     @endif
 
                     <li class="nav-item dropdown nav-text">
-                        <a class="nav-link nav-text" href="{{ route('annunci.index') }}">
+                        <a class="nav-link nav-text margin-top" href="{{ route('annunci.index') }}">
                             {{ __('ui.announcements') }}</a>
                     </li>
-                    <div class="dropdown">
-                        <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            {{auth()->user()->name}}
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{route('i.tuoi.annunci')}}">I miei annunci</a>
-                            </li>
 
-                            <li class="nav-item dropdown nav-text">
-                                <form action="/logout" method="POST">
-                                @csrf
-                                <button class="btn nav-text text-dark" type="submit">{{ __('ui.logout') }}</button>
-                            </form>
-                            </li>
-
-                        </ul>
-                    </div>
                     <li class="nav-link nav-text" href="#" role="button">
-                        
+
                     </li>
-                    
+
 
                     <ul class="dropdown-menu">
                         <li class="nav-item">
@@ -79,7 +88,7 @@
                         </li>
                     </ul>
                 @else
-                <div class="dropdown">
+                    <div class="dropdown">
                         <button class="flag-container dropdown-toggle" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <i class="bi bi-flag-fill"></i>
