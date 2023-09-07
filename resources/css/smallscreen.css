@@ -133,13 +133,27 @@
         border-radius: 25px;
     }
 
-    /* .card-announcements {
-        width: 100vw;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 0;
-        border-radius: 25px;
-    } */
+    .card-announcement {
+        height: 130px;
+        padding: 0px;
+
+    }
+    .announcement-category{
+        font-size: 12px;
+    }
+    .announcement-title{
+        font-size: 1.1rem;
+    }
+    .announcement-price{
+        font-size: 14px;
+    }
+    .announcement-descr{
+        font-size: 14PX;
+    }
+    .last-update{
+        margin-top: -30px;
+        font-size: 12px;
+    }
 
     .btn-container  {
         margin-left: 0;
