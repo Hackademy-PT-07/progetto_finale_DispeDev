@@ -378,4 +378,13 @@
         margin-bottom: 0;
         margin-right: 25px;
     }
+
+    .work-content--container    {
+        padding: 10px 15px;
+        max-width: 300px;
+    }
+
+    .talk-about--you    {
+        max-width: 250px;
+    }
 }

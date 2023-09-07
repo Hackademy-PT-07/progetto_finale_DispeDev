@@ -1,0 +1,50 @@
+.work-center    {
+    display: flex;
+    justify-content: center;
+}
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    height: auto;
+}
+
+.work-content--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255,255,255);
+    background: linear-gradient(132deg, rgba(255,255,255,1) 41%, rgba(252,246,235,1) 100%);
+    border-radius: 25px;
+    width: 500px;
+    height: auto;
+    padding: 20px 30px;
+    box-shadow: 0px 20px 30px -1px var(--shadow);
+}
+
+.work-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--blu);
+    padding: 20px;
+    border-bottom: 1px solid var(--blu);
+}
+
+.work-motivation    {
+    font-size: 18px;
+    line-height: 1.5rem;
+    padding: 25px;
+    text-align: center;
+}
+
+.card-btn   {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.talk-about--you    {
+    width: 400px;
+    height: 100px;
+}

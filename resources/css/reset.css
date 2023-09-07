@@ -69,9 +69,10 @@ button{
     border: none;
     border-radius: 5px;
 }
+
 button:active {
     transform: scale(0.95);
-  }
+}
 
 button a {
     color: var(--bianco);
